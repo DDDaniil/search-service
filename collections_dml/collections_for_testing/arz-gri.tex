@@ -1,0 +1,364 @@
+\documentclass[
+11pt,%
+tightenlines,%
+twoside,%
+onecolumn,%
+nofloats,%
+nobibnotes,%
+nofootinbib,%
+superscriptaddress,%
+noshowpacs,%
+centertags]%
+{revtex4}
+\usepackage{ljm}
+
+%%%%%%%%%%%%%%%%%%%%%%% file template-ljm.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a general template file for the LaTeX package ljm-auth
+% for Lobachevskii Journal of Mathematics 2009/07/20
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article. Delete % signs as needed.
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\newtheorem{remark}{Remark} % for running heads
+% % for running heads %for running heads
+%
+
+\setcounter{page}{3}
+
+\begin{document}
+\titlerunning{Functional Description of C$^*$-algebras}
+\authorrunning{ARZUMANIAN and GRIGORYAN}
+
+\title{Functional Description of C$^*$-algebras Associated\\ with Group Graded Systems}
+
+\author{\firstname{Victor}~\surname{Arzumanian}}
+\email[E-mail: ]{vicar@instmath.sci.am} \affiliation{Institute of
+Mathematics, National Academy of Science of Armenia, 24/5 Marshal Baghramian ave.
+Yerevan, 0019, Republic of Armenia}
+
+\author{\firstname{Suren}~\surname{Grigoryan}}
+\email[E-mail: ]{gsuren@inbox.ru} \affiliation{Kazan State Power
+Engineering University, ul. Krasnoselskaya, 51, Kazan, Russia}
+
+
+
+\firstcollaboration{(Submitted by E. K. Lipachev ) }
+
+\received{June 7, 2018}
+
+\begin{abstract}
+The well known pure algebraic concept of group grading arises
+naturally in considering the crossed products, especially in the
+context of irreversible dynamical systems. In the paper some general
+aspects concerning group graded systems and  related algebras are
+considered. In particular, a functional description of a
+C$^*$-algebra associated with an Abelian group graded system is
+presented.
+\end{abstract}
+\subclass{46L05, 46L08, 46H25}
+\keywords{C$^*$-algebra, representation, conditional expectation, bimodule, Hilbert module, graded system, graded C$^*$-algebra, inverse semigroup.}
+
+\maketitle
+
+
+
+\section{Introduction}
+In recent years the attention of many specialists in operator algebras were focused on the constructions of algebras associated with irreversible dynamical systems.
+Since the concept of the group crossed product can not be directly transferred to the semigroup case, new methods are developed to avoid the arising difficulties.
+
+It can be mentioned papers concerning the different aspects of  algebras associated with semigroup systems.
+Some of them arise within the framework of algebraical structurs, namely, as corresponding to semigroups with certain properties,
+see a recent detailed review  of Xin Li with references in \cite{L2}, others describe  irreversible dynamical systems: endomorphisms, polymorphisms
+(see e.g. \cite{A, AR, CV, SV}), irreversible mappings (see e.g. \cite{GK}), or interactions, (see e.g. \cite{E1, ER}).
+
+\medskip
+\noindent Involvment of the concept of graded algebra into consideration, seems to be most promising in this regard.
+As the first step a notion of group graded system arises which allows different interpretations.
+Group graded system is a C$^*$-variant of  Fell bundle concept, which was developed in detail by Ruy Exel and presented in the book \cite{E}.
+In his turn, the mentioned work in the substantial part is a continuation of a large series of works of the author and others (see e.g. \cite{BE} as one of the recent).
+
+It should be noted that our purposes are a little differ from the accents of the book of Exel, who is mainly interested in partial actions.
+On the contrary, it seems that by applying the tools of graded systems, the difficulties associated with the use of partial isometries usually
+accompanying the irreversible
+dynamical systems can be avoided.
+
+In the present paper we prefer consider the main object as an involutive semigroup structured in a special way.
+
+Although almost all definitions are available in general case the main result is formulated for Abelian groups. We mention in text when this restriction is necessary.
+
+The paper is arranged as follows.\\
+In the first section preliminary definitions and facts are provided. The  next section is  devoted to the modular structure on the graded systems under consideration since their main properties are based just on it and on the natural action of the dual group in the Abelian case. In the third section we consider the modular   representations and associated algebras in a suitable Hilbert module.
+In  the last section a theorem describing the reduced C$^*$-algebra as  an algebra of continuous  functions on the dual group is presented.
+We consider the work as an our first step in studying semigroup dynamical systems in pursuit to replace partial actions on a given C$^*$-algebra by the actions
+of a suitable group on a modifying algebra equipped with complementary relations which should accumulate some problems arising in similar situations.
+In a certain part, we follow the contours of the paper \cite{AG}, which was introductory in nature, with some abbreviations, new details, explanations and corrections.
+We exclude from consideration the important concept of graded C$^*$-algebra and, accordingly, do not touch the connection between graded systems and algebras
+connected with semigroup systems.
+
+\section{Definitions and elementary properties.}
+
+Let  $\Gamma$  be a discrete group (say, with the unit   $e$), and   $\mathfrak A$    a multiplicative semigroup with zero. We will say that
+ $\mathfrak A$  is   {\em $\Gamma$-equipped} with a system   $\mathfrak A_\Gamma  = \{\mathfrak A_\gamma, \gamma\in\Gamma\}$   of subsets of  $\mathfrak A$  if
+
+\medskip(i) $\mathfrak A_\gamma$  is a Banach space for each  $\gamma\in\Gamma$,
+
+\medskip(ii) $\cup_{\gamma\in\Gamma}{\mathfrak A_\gamma} = {\mathfrak A}$,
+
+\medskip(iii) ${\mathfrak A}_\alpha\cap {\mathfrak A}_\beta  =  \{0\}$ for each $\alpha, \beta\in\Gamma, \alpha\neq\beta$.
+
+\begin{definition}\label{graded-system}  A  $\Gamma$-equipped star semigroup \ ${\mathfrak A} = (\Gamma, {\mathfrak A}_\Gamma)$ \ is called {\em $\Gamma$-graded system}
+if the operations of multiplication and involution on the semigroup are consistent with the operations on the Banach {\em spaces} (components of the system), and
+
+\medskip{\em (i)}   $ab\in{\mathfrak A}_{\alpha \beta}$,    for $a\in    {\mathfrak  A}_\alpha,\   b\in {\mathfrak   A}_\beta,$
+
+\medskip {\em (ii)}
+  $a^*\in {\mathfrak A}_{\gamma^{-1}}$,  for  $a \in {\mathfrak   A}_\gamma$,
+
+\medskip {\em (iii)}
+$\|ab\|\leq \| a \|\|b\|$,\  for\   $a\in  {\mathfrak A}_\alpha, \ \ b\in{\mathfrak A}_\beta,$
+
+\medskip {\em (iv)} $\| a^*a \| =  \| a \|^2 = \| a^*\|^2$,\ \  for\ \  $a\in\mathfrak A_\gamma$.
+\end{definition}
+
+\noindent Obviously, the  {\em central}  algebra\ \ $A = \mathfrak A_e$\ \ is a C$^*$-algebra as well as an involutive subsemigroup of the semigroup $\mathfrak A$.
+\begin{remark}
+    We suppose almost everywere that the initial semigroup is unital. The reader himself will understand when such an assuming does not work (e.g. when the considering system is an ideal).
+\end{remark}
+\begin{definition} We say that a \ $\Gamma$-graded system \ $\mathfrak B = (\Gamma,\mathfrak B_ \Gamma)$ \ is a  {\em subsystem} of  the \ $\Gamma$-graded system $\mathfrak A = (\Gamma,\mathfrak A_ \Gamma)$ \ if \  $\mathfrak B$ \ is a \ *-subsemigroup of \  $\mathfrak A$,  and for each $\gamma\in\Gamma$  the Banach space \ $\mathfrak B_\gamma$ \ is a subspace of the Banach space \ $\mathfrak A_\gamma$.\\
+A \ $\Gamma$-graded  subsystem  $\mathfrak I =(\Gamma, \mathfrak I_\Gamma)$\ is called an {\em ideal} (two-sided) of the system \ $\mathfrak A = (\Gamma, \mathfrak A_\Gamma)$ \ if it is an involutive (two-sided) ideal  of the semigroup \ $\mathfrak A$.
+\end{definition}
+\noindent Thus, the central algebras \ \  $B = \mathfrak B_e$ \ \  and $I = \mathfrak I_e$ \ \  are, respectively, a \ \ C$^*$-subalgebra and an ideal of the central  C$^*$-algebra $A$.
+When $\mathfrak I$ is an ideal of the draded system $\mathfrak A$, a standard equivalence relation can be defined on $\mathfrak A$ in the following way: elements $a$ and $b$  are equivalent, $a\sim b$   if they are from the same $\mathfrak A_\gamma$, and $a - b\in \mathfrak I_\gamma$.
+
+\begin{proposition} The equivalence relation $\sim$ is a *-congruence.
+\end{proposition}
+\begin{proof} Let $a\sim b$, with $a, b\in\mathfrak \mathfrak A_\alpha$, and  $u\sim v,\ \  u, v\in \mathfrak  A_\beta$.  Then, both  $au$  and  $bv$  are  from $\mathfrak  A_{\alpha\beta}$,  so
+$$au - bv  = a (u - v)  +  (a - b) v\in\mathfrak I_{\alpha\beta},$$
+and
+$$a^* - b^* =  (a - b)^*\in\mathfrak I_{\alpha^{-1}}$$
+which means  $au\sim bv$,  and  $a^*\sim  b^*$.
+\end{proof}
+\noindent The corresponding quotient semigroup \ \  $\mathfrak A/\mathfrak I$, \   defined in the standard way presents a \ $\Gamma$-graded system   composed of the quotient spaces \ \ $\mathfrak A_\gamma/\mathfrak I_\gamma, \ \  \gamma\in\Gamma$.
+
+\medskip\noindent  As a morphism of a graded system $\mathfrak A=(\Gamma, \mathfrak A_\Gamma)$  into another graded system  $\mathfrak B=(\Delta, \mathfrak A_\Delta)$ we understand the pair $\Phi = (\rho, \varphi)$, where $\rho:\Gamma\rightarrow \Delta$  is a group homomorphism, and  $\varphi: \mathfrak A \rightarrow \mathfrak B$  is   a *-morphism of the semigroup $\mathfrak A$ into the semigroup  $\mathfrak B$ such that  $\varphi (\mathfrak A_\gamma)\subset    \mathfrak A_{\rho(\gamma)}$  for each $\gamma\in \Gamma$, and the restriction of $\varphi$  on each  $\mathfrak A_\gamma$ is linear.
+
+\begin{proposition}\label{cont-morphism}
+Let \ $\Phi$ \ be a morphism $\Phi=(\rho, \varphi):\mathfrak A\rightarrow \mathfrak B$  of graded systems. Then the morphism \ $\varphi$ \ does not increase the norm:
+$$\|\varphi(a)\|\leq \|a\|
+$$
+for any\ \  $a\in A_\gamma,\ \gamma\in \Gamma$.
+\end{proposition}
+\begin{proof}
+Let $a\in A_\gamma$. Then, by the condition  (iv) of Definition \ref{graded-system}
+$$\|\varphi(a)\|^2 = \|\varphi(a)^*\varphi(a)\| = \|\varphi(a^*a)\|\leq \|a^*a\| = \|a\|^2.$$
+\end{proof}
+\noindent Two graded systems are called {\em isomorphic} if the mappings  $\rho$   and $\varphi$ are bijective. The group of automorphisms of a graded system $\mathfrak A$ is denoted by Aut($\mathfrak A$).
+The standard action of the dual group of the group $\Gamma$ on the $\Gamma$-graded system can be characterized as follows.
+\begin{proposition}
+    Let\ $\mathfrak A$\  be  a\  $\Gamma$-graded system with Abelian\ $\Gamma$,\ and\ $G=\widehat\Gamma$\  be the dual group of the group\ $\Gamma$.  Then for any\ $g\in G$\ the pair\  $\Phi_g = ({\bf id}, \tau(g))$,\ where\ ${\bf id}$\ is the identity map, and\ $\tau(g)(a)=g(\gamma)a$\  (for\ $a\in\mathfrak A_\gamma$) is an automorphism of the system\ $\mathfrak A$.\  Moreover, the map\ $\tau: G\rightarrow \rm{Aut}(\mathfrak A)$\ is a faithful representation of the group\ $G$\  into the automorphism group of  of\ $\mathfrak A$.
+\end{proposition}
+\begin{proof}
+ For\ $g\in G, a\in\mathfrak   A_\alpha$, and\ $b\in\mathfrak A_\beta$\ we have
+ $$
+ \tau(g)(ab)=g(\alpha\beta)ab=g(\alpha)g(\beta)ab=\tau(g)(a)\tau(g)(b).$$
+  For\  $g\in G, a\in\mathfrak   A_\alpha$,
+ $$
+ \tau(g)(a^*)=g(\alpha^{-1})a^*=\overline{g(\alpha)}a^*=(\tau(g)(a))^*.$$
+  Evidently, $\tau(g)$\  is linear on each\ $\mathfrak A_\gamma$. Thus,\ $\Phi_g\in\rm{Aut}(\mathfrak A)$.\\
+ Now, let\ $g,h\in G$\ and\ $a\in\mathfrak  A_\gamma$. Then
+  $$
+  \tau(gh)(a)=(gh)(\gamma)a=g(\gamma)h(\gamma)a=\tau(g)\tau(h)(a).$$
+ Let\ $\tau(g)=\tau(h)$. Then\ $g(\gamma)a=h(\gamma)a$\ for all\ $a\in\mathfrak  A_\gamma$\  and\ $\gamma\in\Gamma$,  which means that\ $g=h$.\end{proof}
+
+\begin{remark} Each ideal of a\ $\Gamma$-graded system is invariant under the standard action of the dual group.
+\end{remark}
+
+\section{Modules.}
+Let  $\mathfrak A$  be a graded system, and $B$ be a  C$^*$-algebra. We consider  a notion of $B$-module graded system limiting ourselves to bimodules.
+
+\begin{definition}
+Let  $\mathfrak A = (\Gamma, \mathfrak A_\Gamma)$ be a $\Gamma$-graded system, $B$  be a C$^*$-algebra. We say the system $\mathfrak A$ is a $B$-module, if each $\mathfrak A_\gamma$  is a  $B$-module and the following consistency conditions satisfy  (modular multiplication is denoted as\ \ $\cdot$)
+
+\medskip (i) $(b\cdot\xi)\eta=b\cdot(\xi\eta), \ \ (\xi\cdot b)\eta=\xi(b\cdot\eta)$
+
+\medskip (ii)
+$(b\cdot\xi)\cdot a=b\cdot(\xi\cdot a), \ \ (\xi\cdot b)\cdot a=\xi\cdot (ba)$
+
+
+
+ \medskip (iii)  $(b\cdot\xi)^*=\xi^*\cdot b^*, \ \ (\xi\cdot b)^*=b^*\cdot \xi^*$
+
+\medskip
+\noindent  for $a,b\in B, \  \xi\in\mathfrak  A_\alpha, \  \eta\in A_\beta$.
+
+\end{definition}
+
+\noindent The following four conditions follow immediately from the previous ones and complete all the possibilities with them.
+
+\medskip (iv) $\xi(\eta\cdot b)=(\xi\eta)\cdot b, \ \ \ \xi(b\cdot\eta)=(\xi \cdot b)\eta$
+
+\medskip (v)
+$a\cdot(\xi\cdot b)=(b\cdot\xi)\cdot a, \ \ \  a\cdot (b\cdot\xi)=(ab)\cdot\xi$.
+
+\medskip
+\medskip
+\noindent Graded systems have the standard modular structure.
+
+\begin{proposition}\label{module}  Let  $\mathfrak A = (\Gamma, \mathfrak A_\Gamma)$ be a $\Gamma$-graded system  with the central algebra $A$. Then each $\mathfrak A_\gamma, \ \gamma\in\Gamma Γ$  is  an A-module (more precisely, bimodule) with respect the operations
+    $$a\cdot\xi=a\xi, \ \ \xi\cdot a=\xi a,
+    $$
+for $a\in A,\ \ \xi\in A_\gamma$. Moreover, the system  $\mathfrak A$ is also an $A$-module.
+\end{proposition}
+\begin{proof}
+We omit routine calculations.
+\end{proof}
+
+\noindent The following proposition introduces the structure of  Hilbert  $A$-module on each  $A_\gamma, \ \gamma\in \Gamma$.
+
+\begin{proposition} The space $A_\gamma$ with the inner product
+\begin{equation}
+\label{Hilbert-module}
+< \xi,\ \eta >\ =\ \eta^*\xi,\ \ \ \xi, \eta\in A_\gamma,
+\end{equation}
+is a (right) Hilbert $A$-module  (denoted as  $\mathcal H_\gamma)$.
+\end{proposition}
+\begin{proof}
+We give only a few obvious relations
+
+\medskip $<\xi\cdot a,\ \eta >\
+=\ <\xi,\ \eta >a$,
+
+\medskip $<\xi,\  \eta\cdot a >\
+=\ a^* <\xi, \eta >$,
+
+\medskip $<\xi,\ \xi>\ =\ \|\xi\|^2$.
+\end{proof}
+
+\noindent Then, a right Hilbert  $A$-module  $\mathcal H(\mathfrak A)$  can be associated to the  $\Gamma$-graded system $\mathfrak A$ as a direct sum of the Hilbert modules on the fibers.\\
+The inner product in $\mathcal H(\mathfrak A)$ is determined as
+\begin{equation}\label{inner-product}
+< \xi,\ \eta >\ =\ \sum\limits_{\gamma\in\Gamma}\ \eta^*_\gamma\, \xi_\gamma,
+\end{equation}
+for $\xi,\ \eta\in\mathfrak A_\Gamma,\  \xi=\{\xi_\gamma\},\ \eta =\{\eta_\gamma\}$.
+
+\begin{remark} Remind that a system $\xi\in\mathfrak A_\Gamma$   belongs to the Hilbert module $\mathcal H(\mathfrak A)$ if the series $\sum\xi^*_\gamma\, \xi_\gamma$  is convergent in $A$. It certainly holds if the series $\sum\|\xi_\gamma\|^2$  converges.\\
+Denote $|\xi_\gamma| = (\xi^*_\gamma\xi_\gamma)^{\frac 12}$\  for\ $\xi = \{\xi_\gamma\}\in\mathfrak A_\Gamma$. Then $\xi\in \mathcal H(\mathfrak A)$ means that the series $\sum|\, \xi_\gamma |^2$  is convergent, and so the Hilbert module $\mathcal H(\mathfrak A)$ associated to a $\Gamma$-graded system $\mathfrak A$  may be considered as a non-commutative $l^2(\mathfrak A)$.
+\end{remark}
+
+\section{Representations.}
+We consider group graded systems as something like a  covariant system. From this viewpoint, the following concept is a continuation of this analogy.
+
+\begin{definition}
+Let $\mathfrak A = (\Gamma, \mathfrak A_\Gamma)$  be a $\Gamma$-graded system, and  $H$  be a Hilbert space. We call a $^*$-representation $\pi$ of the semigroup $\mathfrak A$   in  $H$  a  representation of  the $\Gamma$-graded system $\mathfrak A$  if it is linear on each $\mathfrak A_\gamma, \gamma\in\Gamma$.
+\end{definition}
+
+\noindent Obviously, the restriction of the representation   onto the central algebra is a representation of the central C$^*$-algebra $A$. It is easy to verify that the kernel of any representation of a graded system is an ideal.
+The following fact is an immediate consequence of the Proposition \ref{cont-morphism}.
+
+\begin{proposition}\label{cont-Repr}
+Each representation   of a $\Gamma$-graded system $\mathfrak A$  satisfies the inequality
+\begin{equation}\label{cont-repr}
+\| \pi(a) \| \leq \| a \|
+\end{equation}
+for $a\in\mathfrak A$. The  representation $\pi$  is faithful if and only if  $\| \pi(a) \| = \| a \|$.
+\end{proposition}
+
+\noindent
+The uniformly closed involutive algebra C$^*(\mathfrak A, \pi)$ generated by  $\pi(\mathfrak A)$ in $\mathcal B(H)$ we call the             C$^*$-algebra  $\pi$-associated to the graded system $\mathcal A$.
+
+\smallskip\noindent For any Hilbert  $B$-module $\mathcal H$  we denote by  $\mathcal L(\mathcal H)$  the algebra of all adjointable bounded  $B$-linear operators on $\mathcal H$.
+
+\begin{definition}
+    Let\  $\mathfrak A = (\Gamma, \mathfrak A_\gamma)$\ be a $\Gamma$-graded $B$-module, and $\mathcal H$  be a (right) Hilbert $B$-module. A $^*$-representation $\Pi$ of the semigroup  $\mathfrak A$  in  the algebra $\mathcal L(\mathcal H)$  is called  $B$-representation of the system $\mathfrak A$ if it is a   $B$-modular mapping on each space $\mathfrak A_\gamma,\ \gamma\in\Gamma Γ$.
+\end{definition}
+
+\noindent The uniformly closed involutive algebra  C$^*(\mathfrak A,\ \Pi)$  generated by  $\Pi(\mathfrak A)$  in  $\mathcal L(\mathcal H)$  is called the
+C$^*$-algebra  $\Pi$-associated to the graded system $\mathfrak A$.\\
+Now we introduce a canonical $A$-representation of a graded system $\mathfrak A$ in the associated Hilbert module  $\mathcal H(\mathfrak A)$.
+
+\begin{theorem}\label{representation}
+The mapping specified on generators as
+\begin{equation}\label{resentation}\Pi_r(a)\xi = a\cdot  \xi\end{equation}
+for  $a, \xi\in \mathfrak A$,\
+determines a faithful A-representation of the system $\mathfrak A$  in the associated Hilbert A-module $\mathcal H(\mathfrak A)$.
+\end{theorem}
+\begin{proof}  It is easy to verify that $\Pi_r$ is a representation of the system $\mathfrak A$, and then $\|\Pi_r (a)\| \leq \| a \|$  by Proposition \ref{cont-Repr}. Let us show that it is faithful. For any $a\in A_\gamma,\ a \neq 0$ we have by (iv) of Definition \ref{graded-system}
+    $$\|\Pi_r \| \geq   \| a^* \|^{-1} \| \Pi_r (a)(a^*) \| = \| a \|^{-1} \| a a^* \| =  \| a \|^{-1} \| a \|^2 = \| a \|.
+$$
+\end{proof}
+
+\begin{definition}
+    The representation  $\Pi_r$   introduced via {\em Theorem \ref{representation}} is called (left) regular representation of the graded system $\mathfrak A$.
+\end{definition}
+
+\noindent The last result shows that a graded system can be realized as an operator system.
+Let us denote by C$^*_r(\mathfrak A)$ the uniformly closed subalgebra in $\mathcal L(\mathcal H(\mathfrak A))$  generated by the image of the regular representation of a graded system $\mathfrak A$.
+Thus, a covariant functor could be defined from the category of graded systems (with above mentioned morphisms) to the category of C$^*$-algebras with $^*$-homomorphisms as morphisms.
+
+
+\section{Functional description.}
+Now we are ready to present a description of the C$^*$-algebra associated with a graded system as the  algebra of $\mathfrak A$-valued mappings on the compactum $G= \widehat\Gamma$, the dual group to the group $\Gamma$.\\
+For each  $a\in\mathfrak  A_\gamma,\ \gamma\in\Gamma$,\  let a continuous function $\hat a$ on $G$ be defined as
+\begin{equation}
+\hat a(g) = \gamma(g)a,
+\end{equation}
+and let  $\widehat{\mathfrak A}_\gamma = \{\hat a: a\in\mathfrak A_\gamma\}, \  \gamma\in\Gamma Γ$.  Denote also  $\widehat{\mathfrak{A}}=\bigcup\limits_{\gamma\in\Gamma} \widehat{\mathfrak A}_\gamma$.
+
+\begin{theorem}
+    The system $\widehat{\mathfrak{A}}$ is a $\Gamma$-graded system isomorphic to the system $\mathfrak{A}$, and then the associated reduced C$^*$-algebras C$^*_r(\widehat{\mathfrak{A}})$ and C$^*_r(\mathfrak{A})$
+are isomorphic.
+\end{theorem}
+\begin{proof}
+    Obviously, $\widehat{\mathfrak{A}}$ is an involutive subsemigroup of $C(G, \mathfrak  A)$. Each $\widehat{\mathfrak{A}}_\gamma$ is a Banach space in sup-norm, a subspace of $C(G, \mathfrak A)$. By virtue of  Proposition~\ref{module} the only common element of these spaces is the zero function. Then  $\widehat{\mathfrak{A}}$ is a  $\Gamma$-equipped system.\\
+    For $a\in\mathfrak A_\alpha$ and $b\in\mathfrak A_\beta$    we have
+$$\hat a\hat b(g)=\hat a(g)\hat b(g) =\alpha(g)a\beta(g)b=(\alpha\beta)(g)ab = \widehat{ab}(g)$$
+and
+$$
+    (\hat a)^*(g) = (\alpha(g)a)^* = \overline{\alpha(g)}a^* = \widehat{a^*}(g).
+    $$
+    Thus, $\widehat{\mathfrak  A}_\alpha\widehat{\mathfrak  A}_\beta\subset \widehat{\mathfrak  A}_{\alpha\beta}$, and  $\widehat{\mathfrak A^*}_\alpha\subset \widehat{\mathfrak A}_{\alpha^{-1}}$     which means that the first two conditions of Definition \ref{graded-system} are satisfied. The conditions (iii) and (iv) of the definition are evident since $C(G, \mathfrak A)$ is a  C$^*$-algebra.\\   Again by Proposition \ref{module}  we obtain that the mapping  $a\rightarrow \hat a$  is a bijection  which means
+    that the $\Gamma$-graded systems $\mathfrak A$ and $\widehat{\mathfrak{A}}$  are isomorphic.
+\end{proof}
+
+
+
+\begin{thebibliography}{20}
+        \bibitem{A} V.~Arzumanian,  ``Operator algebras associated with polymorphisms,'' J. of Math. Sci. \textbf{140} (1), 354--356 (2007).
+
+    \bibitem{AG} V.~Arzumanian, S.~Grigoryan,  ``Group-graded Systems and Algebras,'' J. of Math. Sci. \textbf{216} (1), 1--7 (2016).
+
+    \bibitem{AR} V.~Arzumanian, J.~Renault,   ``Examples of pseudogroups and their C$^*$-algebras,''
+    in Operator algebras and quantum field theory (Rome, 1996), International Press, Cambridge, MA, 93--104 (1997).
+
+    \bibitem{BE} A.~ Buss, R.~Exel,  ``Fell bundles over inverse semigroups and twisted etale groupoids,''  J. of Operator Theory   \textbf{67}, 153--205 (2012).
+    \bibitem{CV} J.~ Cuntz, A.~Vershik,   ``C$^*$-algebras Associated with Endomorphisms and Polymorphisms of Compact Abelian Groups,''
+    Commun. Math. Phys. \textbf{321}, 157--179 (2013).
+
+    \bibitem{E1} R.~Exel, ``Interactions,'' J. Funct. Analysis \textbf{244}, 26--62 (2007).
+
+        \bibitem{ER} R.~Exel, J.~Renault, ``Semigroups of local homeomorphisms and
+        interaction groups,'' Ergodic Theory Dynam. Systems, \textbf{27}, 1737--1771 (2007).
+
+        \bibitem{E} R.~Exel, ``Partial Dynamical Systems, Fell Bundles and Applications,'' URL: http://mtm.ufsc.br/exel/papers/pdynsysfellbun.pdf
+
+    \bibitem{GK}
+    S.~Grigoryan, A.~Kuznetsova, ``C$^{*}$-algebras generated by mappings,''
+    Lobachevskii J. of Math. \textbf{29}(1), 5--8 (2008).
+
+    \bibitem{SV}
+    K.~Schmidt, A.~Vershik, ``Algebraic polymorphisms,''  ErgodicTheory and Dynamical Systems, \textbf{28}(2), 633--642 (2008).
+
+    \bibitem{L2} X.~Li, ``Semigroup {\rm C}$^*$-algebras,'' URL: https://arxiv.org/pdf/1707.05940.pdf.
+
+\end{thebibliography}
+
+
+\end{document}

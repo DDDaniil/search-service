@@ -1,0 +1,670 @@
+%%
+%% ****** ljmsamp.tex 13.06.2018 ******
+%%
+\documentclass[
+11pt,%
+tightenlines,%
+twoside,%
+onecolumn,%
+nofloats,%
+nobibnotes,%
+nofootinbib,%
+superscriptaddress,%
+noshowpacs,%
+centertags]%
+{revtex4}
+\usepackage{ljm}
+\newtheorem{example}{Example}
+
+\begin{document}
+\titlerunning{$T_0$ - Closure Operators and Pre-Orders}
+\authorrunning{B. Venkateswarlu and  U. M. Swamy}
+
+\title{$T_0$ - Closure Operators and Pre-Orders}
+
+\author{\firstname{B.}~\surname{Venkateswarlu}}
+\email[E-mail: ]{  bvlmaths@gmail.com }% (Corresponding author) }
+\affiliation{Department of Mathematics, GITAM University,  Benguluru
+Rural -- 561 203, Karnatka, India.}
+\author{\firstname{U. M.}~\surname{Swamy}}
+\email[E-mail: ]{umswamy@yahoo.com} \affiliation{ Department of
+Mathematics, Andhra University; Visakhapatnam -- 530 003, A.P.,
+India.}
+
+\firstcollaboration{(Submitted by E. K. Lipachev)}
+
+\received{June 06, 2017}
+
+
+\begin{abstract}
+It is well known that the lattice of closed  subsets of any
+topological space is isomorphic to that of a $T_0$-topological
+space.  This result is extended to lattices of closed subsets with
+respect to arbitrary closure operator on a set. Also, we establish a
+one-to-one correspondence between  closure operators which are both
+algebraic and topological on a given set $X$  and pre-orders on $X$
+and prove that this correspondence induces a one-to-one
+correspondence between  topological algebraic $T_0$-closure
+operators on $X$  and partial orders on $X.$
+\end{abstract}
+\subclass{06A15,06F30, 54H12.}
+\keywords{closure operator, Moore
+class,  algebraic lattice, $T_0$-closure operator, pre-order. }
+
+\maketitle
+
+\section{Introduction and Preliminaries}
+
+A partially ordered set (poset) is a pair $(X, \leq)$,  where $X$ is
+a non empty set and $\leq$ is a partial order (a reflexive,
+transitive and antisymmetric binary relation) on $X.$ For any subset
+$A$ of $X$ and $x \in X, ~ x$ is called a lower bound (upper bound)
+of $A$ if $x \leq a~ ( a \leq x $ respectively) for all $a \in A. $
+A poset $(X, \leq )$ is called  a lattice if every nonempty finite
+subset of $X$ has greatest lower bound (or glb or infimum) and least
+upper bound (or lub or supremum) in $X.$ If $( X, \leq ) $ is a
+lattice and, for any $a, b \in X,$ if we define $a \wedge b =$
+infimum $ \{ a, b \}$ and $ a \vee b =$ supremum $\{a, b \},$ then
+$\wedge$ and $\vee$ are binary operations on $X$ which are
+commutative, associative and idempotent and satisfy the absorption
+laws $ a \wedge ( a \vee b ) = a =  a \vee ( a \wedge b ). $
+Conversely, any algebraic system $ ( X, \wedge , \vee )$ satisfying
+the above properties becomes a lattice in which the partial order is
+defined by $a \leq b \Longleftrightarrow a = a \wedge b
+\Longleftrightarrow a \vee b = b.$ A lattice $( X, \wedge, \vee)$ is
+called distributive if $a \wedge (b \vee c) = (a \wedge b) \vee (a
+\wedge c)$ for all $a, b, c \in X$ (equivalently $a \vee ( b \wedge
+c) = ( a \vee b ) \wedge ( a \vee c)$ for all $a,b,c \in X).$ A
+lattice  $(X, \wedge, \vee)$ is called a bounded lattice if it has
+the smallest element $0$ and largest element  $1;$ that is, there
+are elements $0$ and $1$ in $X,$ such that $0 \leq x \leq 1$ for all
+$x \in X.$
+
+
+A partially ordered set in which every subset has  infimum and
+supremum is called a complete lattice. If $(L, \leq)$ is a complete
+lattice
+ and $X \subseteq L,$ we write $\inf X$ or $\wedge X$
+ or $\bigwedge  \limits_{x \in X} x$ for the infimum of $X$  and sup $X$ or $\vee X$ or
+  $\bigvee \limits_{x \in X} x$ for the supremum
+  of $X.$ If $ X =  \{ x_1, x_2, \cdots , x_n \}$ is a finite subset,
+   then we write $\bigwedge \limits_{i = 1} ^{n}  x_i$ or $x_1 \wedge x_2 \wedge  \cdots \wedge x_n$
+   for $\inf X$ and $\bigvee \limits _{i = 1} ^{n} x_i$
+   or $x_1 \vee x_2 \vee \cdots \vee x_n$ for $\sup X.$ Any complete lattice has the smallest element
+    and the greatest element which are denoted by $0$ and $1$ respectively. Logically, the infimum
+    and supremum of the empty set are $1$ and $0$ respectively.
+    An element $a \neq 0$ in a complete lattice $L$ is called compact if, for any
+    $A \subseteq L,~ a \leq \sup A \Longrightarrow a \leq \sup F$ for some finite $F \subseteq A.$
+    A complete lattice in which every element is the supremum of a set of compact elements is called
+    an algebraic lattice.
+
+
+It is well known that any class of subsets of a set $X$ which is
+closed under arbitrary intersections and finite unions  gives a
+topology on $X$ with respect to which the members of the class are
+precisely closed sets. In other words, a Moore class on $X$ which is
+closed under finite unions is precisely the class of closed subsets
+of $X$ with respect to a  topology on $X.$ Such Moore classes can be
+named as topological Moore classes. Also, a closure  operator $c$ on
+a set $X$ satisfying the additional properties $c(\phi)~=~\phi$ and
+$c(A \cup B)~=~c(A) \cup c(B)$ induces a topology on $X$ with
+respect which $c(A)$ is the closure of $A,$  for any subset $A$ of
+$X.$ For this reason, such closure operators can be called as
+topological closure operators. Further the class of closed subsets
+of a topological space forms a complete lattice. For elementary
+properties of  posets, lattices and topological spaces  we refer to
+\cite{ 1, 2, 3, 4, 5}.
+
+
+\section{$T_0$-Closure operators}\label{sec:ch4sec3}
+It is proved in  \cite{6} that the lattice of closed subsets  of any
+topological space is isomorphic to that of a $T_0$-topological
+space. In this section, we extend this to any given closure operator
+on a given set. First, let us recall that an
+ extensive, idempotent and inclusion preserving mapping of the
+  power set $\mathscr{P}(X)$  into itself is called a closure operator on a set $X.$
+
+\begin{definition}
+\label{ch4sec3:def1} Let $c$ be a closure operator on a set $X.$ For
+any $x \in X,$  we write $c(x)$ for $c(\{x\});~c$  is called a
+$T_0$-closure operator on $X$ if, for any elements $x$ and $y$ in
+$X,$  $c(x)~=~c(y) \Longrightarrow x = y.$
+\end{definition}
+
+\begin{example}
+\label{ch4sec3:ex2} Recall that a topological space $X$ is called a
+$T_0$-space if,  for any $x \neq y \in X,$ there exists an open set
+containing $x$ and not containing $y$ or vice-versa. It can be
+easily proved that a topological space $X$ is a $T_0$-space if and
+only if, for any $x,y \in X,$ $\overline{x}=\overline{y}
+\Longrightarrow x = y $ and therefore the topological closure
+operator $c$ defined by $c(A)=\overline{A}, $ the closure of A is a
+$T_0$-closure operator on $X.$
+\end{example}
+
+In the following, we prove that, for any  closure operator $c$ on a
+set $X,$ there exists a $T_0$-closure operator $\overline{c}$
+defined on a suitable set $Y$ such that the Moore classes
+$\mathscr{M}_c$ and $\mathscr{M}_{\overline{c}}$ are isomorphic,
+where
+$$\mathscr{M}_c ~=~ \{ A \subseteq X \mid c(A)=A \}.$$ First we have the following.
+
+\begin{definition}
+\label{ch4sec3:def3} Let $c$ be a closure operator on a set $X.$
+Define a relation $\theta_c$ on $X$ by $\theta_c = \{ (x,y) \in X
+\times X \mid c(x) =  c(y) \}.$ Then $\theta _c$ is an equivalence
+relation on $X.$ Let us consider the quotient set $X_c = \{ \theta _
+c (x) \mid x \in X \},$ where $\theta_{c} (x)$  is the equivalence
+class containing $x;$ that is, $\theta_c (x) = \{ y \in X  \mid c(x)
+=  c(y) \}.$ Let $p_c : X \longrightarrow X_c$ be the natural map
+defined by $p_c (x) = \theta _c (x)$ for all $x \in X.$  clearly
+$p_c$ is a surjection.
+\end{definition}
+
+\begin{definition}
+\label{ch4sec3:def4} Let $X_c$ be the set constructed above,
+corresponding to a given  closure operator $c$ on a set $X.$ Define
+$$
+\overline{c}: \mathscr{P}(X_c) \longrightarrow  \mathscr{P}(X_c)
+~\text{by}~ \overline{c}(A) = p_c (c(p_{c}^{-1}(A))) = \{ \theta_c (x) \mid x \in c(p_{c}^{-1}(A)) \}
+$$  for any $A \subseteq X_c,$  where
+$p_c : X \longrightarrow X_c$ is the natural map.
+\end{definition}
+
+\begin{theorem}
+\label{ch4sec3:thm5}
+For any closure operator $c$ on a set $X,~\overline{c}$ is a $T_0$-closure operator on $X_c.$
+\end{theorem}
+\begin{proof}
+First we observe the following:
+$$p_{c} ^{-1} ( p_c (c(Y)))~=~c(Y) \quad~\text{for all }~ \quad Y \subseteq X. \eqno{(1)}
+$$
+Clearly $Z \subseteq p_{c} ^{-1} ( p_c ( Z ) ) $ for all $Z \subseteq X.$ Now, let $Y \subseteq X.$ Then
+$$%\begin{align*}
+x \in p_{c} ^{-1} ( p_c (c ( Y ) ) )  \Longrightarrow p_c (x) = p_c
+(a) ~ \text{ for some}~ a \in c(Y)
+$$
+$$
+ \Longrightarrow \theta_c (x) = \theta_c (a) ,~~ a \in c(Y)
+ \Longrightarrow x \in c(x) = c(a) \subseteq c(c(Y)) = c(Y).
+$$
+%\end{align*}
+Thus $ p_{c} ^{-1} ( p_c (c(Y))) = c(Y) $ and hence (1) is proved.
+
+Now, let $A \subseteq X_c.$ Then, since $p_c$ is a surjection,
+$
+A = p_c(p_{c}^{-1} (A)) \subseteq p_c(c(p_{c}^{-1} (A))) = \overline{c}(A).
+$
+Therefore, $\overline{c}$ is extensive. Also,
+$$
+\overline{c}(\overline{c}(A))~&=~p_c c p_{c}^{-1}( p_c(c(p_{c}^{-1} (A))))
+ = p_c c (c(p_{c}^{-1} (A))) ~~( \text{by}~ (1)~)
+= p_c(c(p_{c}^{-1} (A))) ~
+ = \overline{c}(A).
+$$
+Therefore $\overline{c}$ is idempotent. Finally, let $A \subseteq B
+\subseteq X_c.$ Then
+$$\overline{c}(A) = p_c(c(p_{c}^{-1} (A))) \subseteq p_c(c(p_{c}^{-1} (B))) = \overline{c}(B).$$
+Therefore $\overline{c}$ is inclusion preserving. Thus $\overline{c}$ is a closure operator on $X_c$.
+
+To prove that $\overline{c}$ is a $T_0$-closure operator on $X_c,$ first let us prove that
+$c(\theta_c (x))= c(x)~
+\text{for any}~ x \in X.$
+Since $x \in \theta_c (x),$ we clearly have $c(x) \subseteq c( \theta_c (x)).$
+Also, $z \in \theta_c (x)  \Longrightarrow (x,z) \in \theta_c
+ \Longrightarrow c(z) = c(x)
+ \Longrightarrow z \in c(x)
+$
+and hence $\theta_c (x) \subseteq c(x),$ so that $c(\theta_c (x)) \subseteq c(x).$ Therefore, we get that
+$$
+c(\theta_c (x)) = c(x) \quad ~ \text{for all }~ \quad x \in X.
+\eqno{(2)}
+$$
+Also, for any $x$ and $y \in X,$
+$$
+y \in p_{c} ^{-1} ( \theta_c (x))  \Longleftrightarrow p_c(y) = \theta_c (x)
+ \Longleftrightarrow \theta_c (y) = \theta_c (x)
+ \Longleftrightarrow y \in \theta_c (x).
+$$
+Thus,
+$$
+p_{c} ^{-1} ( \theta_c (x)) = \theta_c (x) ~\text{for all }~ x \in X. \eqno{(3)}
+$$
+Note here that, on the left of (3), $\theta_c (x)$ is treated  as an
+element of $X_c$  and on the right $\theta_c (x)$ is treated as a
+subset of $X.$
+
+Now, for any $\theta_c (x)$ and $\theta_c (y) \in X_c,$  where $x$ and $y \in X,$
+$$
+ \overline{c}( \theta_c (x)) ~=~\overline{c}( \theta_c (y))
+ \Longrightarrow p_c(c(p_{c} ^{-1}(\theta_c (x)))) ~=~ p_c(c(p_{c} ^{-1}(\theta_c (y))))
+$$
+$$
+ \Longrightarrow p_c(c(\theta_c (x)))  = p_c(c(\theta_c (y))) ~\text{(by (3)) }
+ \Longrightarrow p_c (c(x)) = p_c(c(y)) ~\text{ (by (2)) }
+$$
+$$
+\Longrightarrow p_{c} ^{-1} ( p_c ( c (x))) = p_{c} ^{-1} ( p_c ( c (y)))
+\Longrightarrow c(x) = c(y)  ~\text{ (by (1)) }  \Longrightarrow (x,y) \in \theta_c
+ \Longrightarrow \theta_c (x) = \theta_c (y).
+$$
+Thus $\overline{c}$ is a $T_0$-closure operator on $X_c$.
+\end{proof}
+
+From  Venkateswarlu et al. \cite{7} that, for any closure operator
+$c$ on a set $X,$ the Moore class corresponding to $c$ is given by $
+\mathscr{M}_c ~=~ \{ A \subseteq X \mid c(A)~=~A \}$ and that $
+\mathscr{M}_c $ is a complete lattice under the inclusion ordering.
+
+\begin{theorem}
+\label{ch4sec3:thm6} Let $c$ be a closure operator on $X$ and
+$\overline{c}$ be the corresponding  $T_0$-closure operator on $X_c
+.$ Then $\mathscr{M}_c \cong \mathscr{M}_{\overline{c}}$ as lattices
+under the inclusion orders.
+\end{theorem}
+
+ \begin{proof}
+We have $\mathscr{M}_c  = \{ Y \subseteq X \mid c(Y) = Y \}$ and $\mathscr{M}_{\overline{c}}
+ = \{ A \subseteq X_c \mid \overline{c}(A) = A \}.$
+Now, define $f: \mathscr{M}_c \longrightarrow
+\mathscr{M}_{\overline{c}}$ by $f(Y) = p_c (Y),$ for any $Y \in
+\mathscr{M}_c$, where $p_c : X \longrightarrow X_c$ is the natural
+map.  First, note that
+$$
+Y \in \mathscr{M}_c  \Longrightarrow c(Y) = Y\Longrightarrow \overline{c}(p_c (Y))
+$$
+$$
+= p_c c p_{c} ^{-1} p_c (Y) = p_c  ~c(Y) ~( \text{by (1)
+in the above Theorem ~\ref{ch4sec3:thm5}} )= p_c (Y)
+\Longrightarrow p_c (Y) \in \mathscr{M}_{\overline{c}}
+$$
+and hence $f$ is well defined and clearly $f$ is order preserving. Now define
+$$
+ g : \mathscr{M}_{\overline{c}}  \longrightarrow \mathscr{M}_c ~ \text{ by } ~
+ g(A)= p_{c} ^{-1} (A)
+ $$
+ for all $A \in \mathscr{M}_{\overline{c}}. $
+ Note that
+$$
+A \in \mathscr{M}_{ \overline{c} } \Longrightarrow A = \overline{c} (A) = p_c (c ( p_{c} ^{-1} (A)))
+$$
+$$
+\Longrightarrow p_{c} ^{-1} (A) = c( p_{c} ^{-1} (A)) ~(\text{by (1) in Theorem \ref{ch4sec3:thm5} } )
+ \Longrightarrow p_{c} ^{-1} (A) \in \mathscr{M}_c.
+$$
+Therefore $g$ is well defined and clearly $g$ is an order preserving
+map. Also, for any $Y \in \mathscr{M}_c,$ $(g\circ f )(Y) = p_{c}
+^{-1} ~p_c (Y)$ $= Y ( \text{by (1) in Theorem \ref{ch4sec3:thm5}})$
+and, for any $A \in \mathscr{M}_{\overline{c}},$ $(f \circ g) (A) =
+p_c ~ p_{c} ^{-1} (A) = A ~~(\text{since }~p_c ~ \text{is a
+surjection}).$ Therefore $f \circ g$ and $g \circ f$ are identities
+on $\mathscr{M}_{\overline{c}}$ and  $\mathscr{M}_c$ respectively
+and hence $f$ and $g$ are order isomorphisms. Thus $\mathscr{M}_c
+\cong \mathscr{M}_{\overline{c}} $.
+\end{proof}
+
+\begin{theorem}
+\label{ch4sec3:thm7} Let $c$ be a closure operator on a set $X$ and
+$\overline{c}$ be  the corresponding $T_0$-closure operator on $X_c
+$. Then $\overline{c}$ is a topological closure operator if and only
+if so is $c.$
+\end{theorem}
+
+\begin{proof}
+Suppose that $\overline{c}$ is topological. Then $\overline{c}(\phi)
+= \phi$  and $\overline{c}( A \cup B ) = \overline{c}(A) \cup
+\overline{c}(B)$ for all subsets $A$ and $B $ of $X_c$. We have
+$\phi = \overline{c} (\phi) = p_c ( c( p_{c} ^{-1} ( \phi ))) = p_c
+( c ( \phi ))$ and therefore $c ( \phi ) = \phi.  $ Next, let $Y, Z
+\subseteq X.$ Clearly we have $c(Y) \cup c(Z) \subseteq c( Y \cup
+Z).$ On the other hand, since $Y \cup Z \subseteq p_{c} ^{-1} (p_c (
+Y \cup Z)),$ we have
+\begin{align*}
+p_c ( c( Y \cup Z )) & \subseteq p_c ~c~p_{c} ^{-1}~( p_c(Y \cup Z))
+ = \overline{c } ( p_c( Y \cup Z))
+ = \overline{c} (p_c (Y) \cup p_c (Z)) \\
+& = \overline{c} (p_c (Y)) \cup \overline{c} (p_c (Z)) ~~(\text{since}~ \overline{c}~ \text{is topological})
+\end{align*}
+and therefore
+$$
+c( Y \cup Z) & \subseteq p_{c} ^{-1} [\overline{c} (p_c (Y))~ \cup~ \overline{c} (p_c (Z))]
+ = p_{c} ^{-1} (\overline{c}~( p_c ~ (Y))) ~ \cup ~p_{c} ^{-1}(\overline{c}~( p_c ~ (Z)))
+$$
+$$
+ = c(p_{c} ^{-1} ~ p_c ~(Y)) ~ \cup ~ c(p_{c} ^{-1} ~ p_c ~(Z)) ~~(\text{by (1) of
+  Theorem \ref{ch4sec3:thm5} } ) \subseteq c(Y) \cup c(Z),
+$$
+ since $p_{c} ^{-1} ~ p_c ~(Y) \subseteq c(Y)$ and $p_{c} ^{-1} ~ p_c ~(Z) \subseteq c(Z). $
+ Therefore $c(Y \cup Z ) = c(Y) \cup c(Z). $ Thus $c$ is a topological closure operator on $X.$
+
+ Conversely, suppose that $c $ is topological. Then
+ $
+\overline{c}(\phi) = p_c( c( p_{c} ^{-1}(\phi))) = p_c (c (\phi)) =
+p_c( \phi) = \phi .$ Let $A $ and $B$ be any subsets of $X_c.$ Since
+each of $p_c, c$ and $p_{c} ^{-1}$ are  union preserving, we have
+\begin{align*}
+\overline{c}( A \cup B ) & = p_{c} ( c ( p_{c} ^{-1}( A \cup B )))
+ = p_{c} [c( p_{c} ^{-1}(A) \cup p_{c} ^{-1}(B))]
+ = p_{c} [c( p_{c} ^{-1}(A)) \cup c( p_{c} ^{-1}(B))] \\
+& = p_{c} [c( p_{c} ^{-1}(A))] \cup p_c [ c (p_{c} ^{-1}(B))]
+ = \overline{c}( A) \cup \overline{c}( B).
+\end{align*}
+Thus $\overline{c}$ is a topological closure operator on $X_c$ .
+\end{proof}
+
+Let us recall that a closure operator $c$ on $X$ is called algebraic
+if $c(Y) = \cup \{ c(F) \mid F \subseteq Y ~\text{and}~ F ~ \text{is finite}~\}$
+for all $Y \subseteq X$.
+
+\begin{theorem}
+\label{ch4sec3:thm8} A closure operator $c$ on a set $X$ is
+algebraic if  and only if the corresponding closure operator
+$\overline{c}$ on $X_c$ is algebraic.
+\end{theorem}
+\begin{proof}
+Suppose that $c$ is algebraic. Let $A \subseteq X_c.$ Then
+$$
+\overline{c}(A) & = p_c (c (p_{c} ^{-1}(A)))
+ = p_{c} \left( \cup \{ c(F) \mid F  \subseteq p_{c} ^{-1}(A) ~\text{and}~ F ~\text{is finite}~ \} \right)
+  = \cup \{ p_{c} ( c(F)) \mid F \subseteq  p_{c} ^{-1}(A), F ~\text{ is finite}\}.
+$$
+Now, let $a \in \overline{c}(A).$ Then $a \in p_c (c (F)),$ for some
+$F = \{ x_1, x_2, \cdots, x_n \} \subseteq p_{c} ^{-1} (A).$ Put $F'
+=   \{ p_c (x_1), p_c (x_2),\cdots , p_c (x_n) \}.$ Then $F'$ is a
+finite subset of $A$ and $a \in p_c ~(c (~p_{c} ^{-1}(F')))
+=\overline{c}(F'). $ Therefore $\overline{c}(A) \subseteq  ~\cup~ \{
+~\overline{c}(F') \mid F' \subseteq A ~\text{and}~ F'~\text{ is
+finite }\}$. The other inclusion is trivial. Thus $\overline{c}$ is
+an algebraic closure operator.
+
+Conversely, suppose that $\overline{c}$ is algebraic. Let $A
+\subseteq X$ and $x \in c(A).$ Then $$ p_c (x) \in p_c (c(A))
+\subseteq p_c (c ( p_{c} ^{-1} ( p_c(A)))),~\text{since}~ A
+\subseteq  p_{c} ^{-1}(p_c(A)) $$
+$$
+ = \overline{c}(p_c (A))
+ = \cup ~\{~ \overline{c}(K) \mid K \subseteq p_c (A), K ~\text{is finite}~\}
+$$
+and hence $p_c(x) \in \overline{c}(K) = p_c ~c~ p_{c} ^{-1}(K)$
+for some finite subset of $K$ of $p_c(A).$
+
+Let $K= \{ p_c (a_1), p_c (a_2),\cdots , p_c (a_n) \},$  where $
+a_1, a_2, \cdots , a_n \in A. $ Put $F= \{ a_1, a_2, \cdots , a_n
+\}.$ Since $p_c (x) \in p_c (c( p_{c} ^{-1}(K))) ,$ we get that $p_c
+(x) = p_c(y)$ for some $y \in p_{c} ^{-1}(K).$ Therefore $\theta_c
+(x) = \theta_c (y)$ and $y \in c~ p_{c} ^{-1}(K) = c(p_{c} ^{-1}(p_c
+(F))) = c(F).$ From this, we get that $c(x) = c(y),~ y \in c(F).$
+Now, $x \in c(x) = c(y) \subseteq c(c(F)) = c(F)$ and $F$ is a
+finite subset of $A.$ Thus $c$ is an algebraic closure operator on
+$X.$
+\end{proof}
+
+The following corollaries are immediate consequences  of Theorems
+\ref{ch4sec3:thm6}, \ref{ch4sec3:thm7}  and \ref{ch4sec3:thm8}.
+
+\begin{corollary}
+\label{ch4sec3:cor9} For any given topological space $X,$ there
+exists a $T_0$-space $Y$ such  that the lattice of closed subsets of
+$X$ is isomorphic to that of $Y.$
+\end{corollary}
+
+\begin{corollary}
+\label{ch4sec3:cor10} For any given algebraic closure operator $c$
+on a set $X,$  there exists  an algebraic $T_0$-closure operator
+$\overline{c}$ on a suitable set $Y$ such that the Moore classes of
+$c$ and $\overline{c}$ are isomorphic to each other.
+\end{corollary}
+
+\section{Pre-orders and Closure operators}\label{ch4:sec4}
+In this section we establish a one-to-one correspondence between
+pre-orders  on a set $X$ and closure operators, which are both
+algebraic and topological, on the set $X$ and prove that this
+induces a one-to-one correspondence between partial orders on $X$
+and topological algebraic $T_0$-closure operators on $X.$ Let us
+begin with the following
+
+\begin{definition}
+\label{ch4sec4:def1} Let $X$ be a non-empty set. A binary relation
+$\theta$ on $X$ is  said to be a pre-order on $X$ if $\theta$ is
+reflexive and transitive.
+\end{definition}
+
+An antisymmetric pre-order on $X$ is called a partial order on $X.$
+As usual, pre-orders or partial orders are denoted by $\leq, ~\geq,
+~ \subseteq$ etc.  We write $a \leq b$ for $(a,b) \in \leq.$
+
+\begin{theorem}
+\label{ch4sec4:thm2} Let $\leq$ be a pre-order on a set $X.$ For any
+$A \subseteq X,$  define $c(A) = \{x \in X \mid x \leq a ~\text{for
+some } a \in A \}.$ Then $c$ is a closure operator on $X$ which is
+both algebraic and topological. Also, $c$ is a $T_0$-closure
+operator on $X$ if and only if $\leq$ is a partial order on $X.$
+\end{theorem}
+\begin{proof}
+Clearly $c: \mathscr{P}(X) \longrightarrow \mathscr{P}(X)$  is a
+mapping and $c(\phi) = \phi.$  Also, for any $A,B \in
+\mathscr{P}(X),$
+\begin{align*}
+A & \subseteq c(A) ,~
+A \subseteq B  \Longrightarrow c(A) \subseteq c(B), ~~
+c(c(A) )  = c(A)\quad
+\text{and}~\quad c(A \cup B)  = c(A) \cup c(B).
+\end{align*}
+Therefore $c$ is a topological closure operator on $X.$ Further
+$c(A) = \bigcup \limits _{a \in A} c( \{a\} )$  for any $A \subseteq X,$
+ and hence $c$ is algebraic also. Thus $c$ is a closure operator on
+$X$ which is both algebraic and topological.
+Next, for any $x$ and $y \in X,$ we have
+$$
+c(x)= c(y) & \Longleftrightarrow c(x) \subseteq c(y) ~\text{and}~ c(y) \subseteq c(x)
+ \Longleftrightarrow x \in c(y) ~\text{and}~  y \in c(x) \Longleftrightarrow x \leq y ~\text{and}~ y \leq x.
+$$
+From this, it follows that $c$ is a $T_0$-closure operator on $X$
+if and only if $\leq$ is antisymmetric also; that is, $\leq$ is a partial order on $X.$
+\end{proof}
+
+The following is a converse of the above  theorem, in the sense that
+every algebraic and topological closure operator on $X$ is induced
+by a pre-order on $X.$
+\begin{theorem}
+\label{ch4sec4:thm3} Let $c$ be an algebraic and topological closure
+operator  on a set $X.$ For any $x$ and $y \in X,$ define $x \leq_c
+y ~\text{if and only if}~ c(x) \subseteq c(y).$ Then $\leq_c$ is a
+pre-order on $X$ such that, for any $A \subseteq X,$
+$$
+c(A) = \{x \in X \mid x \leq_c a ~\text{for some }~ a \in A \}.
+$$ Also, $\leq_c$ is a partial order if and only if $c$ is a $T_0$-closure operator
+on $X.$
+\end{theorem}
+\begin{proof}
+Clearly $x \leq_c x$ for all $x \in X.$ Also,
+\begin{align*}
+x \leq_c y ~\text{and}~ y \leq_c z & \Longrightarrow c(x) \subseteq c(y) \subseteq c(z)
+ \Longrightarrow x \leq_c z.
+\end{align*}
+Therefore $\leq_c$ is a pre-order on $X.$ Since $c$ is an algebraic
+and topological closure operator on $X,$ it follows that for any $A
+\subseteq X, $
+$$
+c(A) = \cup \left \{ c(F) \mid F \subseteq A ~\text{and}~ F ~ \text{ is finite} \right \}  =   \cup \left\{ \bigcup \limits _{i=1} ^{n} c(a_i) \mid a_1, a_2, \cdots,a_n \in A  \right \}
+ = \bigcup \limits _{a \in A} c(a).
+$$
+Since $x \in c(a) \Longleftrightarrow c(x) \subseteq c(a) \Longleftrightarrow x \leq_c a,$ we have
+$$c(A) = \{ x \in X \mid x \leq_c a  ~\text{ for some }~ a \in A \}.$$
+Also, since $c(x)=c(y) \Longleftrightarrow x \leq_c y $ and $y
+\leq_c x,$  it follows that $\leq_c$ is a partial order on $X$ if
+and only if $c$ is a $T_0$-closure operator on $X.$
+\end{proof}
+The following is an immediate consequence of Theorems \ref{ch4sec4:thm2} and \ref{ch4sec4:thm3}.
+\begin{corollary}
+\label{ch4sec4:cor4} Let $X$ be any non-empty set. Then $c ~\mapsto~
+\leq_c$ is a one-to-one  correspondence between algebraic and
+topological closure operators on $X$ and pre-orders on $X$ such that
+$c$ is a $T_0$-closure operator if and only if $\leq_c$ is a partial
+order on $X.$
+\end{corollary}
+
+The following is an easy verification using the definitions of
+algebraic  closure operators and topological closure operators.
+
+\begin{theorem}
+\label{ch4sec4:thm5}
+A closure operator $c$ on $X$ is both algebraic and topological if and only if, for any $A \subseteq X,$
+$c(A) = \bigcup _{ a \in A} c(a)$.
+\end{theorem}
+
+Next, we prove that any function defined from a set $X$  into any
+set $Y$ induces an algebraic and topological closure operator $X.$
+First, we have the following.
+
+\begin{theorem}
+\label{ch4sec4:thm6}
+Let $f : X ~ \rightarrow ~Y$ be a function. For any $A \subseteq X,$ define
+$$c_f (A) = f^{-1}(f(A)) = \{ x \in X \mid f(x) = f(a) ~\text{for some}~ a \in A \}.$$
+Then $c_f$ is an algebraic and topological closure operator  on $X$
+and $\{ c_f (a) \mid  a \in X \}$ is a partition of $X$.
+\end{theorem}
+\begin{proof}
+Clearly $c_f (\phi) = \phi$ and $A \subseteq f^{-1}(f(A)) = c_f (A)$ for any $A \subseteq X.$ Also,
+$$
+x \in c_f(c_f (A))  \Longrightarrow f(x) \in f(c_f (A))
+ \Longrightarrow f(x) = f(y) ~\text{for some }~ y \in c_f(A)
+$$
+$$
+\Longrightarrow f(x) = f(y) ~\text{and }~ f(y) \in f(A)
+\Longrightarrow f(x) = f(y) = f(a) ~\text{for some }~ a \in A  \Longrightarrow x \in f^{-1}(f(A)) = c_f (A).
+$$
+Therefore~ $c_f (c_f(A))  = c_f (A).$ Further,
+$$
+A \subseteq B \subseteq X  \Longrightarrow f(A) \subseteq f(B)
+ \Longrightarrow f^{-1}(f(A)) \subseteq f^{-1}(f(B))  \Longrightarrow c_f (A) \subseteq c_f (B).
+$$
+Thus $c_f$ is a closure operator on $X.$
+
+For any $A \subseteq X,$ we have
+\begin{align*}
+x \in c_f (A) & \Longleftrightarrow x \in f^{-1} ( f( A))
+ \Longleftrightarrow f(x) = f(a) ~\text{ for some }~ a \in A \\
+& \Longleftrightarrow x \in f^{-1}(f (a)) = c_f(a) ~\text{ for some } a \in A
+\end{align*}
+and hence $c_f (A)  = \bigcup_{a \in A} c_f (a).$ Thus $c_f$ is both
+algebraic and topological. In particular, $X = c_f (X) = \bigcup _{
+x \in X} c_f (x).$ Note that, for any $x \in X, c_f(x) = \{a \in X
+\mid f(a) = f(x) \}.$ For any $x$ and $y \in X,$ we have
+\begin{align*}
+f(x) \neq f(y) & \Longleftrightarrow c_f (x) \cap c_f (y) = \phi
+ \Longleftrightarrow  c_f (x) \neq c_f (y)
+\end{align*}
+and therefore, any two distinct $c_f(x)' $s are disjoint.  Thus $\{
+c_f(x) \mid x \in X \}$ forms a partition of $X.$
+\end{proof}
+
+The following is a converse of the above theorem, in the sense  that
+any algebraic topological closure operator $c$ on a set $X$ is
+induced by a mapping of $X$ into a suitable set, provided $\{c(a)
+\mid a \in X \}$ is a partition of $X.$
+
+\begin{theorem}
+\label{ch4sec4:thm7} Let $c$ be an algebraic topological closure
+operator on a set $X$  such that $\{c(a) \mid a \in X \}$  forms a
+partition of $X.$ Then there exist a set $Y$ and a function $f : X
+\longrightarrow Y$ such that $c(A) = c_f(A)$ for all $A \subseteq
+X.$
+\end{theorem}
+\begin{proof}
+Since $c$ is given to be an algebraic and topological closure
+operator on   $X,$  we have $c(A)= \bigcup \limits _{a \in A}
+c(a),~\text{for all }~ A \subseteq X.$ Recall, from Definition
+\ref{ch4sec3:def3},  that we have  $X_c = X / _{\theta_c} ~=~ \{
+\theta_c (x) \mid x \in X \},$ where $\theta_c$ is the equivalence
+relation $\{ (x,y) \in X \times X \mid c(x) = c(y)\}.$ Now, let $f:
+X \longrightarrow X_c$ be the natural map given by $f(x) = \theta_c
+(x) ~ \text{ for all}~ x \in X.$ First we observe that, for any $A
+\subseteq X,$
+\begin{align*}
+x \in c(A) & \Longleftrightarrow x \in c(a) ~\text{ for some}~ a \in A
+ \Longleftrightarrow c(x) = c(a) ~\text{ for some}~ a \in A
+\end{align*}
+(since $ c(x) \cap c(a) \neq \phi $ and $\{ c(a) \mid a \in X \}$ is
+a partition of $X$).  Therefore, we have
+\begin{align*}
+c_f(A) & = f^{-1}(f(A))
+ = \{ x \in X \mid f(x) = f(a) ~\text{for some }~ a \in A \} \\
+& = \{ x \in X \mid \theta_c (x) = \theta_c (a) ~\text{for some }~ a
+\in A \} = \{ x \in X \mid (x,a) \in \theta_c ~\text{for some }~ a \in A \} \\
+& = \{ x \in X \mid c(x) = c(a) ~\text{for some }~ a \in A \} = c(A).
+\end{align*}
+\end{proof}Let us recall that a closure operator $c$ on $X$ is called a
+$T_0$-closure operator if, for any $x$ and $y \in X,$
+$c(x) = c(y) \Longrightarrow x = y .$
+ In the following, we exhibit certain equivalent conditions for $c_f$ be
+ a $T_0$-closure operator, where $f$ is a given function defined on $X.$
+\begin{theorem}
+\label{ch4sec4:thm8}
+The following are equivalent to each other for any function $f: X \longrightarrow Y.$
+\begin{itemize}
+\item[(1)] $c_f $  is a $ T_0$-closure operator on $X$;
+\item[(2)] $f$ is an injection;
+\item[(3)] $c_f (x) = \{ x\}$ for all $x \in X$;
+\item[(4)] $c_f$ is trivial; that is, $c_f (A) = A$ for all $A \subseteq X.$
+\end{itemize}
+\end{theorem}
+\begin{proof}
+(1) $\Longrightarrow$ (2): for any $x$ and $y \in X,$ we have
+$$
+f(x) = f(y) & \Longrightarrow  x \in f^{-1} ( f ( y)) ~\text{and}~ y \in f^{-1} ( f ( x ) )
+$$
+$$
+ \Longrightarrow x \in c_f (y) ~\text{and}~ y \in c_f (x)  \Longrightarrow c_f (x)
+  \subseteq c_f (y)  ~\text{and}~ c_f (y) \subseteq c_f (x)  \Longrightarrow c_f (x) = c_f (y)
+ \Longrightarrow x = y.
+$$
+Therefore $f$ is an injection.
+
+(2)  $\Longrightarrow $ (3): for any $x$ and $y \in X,$ we have
+$$
+y \in c_f(x) & \Longrightarrow y \in f^{-1}(f(x))
+\Longrightarrow f(y) = f(x)
+\Longrightarrow y = x
+$$
+ and therefore  $ c_f (x) = \{x\}$.
+
+(3) $\Longrightarrow$ (4): since $c_f$ is algebraic and topological,
+we have $$c_f (A) = \bigcup_{a \in A} c_f (a) = \bigcup_{a \in A}
+\{a \} = A ~ \text{for any}~ A \subseteq X.$$ (4)  $\Longrightarrow
+$ (1) is trivial.
+\end{proof}
+
+
+
+
+
+\begin{acknowledgments}
+We are grateful to the reviewers for careful reading of the manuscript and helpful remarks.
+\end{acknowledgments}
+
+
+
+\begin{thebibliography}{99}
+
+
+\bibitem{1} G. Birkhoff,   \textit{Lattice Theory}   (Amer. Math. Soc. Colloq. Publ. XXV, Providence,  U.S.A., 1967).
+
+\bibitem{2} G. Gratzer,   \textit{General Lattice Theory}    (Academic Press, New York, Sanfransisco, 1978).
+
+    \bibitem{3}  G. F. Simmons,  \textit{ Introduction to Topology and Modern Analysis}  (McGraw-Hill  Book Co. Inc, NewYork, 1963).
+
+\bibitem{4} S. Burris and H. P. Sankappanavar, \textit{A Course in Universal Algebra}  (Springer-Verlag, New York, 1980).
+
+
+\bibitem{5} U. M. Swamy,   G. C. Rao, R.S. Rao and K. R. Rao, The lattice of closed subsets of a topological space, \textit{South East Asian Bull. Math.,}
+            \textbf{21}, 91--94 (1997).
+
+
+  \bibitem{6}   U. M. Swamy  and R.S. Rao, Algebraic Topological Closure Operators, \textit{South East Asian Bull. Math.}
+   \textbf{26} 669--678 (2002).
+
+\bibitem{7} B. Venkateswarlu, R. Vasu Babu and Getnet Alemu, Morphisms on Closure spaces and Moore spaces,
+ \textit{Int. J. of Pure and Applied Math.}  \textbf{91} (2), 197--207 (2014).
+ \end{thebibliography}
+\end{document}

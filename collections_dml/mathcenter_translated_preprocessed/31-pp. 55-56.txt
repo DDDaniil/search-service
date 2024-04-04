@@ -1,0 +1,1 @@
+the existence of a generalized solution of a non ink problem for the wave equation v b dmitriev samara state academy of railways consider the equation lu utt 4 u f x t 1 56

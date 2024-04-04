@@ -1,0 +1,860 @@
+%%
+%% ****** ljmsamp.tex 13.06.2018 ******
+%%
+\documentclass[
+11pt,%
+tightenlines,%
+twoside,%
+onecolumn,%
+nofloats,%
+nobibnotes,%
+nofootinbib,%
+superscriptaddress,%
+noshowpacs,%
+centertags]%
+{revtex4}
+\usepackage{ljm}
+\begin{document}
+
+\titlerunning{Initial-boundary problem} % for running heads
+\authorrunning{Sabitov} % for running heads
+%\authorrunning{First-Author, Second-Author} % for running heads
+
+\title{Initial-boundary problem for a three-dimensional inhomogeneous equation of parabolic-hyperbolic type}
+% Splitting into lines is performed by the command \\
+% The title is written in accordance with the rules of capitalization.
+
+\author{\firstname{K.~B.}~\surname{Sabitov}}
+\email[E-mail: ]{sabitov\_fmf@mail.ru}
+\affiliation{Sterlitamak branch of Bashkir State University, Lenin Ave. 37, Sterlitamak, 453103 Russia}
+\affiliation{Sterlitamak branch of the Institute for Strategic Studies of the Republic of Bashkortostan, Odeskaya St. 68, Sterlitamak, 453103, Russia}
+
+\author{\firstname{S.~N.}~\surname{Sidorov}}
+\email[E-mail: ]{stsid@mail.ru}
+\affiliation{Sterlitamak branch of Bashkir State University, Lenin Ave. 37, Sterlitamak, 453103 Russia}
+\affiliation{Sterlitamak branch of the Institute for Strategic Studies of the Republic of Bashkortostan, Odeskaya St. 68, Sterlitamak, 453103, Russia}
+%\noaffiliation % If the author does not specify a place of work.
+
+%\firstcollaboration{(Submitted by A.~A.~Editor-name)} % Add if you know submitter.
+%\lastcollaboration{ }
+
+%\received{June 13, 2018} % The date of receipt to the editor, i.e. December 06, 2017
+
+
+\begin{abstract} % You shouldn't use formulas and citations in the abstract.
+For an inhomogeneous three-dimensional equation of mixed parabolic-hyperbolic type in a rectangular parallelepiped, the initial-boundary problem is studied. A criterion for the uniqueness of a solution is established. The solution is constructed as the sum of an orthogonal series. In substantiating the convergence of the series, the problem of small denominators of two natural arguments arose. Estimates are established for the separation from zero of the small denominators with the corresponding asymptotics. These estimates made it possible to justify the convergence of the constructed series in the class of regular solutions of this equation.
+\end{abstract}
+
+\subclass{35M10, 35R30} % Enter 2010 Mathematics Subject Classification.
+
+\keywords{three-dimensional equation of mixed parabolic-hyperbolic type, initial-boundary value problem, spectral method, uniqueness, series, small denominators, uniform convergence, existence} % Include keywords separeted by comma.
+
+\maketitle
+
+% Text of article starts here.
+
+\section{Formulation of the problem}
+
+Consider an equation of mixed parabolic-hyperbolic type
+\begin{equation}\label{2pgu1}
+ Lu=F(x,y,t),
+\end{equation}
+here
+$$
+Lu=
+\begin{cases}
+      u_t-u_{xx}-u_{yy}+bu, & t>0,\\
+      u_{tt}-u_{xx}-u_{yy}+bu, & t<0,
+\end{cases}
+$$
+$$
+F(x,y,t)=
+\begin{cases}
+      F_1(x,y,t), & t>0,\\
+      F_2(x,y,t), & t<0,
+\end{cases}
+$$
+given in the three-dimensional domain
+\begin{equation*}
+Q=\{(x,y,t)|\,(x,y)\in D,\,t\in(-\alpha,\beta)\},
+\end{equation*}
+where
+\begin{equation*}
+D=\{(x,y)|\,0<x<p,\,0<y<q\},
+\end{equation*}
+$\alpha$, $\beta$, $p$, $q$  are given positive real numbers, $b$ is a given any real number, $F_i(x,y,t)$ ($i=1,2$) are known at least continuous functions, and we pose the following problem.
+
+\textbf{Problem.} \emph{Find the function $u(x,y,t)$ defined in the domain $Q$ and satisfying the following conditions:}
+\begin{equation}\label{2pgu2}
+u(x,y,t)\in C(\overline{Q})\cap C^1_t(Q)\cap C^1_{x,y}(\overline{Q})\cap C^{2}_{x,y}(Q_+)\cap C^2(Q_-);
+\end{equation}
+\begin{equation}\label{2pgu3}
+Lu(x,y,t)\equiv F(x,y,t),\quad (x,y,t)\in Q_+\cup Q_-;
+\end{equation}
+\begin{equation}\label{2pgu4}
+u(x,y,t)\big|_{x=0}=u(x,y,t)\big|_{x=p}=0, \quad -\alpha\leq t\leq \beta;
+\end{equation}
+\begin{equation}\label{2pgu5}
+u(x,y,t)\big|_{y=0}=u(x,y,t)\big|_{y=q}=0, \quad -\alpha\leq t\leq \beta;
+\end{equation}
+\begin{equation}\label{2pgu6}
+u(x,y,t)\big|_{t=-\alpha}=\psi(x,y),\quad (x,y)\in \overline{D},
+\end{equation}
+\emph{where $F(x,y,t)$ и $\psi(x,y)$ are given sufficiently smooth functions, $Q_-=Q\cap\{t<0\}$, $Q_+=Q\cap\{t>0\}$.}
+
+
+One of the first studies of conjugation problems, when a parabolic equation is given on one part of the domain and a hyperbolic equation on the other, can be attributed to the work of I.M. Gelfand [1]. He considers an example related to the movement of gas in a channel surrounded by a porous medium, here in the channel gas movement is described by the wave equation, outside it by the diffusion equation, but he did not give a clear statement of the mathematical problem and did not indicate a solution. Ya.S. Uflyand [2, 3], the problem of the propagation of electrical oscillations in composite lines, when losses are neglected on a section of a semi-infinite line, and the rest of the line is considered as a cable without leakage, reduced to solving a system of equations
+\begin{equation*}
+ \begin{cases}
+   \displaystyle{L\frac{\partial I_1}{\partial t}+\frac{\partial U_1}{\partial x}=0,\; C_1\frac{\partial U_1}{\partial t}+\frac{\partial I_1}{\partial x}=0,} & 0<x<l,\\
+   \\
+   \displaystyle{RI_2+\frac{\partial U_2}{\partial x}=0,\;\;\;\, C_2\frac{\partial U_2}{\partial t}+\frac{\partial I_2}{\partial x}=0,} & l<x<\infty,
+ \end{cases}
+\end{equation*}
+under initial
+$U_1|_{t=0}=0,$ $I_1|_{t=0}=0,$ $U_2|_{t=0}=0$
+and boundary
+$U_1|_{x=0}=E(t),$ $\lim_{x\rightarrow\infty}U_2=0$
+conditions, as well as for voltage continuity requirements and current
+$U_1|_{x=l}=U_2|_{x=l},$ $I_1|_{x=l}=I_2|_{x=l},$
+here $L$, $C_1$ are self-induction and capacitance (per unit length) of the first section of the line; $R$, $C_2$ are resistance and capacitance of the second section.
+
+If we exclude currents from the system of equations, then we come to the problem:
+\begin{equation*}
+ 0=\begin{cases}
+a_1^2u_{xx}-u_{tt}, & 0<x<l,\\
+ a_2^2u_{xx}-u_t, & l<x<\infty,
+ \end{cases}
+\end{equation*}
+$$
+ u(x,0)=0,\ u_t(x,0)=0,\quad 0\leqslant x\leqslant l,\quad u(x,0)=0,\quad l\leqslant x<\infty,
+$$
+$$
+u(0,t)=E(t),\quad \lim_{x\rightarrow +\infty}u(x,t)=0,
+$$
+\begin{equation*}
+ u(l-0,t)=u(l+0,t),\quad u_x(l+0,t)=\frac{R}{L}\int\limits_0^t u_x(l-0,\eta)\,d\eta,
+\end{equation*}
+here
+$$
+u(x,t)=\begin{cases}
+U_1(x,t), & x<l,\\
+U_2(x,t), & x>l,
+\end{cases}\quad
+a_1^2=\frac{1}{LC_1},\quad  a_2^2=\frac{1}{LC_2}.
+$$
+
+This problem for a more general equation with general gluing conditions is studied in the monograph by T.D. Dzhurayev [4].
+
+O.A. Ladyzhenskaya and L. Stupyalis [5, 6] in multidimensional space considered initial-boundary boundary value conjugation problems for parabolic-hyperbolic equations that arise when studying the problem of the motion of a conducting fluid in an electromagnetic field. One of these tasks is as follows. Let the bounded region $ \Omega \subset \mathbb{R}^n $ be the union of two regions $ \Omega_1 $ and $ \Omega_2 $ and the $(n-1)$-dimensional surface $ \Gamma $ separating them, so $\Omega=\Omega_1\cup \Gamma\cup \Omega_2$. Denote by $S$ the boundary of the domain $\Omega$, and by $S_1$ and $S_2$ are the boundaries $\Omega_1$ and $\Omega_2$, $Q_T^{(k)}=\Omega_k\times[0,T]$, $k=1,2$.
+The problem is: find a function $u(x,t)$ that satisfies the parabolic equation in the domain $Q_T^{(1)}$
+$$
+u_{t}+L_1u=f_1(x,t),
+$$
+the hyperbolic equation in the domain $Q_T^{(2)}$
+$$
+u_{tt}+L_2u=f_2(x,t),
+$$
+the initial conditions
+$$
+u\Big|_{t=0}=\varphi_1(x), \quad x\in\Omega_1;
+$$
+$$
+u\Big|_{t=0}=\varphi_2(x), \quad u_t\Big|_{t=0}=\varphi_3(x), \quad x\in\Omega_2,
+$$
+the first boundary condition on the boundary $S$
+$$
+u\Big|_{S}=\psi(x,t),\quad t\in[0,T],
+$$
+and the conjugation conditions on the boundary $\Gamma$:
+$$
+u^{(1)}\Big|_{\Gamma}-u^{(2)}\Big|_{\Gamma}=\psi_1(x,t),
+$$
+$$
+b^{(1)}(x,t)\frac{\partial u^{(1)}}{\partial N}\bigg|_{\Gamma}-
+b^{(2)}(x,t)\frac{\partial u^{(2)}}{\partial N}\bigg|_{\Gamma}
+=\psi_2(x,t),\quad t\in[0,T],
+$$
+here $u(x,t)=u^{(1)}(x,t)$ for $x\in\Omega_1$, $t\geq0$ and $u(x,t)=u^{(2)}(x,t)$ for $x\in\Omega_2$, $t\geq0$, $b^{(k)}(x,t)\geq\beta>0$, $k=1,2$, are known functions,
+$$
+L_ku\equiv-\frac{\partial}{\partial x_i}\left[a_{ij}^{(k)}(x,t)\frac{\partial u}{\partial x_j}\right]+a_i^{(k)}(x,t)\frac{\partial u}{\partial x_i}+a^{(k)}(x,t), \quad k=1,2,
+$$
+where $a_{ij}^{(k)}(x,t)$, $a_{i}^{(k)}(x,t)$, $a^{(k)}(x,t)$, $f_k(x,t)$, $\varphi_j(x)$, $j=1,2,3$, $\psi(x,t)$, $\psi_k(x,t)$ are defined known functions.
+
+In contrast to the above articles in this paper, in the problem, the conjugation conditions are specified not by a spatial variable, but by a temporary variable, i.e. on a straight line $t=0$.
+
+Initial-boundary problems for two-dimensional homogeneous and inhomogeneous equations of mixed parabolic-hyperbolic type in a rectangular region were first studied in the works [7], [8, p. 56--94], [9]. In [10--12], nonlocal problems for a homogeneous parabolic-hyperbolic equation in a rectangular domain were studied.
+
+We also note [13, 14], where for three classes of a two-dimensional parabolic-hyperbolic equation with the right-hand side $F(x,t)$: mixed-type equations with a degenerate hyperbolic part, for a mixed-type equation with a degenerate parabolic part and for mixed type equations with power degeneration, the initial-boundary problem is studied in a rectangular domain $D=\{(x,t)|\,0<x<l,\,-\alpha<t<\beta\}$ with nonzero conditions on the boundary $u(0,t)=h_1(t)$, $u(l,t)=h_2(t)$, $u(x,-\alpha)=\varphi(x)$.
+
+The need to study the problem \eqref{2pgu2} -- \eqref{2pgu6} for the inhomogeneous equation \eqref{2pgu1} arises in connection with the solution of the I.M. Gelfand problem, i.e. constructing an explicit solution to the problem, and studying inverse problems for the equation \eqref{2pgu1} by finding the factors of the right-hand side $F_i(x,y,t)=f_i(x,y)g_i(t)$, $i=1,2$, either depending on $(x,y)$, or depending on $t$. In the two-dimensional case, the inverse problems of searching for unknown right-hand sides were studied in [15 -- 18].
+
+
+In the present work, the results of [19] for the two-dimensional case are transferred to the three-dimensional, that is, for the equation \eqref{2pgu1}. Using the ideas of [8 -- 14, 19], a criterion is established for the uniqueness of a solution to the problem \eqref{2pgu2} -- \eqref{2pgu6}. The solution to the problem is constructed in an explicit form in the form of the sum of an orthogonal two-dimensional series. When substantiating the convergence of a series, the problem of small denominators of two natural arguments arose for the first time, which complicates the convergence of the constructed series. In this regard, to prove the uniform convergence of the series, estimates were established on the separation of small denominators from zero, which made it possible to prove the existence of a regular solution.
+
+
+%\setcounter{equation}{0}
+
+\section{Uniqueness criterion for solving a problem}
+
+Let $u(x,y,t)$ is a solution to the problem \eqref{2pgu2} -- \eqref{2pgu6}. Consider the functions
+\begin{equation}\label{2pgu7}
+u_{mn}(t)=\iint\limits_{D} u(x,y,t)v_{mn}(x,y)\,dxdy, \quad m,\,n\in\mathbb{N},
+\end{equation}
+where
+\begin{equation}\label{2pgu8}
+v_{mn}(x,y)=\frac{2}{\sqrt{pq}}\sin\frac{m\pi x}{p}\sin\frac{n\pi y}{q}
+\end{equation}
+is complete orthonormal system of eigenfunctions of the Laplace operator in the rectangle $D$ with zero Dirichlet boundary conditions.We also note that the system of functions \eqref{2pgu8} forms a basis in the space $L_2(D)$.
+
+Consider helper functions
+\begin{equation*}
+u_{mn\varepsilon}(t)=\iint\limits_{D_{\varepsilon}} u(x,y,t)v_{mn}(x,y)\,dxdy, \quad m,\,n\in\mathbb{N},
+\end{equation*}
+where $D_{\varepsilon}=\{(x,y)|\,\varepsilon<x<p-\varepsilon,\,\varepsilon<y<q-\varepsilon\}$. Differentiating the last equality with respect to $t$ for $ t>0 $ once, and for $ t<0 $ two times, taking into account the equation \eqref{2pgu1}, we obtain
+$$
+u'_{mn\varepsilon}(t)=\iint\limits_{D_{\varepsilon}} u_t(x,y,t)v_{mn}(x,y)\,dxdy=
+$$
+$$
+=\iint\limits_{D_{\varepsilon}} \left[u_{xx}+u_{yy}-bu+F_1(x,y,t)\right]v_{mn}(x,y)\,dxdy=
+$$
+$$
+=\iint\limits_{D_{\varepsilon}}u_{xx}v_{mn}(x,y)\,dxdy+ \iint\limits_{D_{\varepsilon}}u_{yy}v_{mn}(x,y)\,dxdy-bu_{mn\varepsilon}(t)+
+$$
+$$
++\iint\limits_{D_{\varepsilon}}F_1(x,y,t)v_{mn}(x,y)\,dxdy,
+$$
+$$
+u''_{mn\varepsilon}(t)=\iint\limits_{D_{\varepsilon}} u_{tt}(x,y,t)v_{mn}(x,y)\,dxdy=
+$$
+$$
+=\iint\limits_{D_{\varepsilon}} \left[u_{xx}+u_{yy}-bu+F_2(x,y,t)\right]v_{mn}(x,y)\,dxdy=
+$$
+$$
+=\iint\limits_{D_{\varepsilon}}u_{xx}v_{mn}(x,y)\,dxdy+ \iint\limits_{D_{\varepsilon}}u_{yy}v_{mn}(x,y)\,dxdy-bu_{mn\varepsilon}(t)+
+$$
+$$
++\iint\limits_{D_{\varepsilon}}F_2(x,y,t)v_{mn}(x,y)\,dxdy.
+$$
+In integrals containing the derivatives $u_{xx}$ and $u_{yy}$, integrating by parts two times and then passing to the limit at $ \varepsilon \rightarrow0$ taking into account the boundary conditions \eqref{2pgu4} and \eqref{2pgu5}, we obtain differential equations
+\begin{equation*}
+u_{mn}'(t)+\lambda_{mn}^2u_{mn}(t)=\Phi_{1mn}(t), \quad t>0,
+\end{equation*}
+\begin{equation*}
+u_{mn}''(t)+\lambda_{mn}^2u_{mn}(t)=\Phi_{2mn}(t), \quad t<0,
+\end{equation*}
+here
+\begin{equation}\label{2pgu12}
+\lambda_{mn}^2=b+\pi^2\left[\left(\frac{m}{p}\right)^2+\left(\frac{n}{q}\right)^2\right],
+\end{equation}
+\begin{equation*}
+\Phi_{imn}(t)=\iint\limits_{D} F_i(x,y,t)v_{mn}(x,y)\,dxdy, \quad i=1,2.
+\end{equation*}
+
+Note that further in \eqref{2pgu12} we will assume that $b=\mu^2\geq0$ $(\mu\geq0)$, since if $b<0$, then starting from some numbers $n>n_0$ or $m>m_0$ the right side \eqref {2pgu12} takes only positive values, ie the sign of the coefficient $b$ does not affect the results.
+
+The general solutions of the obtained ordinary differential equations are respectively determined by the formulas [8, p. 75]:
+\begin{equation*}
+u_{mn}(t)=a_{mn}e^{-\lambda^2_{mn}t}+\int\limits_0^t \Phi_{1mn}(s)e^{-\lambda^2_{mn}(t-s)}\,ds, \quad t>0,
+\end{equation*}
+\begin{equation*}
+u_{mn}(t)=c_{mn}\cos\lambda_{mn}t+d_{mn}\sin\lambda_{mn}t-\frac{1}{\lambda_{mn}}\int\limits_t^0 \Phi_{2mn}(s)\sin\left[\lambda_{mn}(t-s)\right]\,ds, \quad t<0,
+\end{equation*}
+here $a_{mn}$, $c_{mn}$ and $d_{mn}$ are arbitrary constants. These functions, by virtue of \eqref{2pgu2}, satisfy the gluing conditions
+$$
+u_{mn}(0+0)=u_{mn}(0-0), \quad u_{mn}'(0+0)=u_{mn}'(0-0), \quad m,\,n\in\mathbb{N},
+$$
+only when
+$$
+c_{mn}=a_{mn}, \quad d_k=-\lambda_{mn}a_{mn}+\frac{1}{\lambda_{mn}}\Phi_{1mn}(0+0).
+$$
+By virtue of the last equalities, the functions $u_{mn}(t)$ take the form
+\begin{equation*}
+u_{mn}(t)=
+ \begin{cases}
+      a_{mn}e^{-\lambda^2_{mn}t}+\int\limits_0^t \Phi_{1mn}(s)e^{-\lambda^2_{mn}(t-s)}\,ds, & t>0, \\
+      a_{mn}\left(\cos\lambda_{mn}t-\lambda_{mn}\sin\lambda_{mn}t\right)+\cfrac{\Phi_{1mn}(0+0)}{\lambda_{mn}}\sin\lambda_{mn}t-\\ \hskip30mm-\cfrac{1}{\lambda_{mn}}\int\limits_t^0 \Phi_{2mn}(s)\sin\left[\lambda_{mn}(t-s)\right]\,ds, & t<0.
+ \end{cases}
+\end{equation*}
+To find the constants $a_{mn}$ in this formula, we use the boundary condition \eqref{2pgu6} and the formula \eqref{2pgu7}:
+\begin{equation*}
+u_{mn}(-\alpha)=\iint\limits_{D} u(x,y,-\alpha)v_{mn}(x,y)\,dxdy=\iint\limits_{D} \psi(x,y)v_{mn}(x,y)\,dxdy=\psi_{mn}.
+\end{equation*}
+Then we have
+$$
+a_{mn}\left(\cos\lambda_{mn}\alpha+\lambda_{mn}\sin\lambda_{mn}\alpha\right)-\frac{\Phi_{1mn}(0+0)}{\lambda_{mn}}\sin\lambda_{mn}\alpha+
+$$
+$$
++\frac{1}{\lambda_{mn}}\int\limits_{-\alpha}^0\Phi_{2mn}(s)\sin\left[\lambda_{mn}(s+\alpha)\right]\,ds=\psi_{mn}.
+$$
+Hence, provided that for all $k\in\mathbb{N}$
+\begin{equation*}
+\delta_{mn}(\alpha)=\cos\lambda_{mn}\alpha+\lambda_{mn}\sin\lambda_{mn}\alpha\neq0,
+\end{equation*}
+we find
+\begin{equation*}
+a_{mn}=\frac{\psi_{mn}+\omega_{mn}}{\delta_{mn}(\alpha)},
+\end{equation*}
+where
+$$
+\omega_{mn}=\frac{\Phi_{1mn}(0+0)}{\lambda_{mn}}\sin\lambda_{mn}\alpha- \frac{1}{\lambda_{mn}}\int\limits_{-\alpha}^0\Phi_{2mn}(s)\sin\left[\lambda_{mn}(s+\alpha)\right]\,ds.
+$$
+Then for the functions $u_{mn}(t) $ we obtain the final form
+\begin{equation}\label{2pgu16}
+u_{mn}(t)=
+ \begin{cases}
+      \cfrac{\psi_{mn}+\omega_{mn}}{\delta_{mn}(\alpha)}e^{-\lambda^2_{mn}t}+\int\limits_0^t \Phi_{1mn}(s)e^{-\lambda^2_{mn}(t-s)}\,ds, & t>0, \\
+      \cfrac{\psi_{mn}+\omega_{mn}}{\delta_{mn}(\alpha)}\left(\cos\lambda_{mn}t-\lambda_{mn}\sin\lambda_{mn}t\right)+\cfrac{\Phi_{1mn}(0+0)}{\lambda_{mn}}\sin\lambda_{mn}t-\\ \hskip42mm-\cfrac{1}{\lambda_{mn}}\int\limits_t^0 \Phi_{2mn}(s)\sin\left[\lambda_{mn}(t-s)\right]\,ds, & t<0.
+ \end{cases}
+\end{equation}
+
+Let $F_i(x,y,t)\equiv0$, $i=1,2$, $\psi(x,y)\equiv0$ and the conditions $\delta_{mn}(\alpha)\neq0$ for all $m,\,n\in\mathbb{N}$. Then all $\psi_{mn}\equiv0$, $\Phi_{imn}(t)\equiv0$, and by \eqref{2pgu16} and \eqref{2pgu7} it follows that for all $m,\,n\in\mathbb{N}$ and any $t\in[-\alpha,\beta]$
+$$
+\iint\limits_{D} u(x,y,t)v_{mn}(x,y)\,dxdy=0.
+$$
+Hence, since the system of functions \eqref{2pgu8} in $L_2(D)$ is complete, it follows that $u(x,y,t)=0$ almost everywhere in $\overline{D}$ for any $t\in[-\alpha,\beta]$. By condition \eqref{2pgu2}, the function $u(x,y,t)$ is continuous on $\overline{D}$, therefore $u(x,y,t)\equiv0$ in $\overline{D}$.
+
+Suppose that for some $m=m_0$ or $n=n_0$ the expression $\delta_{m_0n}(\alpha)=0$ or $\delta_{mn_0}(\alpha)=0$. Let us assume that $\delta_{mn_0}(\alpha)=0$. Then the homogeneous problem \eqref{2pgu2} -- \eqref{2pgu6} (where $\psi(x,y)\equiv0$, $F_i(x,y,t)\equiv0$, $i=1,2$) has a nonzero solution
+\begin{equation*}
+u_{mn_0}(x,y,t)=
+  \begin{cases}
+      C_{mn_0}e^{-\lambda_{mn_0}^2t}v_{mn_0}(x,y), & t\geq0,\\
+      C_{mn_0}\Big(\cos\lambda_{mn_0}t-\lambda_{mn_0}\sin\lambda_{mn_0}t\Big)v_{mn_0}(x,y), & t\leq0,
+ \end{cases}
+\end{equation*}
+where $C_{mn_0}\neq0$ s arbitrary constant.
+
+In fact, the constructed function, by virtue of the equality $\delta_{mn_0}(\alpha)=0$, satisfies the conditions \eqref{2pgu2} -- \eqref{2pgu6}. Belonging to the class \eqref{2pgu2} follows from the fact that
+$$
+\lim_{t \to 0+0} u_{mn_0}(x,y,t) = v_{mn_0}(x,y)=\lim_{t \to 0-0} u_{mn_0}(x,y,t)=
+$$
+$$
+=v_{mn_0}(x,y)\lim_{t \to 0-0} \Big(\cos\lambda_{mn_0}t-\lambda_{mn_0}\sin\lambda_{mn_0}t\Big)= v_{mn_0}(x,y);
+$$
+$$
+\lim_{t \to 0+0} \cfrac{\partial u_{mn_0}(x,y,t)}{\partial t}=-\lambda^2_{mn_0}v_{mn_0}(x,y)=\lim_{t \to 0-0} \cfrac{\partial u_{mn_0}(x,y,t)}{\partial t}=
+$$
+$$
+=\Big(-\lambda_{mn_0}\sin\lambda_{mn_0}t-\lambda^2_{mn_0}\cos\lambda_{mn_0}t\Big)v_{mn_0}(x,y)=-\lambda^2_{mn_0}v_{mn_0}(x,y).
+$$
+The equality \eqref{2pgu3} for $F_i(x,y,t)\equiv0$ holds, since by virtue of \eqref{2pgu12} we have
+$$
+u_t-u_{xx}-u_{yy}+bu=
+$$
+$$
+=e^{-\lambda_{mn_0}^2t}v_{mn_0}(x,y) \left[-\lambda_{mn_0}^2+\left(\frac{m\pi}{p}\right)^2+\left(\frac{n_0\pi}{q}\right)^2+b\right]=0, \quad t>0,
+$$
+$$
+u_{tt}-u_{xx}-u_{yy}+bu=
+$$
+$$
+=\Big(\cos\lambda_{mn_0}t-\lambda_{mn_0}\sin\lambda_{mn_0}t\Big)v_{mn_0}(x,y)\times
+$$
+$$
+\times\left[-\lambda_{mn_0}^2+\left(\frac{m\pi}{p}\right)^2+\left(\frac{n_0\pi}{q}\right)^2+b\right]=0, \quad t<0.
+$$
+The conditions \eqref{2pgu4} and \eqref{2pgu5} are satisfied due to the equality of the sines from the formula \eqref{2pgu8} to zero on the boundary of the region. The condition \eqref{2pgu6} for $\psi(x,y)\equiv0$ also holds, since
+$$
+u_{mn_0}(x,y,-\alpha)=\Big(\cos\lambda_{mn_0}\alpha+\lambda_{mn_0}\sin\lambda_{mn_0}\alpha\Big)v_{mn_0}(x,y)=
+$$
+$$
+=\delta_{mn_0}(\alpha)v_{mn_0}(x,y)=0.
+$$
+From the construction of the function $u_{mn_0}(x,y,t)$ it follows that $u_{mn_0}(x,y,t)$ on the set $Q_-\cup Q_+$ is a solution of the equation \eqref{2pgu1} at $F_i(x,y,t)\equiv0$.
+
+
+Now the question arises of the existence of zeros of expression $\delta_{mn}(\alpha)$. For this, we represent it in the form
+\begin{equation*}
+\delta_{mn}(\alpha)=\sqrt{1+\lambda_{mn}^{2}}\sin(\lambda_{mn}\alpha+\gamma_{mn}),
+\end{equation*}
+where
+$$
+\gamma_{mn}=\arcsin{\frac{1}{\sqrt{1+\lambda_{mn}^{2}}}}.
+$$
+It can be seen that $\delta_{mn}(\alpha)=0$ with respect to $\alpha$ only if
+\begin{equation}\label{2pgu20}
+\alpha=\frac{\pi\,k}{\lambda_{mn}}-\frac{\gamma_{mn}}{\lambda_{mn}}, \quad k,\,m,\, n\in\mathbb{N}.
+\end{equation}
+This equality on the basis of the expression \eqref{2pgu12} takes the form
+\begin{equation*}
+\left(\frac{k-\gamma_{mn}/\pi}{\alpha}\right)^2-\left(\frac{m}{p}\right)^2-\left(\frac{n}{q}\right)^2=\left(\frac{\mu}{\pi}\right)^2.
+\end{equation*}
+
+Thus, $\delta_{mn}(\alpha)$ vanishes when $\alpha$ is given by the formula \eqref{2pgu20} or the last inhomogeneous Diophantine equation has a solution on the set of natural numbers. Giving the formula \eqref{2pgu20} for $k$, $m$ and $n$ natural numbers, we get a countable set of zeros of the expression $\delta_{mn}(\alpha)$.
+
+Thus, the following criterion for the uniqueness of the solution to Problem \eqref{2pgu2} -- \eqref{2pgu6} is established.
+
+\begin{theorem}
+If there exists a solution to the problem \eqref{2pgu2} -- \eqref{2pgu6}, then it is unique only when conditions $\delta_{mn}(\alpha)\neq0$ are satisfied for all $m$ and $n$.
+\end{theorem}
+
+
+
+
+
+
+
+%\setcounter{equation}{0}
+
+\section{Existence of a solution to a problem}
+
+Under the conditions $\delta_{mn}(\alpha)\neq0$, the solution of the problem \eqref{2pgu2} -- \eqref{2pgu6} is formally determined by the Fourier series of the system of functions \eqref{2pgu8}:
+\begin{equation}\label{2pgu180}
+u(x,y,t)=\sum\limits_{m,n=1}^{\infty} u_{mn}(t)v_{mn}(x,y),
+\end{equation}
+where the coefficients are found by the formula \eqref{2pgu16}. Since $\delta_{mn}(\alpha) $ is the denominator of the coefficients of the series \eqref{2pgu180} and as shown above, the equation $\delta_{mn}(\alpha)=0$ has a countable set of zeros \eqref{2pgu16}, then the problem of small denominators of a more complex structure arises than in the flat case [7], [8, p. 61--66]. In this connection, in order to justify the convergence of the series \eqref{2pgu180} in the class of functions \eqref {2pgu2}, it is necessary to establish an estimate of separation from zero $\delta_{mn}(\alpha)$.
+
+Expression $\delta_{mn}(\alpha)$ can be represented as
+\begin{equation*}
+\delta_{mn}(\nu)=\sqrt{1+\lambda_{mn}^{2}}\sin(\pi N\nu\widetilde{\lambda}_{mn}+\gamma_{mn}),\quad N=\max\{n,m\},
+\end{equation*}
+where
+$$
+\nu=\widetilde{\alpha}\sqrt{\left(\frac{q\,m}{N}\right)^2+\left(\frac{p\,n}{N}\right)^2},\quad \widetilde{\alpha}=\frac{\alpha}{pq},\quad \widetilde{\lambda}_{mn}=\sqrt{1+\left(\frac{\mu\,p\,q}{\pi\,N\,\sqrt{\left(\frac{q\,m}{N}\right)^2+\left(\frac{p\,n}{N}\right)^2}}\right)^2}.
+$$
+
+
+\begin{lemma}
+Let $b\neq0$. If $\nu$ takes only rational values, then there are positive constants $C_0$ and $N_0$ $(N_0\in\mathbb{N})$ such that for all $N>N_0$ the bound
+\begin{equation*}
+|\delta_{mn}(\nu)|\geq C_0.
+\end{equation*}
+\end{lemma}
+
+\begin{proof}
+There is a natural number $N_1$, such that for all $N>N_1$
+$$
+\frac{\mu\,p\,q}{\pi\,N\,\sqrt{\left(\frac{q\,m}{N}\right)^2+\left(\frac{p\,n}{N}\right)^2}}<1.
+$$
+Then $\widetilde{\lambda}_{mn}$ can be represented as
+$
+\widetilde{\lambda}_{mn}=1+\theta_{mn},
+$
+moreover, for $\theta_{mn}$ we have the estimate
+\begin{equation*}
+\frac{3}{8}\left(\frac{\mu\,p\,q}{\pi\,N\,\sqrt{\left(\frac{q\,m}{N}\right)^2+\left(\frac{p\,n}{N}\right)^2}}\right)^2<\theta_{mn}< \frac{1}{2}\left(\frac{\mu\,p\,q}{\pi\,N\,\sqrt{\left(\frac{q\,m}{N}\right)^2+\left(\frac{p\,n}{N}\right)^2}}\right)^2.
+\end{equation*}
+Substituting $\widetilde{\lambda}_{mn}$ into $\delta_{mn}(\nu)$, we have
+\begin{equation*}
+\delta_{mn}(\nu)=\sqrt{1+\lambda_{mn}^{2}}\sin(\pi N\nu+\nu\widetilde{\theta}_{mn}+\gamma_{mn}), \quad \widetilde{\theta}_{mn}=\pi N\theta_{mn}.
+\end{equation*}
+
+Since $\nu$ depends on $n$ and $m$ and takes only rational values, $\nu$ can be represented as $\nu= r/s$, $r,s \in\mathbb{N}$ , $(r,s)=1$, here $r$ and $s$ also depend on $n$ and $m$. Note that the set of $\nu$ values for any values of $n$ and $m$ is bounded, i.e.
+\begin{equation*}
+\frac{\alpha}{T}<\nu<\frac{\alpha}{pq}\sqrt{p^2+q^2}, \quad \text{где} \quad T=\max\{p,q\}.
+\end{equation*}
+Therefore, the set of values of $s$ is bounded above: $s\leq s_0$, $s_0\in\mathbb{N}$.
+Dividing $Nr$ by $s$ with the remainder: $Nr=ds+d_0$, $d,\,d_0\in\mathbb{N}\cup\{0\}$, $0\leq d_0<s$, we give the expression $\delta_{mn}(\nu)$ form
+\begin{equation}\label{2pgu181}
+\delta_{mn}(\nu)=(-1)^d\sqrt{1+\lambda_{mn}^{2}}\sin\left(\frac{\pi d_0}{s}+ \nu\widetilde{\theta}_{mn}+\gamma_{mn}\right).
+\end{equation}
+By the well-known inequalities
+$$
+|x|\leq|\arcsin x|\leq\frac{\pi}{2}|x|,\quad 0\leq |x|\leq 1,
+$$
+for  $\gamma_{mn}$ we have the estimate
+\begin{equation*}
+\frac{1}{\sqrt{1+\lambda_{mn}^2}}\leq\gamma_{mn}\leq\frac{\pi}{2}\frac{1}{\sqrt{1+\lambda_{mn}^2}}.
+\end{equation*}
+If the remainder is $d_0=0$, then we get
+\begin{equation*}
+|\delta_{mn}(\nu)|=\sqrt{1+\lambda_{mn}^{2}}\,\Big|\sin(\nu\widetilde{\theta}_{mn}+\gamma_{mn})\Big|.
+\end{equation*}
+From the estimates for $\theta_{mn}$ and $\gamma_{mn}$ it follows that $\widetilde{\theta}_ {mn}\rightarrow0$ and $\gamma_{mn}\rightarrow0$ for $N\rightarrow\infty$. Then there exists a natural number $N_2$ such that for all $N>N_2$
+$$
+0<\nu\widetilde{\theta}_{mn}+\gamma_{mn}<\frac{\pi}{2}.
+$$
+Now, by the well-known inequality
+\begin{equation*}
+|\sin x|>\frac{2}{\pi}|x|, \quad 0<x<\frac{\pi}{2},
+\end{equation*}
+and estimates for $\theta_{mn}$ and $\gamma_{mn}$ we have
+\begin{equation*}
+|\delta_{mn}(\nu)|>\frac{2}{\pi}\sqrt{1+\lambda_{mn}^{2}}(\nu\widetilde{\theta}_{mn}+\gamma_{mn})\geq \frac{2}{\pi}\sqrt{1+\lambda_{mn}^{2}}\nu\widetilde{\theta}_{mn}+\frac{2}{\pi}>\frac{2}{\pi}=C_1>0.
+\end{equation*}
+
+Let $d_0>0$. The set of values of $d_0/s$ is limited, so for $N\rightarrow\infty$ it has a lower limit of $\widetilde{d}_0\in(0,1)$, which is independent of $n$ and $m$. Then $\sin\left(\pi d_0/s+ \nu\widetilde{\theta}_{mn}+\gamma_{mn}\right)$ has a lower limit for $N\rightarrow\infty$. Therefore, there exists a number $N_3\in\mathbb{N}$ such that for all $N>N_3$ it follows from the equality \eqref{2pgu181} with the representation $\lambda_{mn}=\frac{\pi N\nu}{\alpha}\widetilde{\lambda}_{mn}$, we get
+$$
+|\delta_{mn}(\nu)|>\frac{1}{2}\sqrt{1+\lambda_{mn}^{2}}|\sin\pi\widetilde{d}_0|>\frac{1}{2}|\sin\pi\widetilde{d}_0|\lambda_{mn}= \frac{1}{2}|\sin\pi\widetilde{d}_0|\frac{\pi N\nu}{\alpha}\widetilde{\lambda}_{mn}>
+$$
+\begin{equation*}
+>\frac{1}{2}|\sin\pi\widetilde{d}_0|\frac{\pi\,N}{T}(1+\widetilde{\theta}_{mn})\geq \frac{\pi N}{2T}|\sin\pi\widetilde{d}_0|=C_2N\geq C_2>0.
+\end{equation*}
+Note that $C_1$ and $C_2$ here and hereafter, $C_i$ are positive constants depending, generally speaking, on $\alpha $, $p$ and $q$.
+
+Then the estimates for $\delta_{mn}(\nu)$ for $d_0=0$ and $d_0>0$ imply the validity of the estimate of the lemma for all $N>N_0$, where $N_0=\max\limits_{1\leq i\leq3}\{N_i\}$, $C_0=\min\limits\{C_1, C_2\}$.
+\end{proof}
+
+
+
+\textbf{Remark 1.} If under the conditions of Lemma 1 the coefficient $b=0$, then $\widetilde{\lambda}_{mn}\equiv1$ (i.e. $\theta_{mn}\equiv0$). That conclusion of this lemma remains valid.
+
+
+
+\begin{lemma}
+If $\nu$ accepts only irrational algebraic numbers of degree $2$ and inequality holds
+\begin{equation*}
+T(\alpha\,\mu^2+\pi)\sqrt{(\alpha p)^2+(\alpha q)^2+(pq)^2}<\pi^2\,p\,q, \quad T=\max\{p,q\},
+\end{equation*}
+then there are positive constants $C_0$ and $N_0$ $ (N_0\in\mathbb{N})$ such that for all $N>N_0$ the estimate
+\begin{equation*}
+|\delta_{mn}(\nu)|\geq C_0.
+\end{equation*}
+\end{lemma}
+
+\begin{proof}
+Since the number $\nu$ is a quadratically irrational number, by Liouville's theorem [20, p. 60] for such a number there exists a positive number $\delta$, depending on $\nu$, such that for any integers $n$ and $l$ ($n>0$) the inequality
+\begin{equation*}
+\left|\nu-\frac{l}{N}\right|>\frac{\delta}{N^2}.
+\end{equation*}
+Since the set of values of $\nu$ is bounded, the set of values of $\delta$ is also bounded, with $\delta\geq\delta_0>0$, where $\delta_0=\inf\limits_{m,n}\delta$.
+
+The relation $\delta_{mn}(\nu)$ can be represented as
+\begin{equation*}
+\delta_{mn}(\nu)=(-1)^k\sqrt{1+\lambda^2_{mn}}\sin\left[\pi\,N\left(\nu-\frac{l}{n}\right)+\nu\widetilde{\theta}_{mn}+\gamma_{mn}\right].
+\end{equation*}
+
+Note that for any $N\in\mathbb{N}$ one can find $l\in\mathbb{N}$ so that the inequality holds [8, p. 63]
+\begin{equation*}
+\left|\nu-\frac{l}{N}\right|<\frac{1}{2N}.
+\end{equation*}
+By the estimates for $\theta_{mn}$ and $\gamma_{mn}$ there exists a natural number $N_4$ such that for all $N>N_4$
+\begin{equation*}
+0<\nu\widetilde{\theta}_{mn}+\gamma_{mn}<\frac{\pi}{4}.
+\end{equation*}
+Then, for the sine argument from relation $\delta_{mn}(\nu)$ two cases are possible:
+$$
+1) \quad \frac{\pi}{2}\leq\pi\,N\left(\nu-\frac{l}{N}\right)+\nu\widetilde{\theta}_{mn}+\gamma_{mn}<\frac{3\pi}{4},
+$$
+$$
+2) \quad -\frac{\pi}{2}<\pi\,N\left(\nu-\frac{l}{N}\right)+\nu\widetilde{\theta}_{mn}+\gamma_{mn}<\frac{\pi}{2}.
+$$
+In the first case
+\begin{equation*}
+\left|\sin\left[\pi\,N\left(\nu-\frac{l}{N}\right)+\nu\widetilde{\theta}_{mn}+\gamma_{mn}\right]\right|>\sin\frac{3\pi}{4}=C_3.
+\end{equation*}
+Then we have
+\begin{equation*}
+|\delta_{mn}(\nu)|>\sqrt{1+\lambda^2_{mn}}\,C_3> C_3.
+\end{equation*}
+
+In the second case we get
+\begin{equation*}
+\left|\sin\left[\pi\,N\left(\nu-\frac{l}{N}\right)+\nu\widetilde{\theta}_{mn}+\gamma_{mn}\right]\right|> \frac{2}{\pi}\left|\pi\,N\left(\nu-\frac{l}{N}\right)+\nu\widetilde{\theta}_{mn}+\gamma_{mn}\right|.
+\end{equation*}
+Now, based on estimates for $\theta_{mn}$, $\gamma_{mn}$, $\nu$ and the inequality of the Liouville theorem, we have
+$$
+\frac{2}{\pi}\left|\pi\,N\left(\nu-\frac{l}{N}\right)+\nu\widetilde{\theta}_{mn}+\gamma_{mn}\right|\geq 2N\left|\nu-\frac{l}{N}\right|-\frac{2}{\pi}\nu\widetilde{\theta}_{mn}-\frac{2}{\pi}\gamma_{mn}>
+$$
+$$
+>\frac{2\delta_0}{N}- N\nu\left(\frac{\mu\,p\,q}{\pi\,N\,\sqrt{\left(\frac{q\,m}{N}\right)^2+\left(\frac{p\,n}{N}\right)^2}}\right)^2-\frac{1}{\sqrt{1+\lambda^2_{mn}}}>
+$$
+$$
+>\frac{2\delta_0}{N}-\frac{\widetilde{\alpha}\,(\mu\,p\,q)^2}{\pi^2 N\sqrt{\left(\frac{q\,m}{N}\right)^2+\left(\frac{p\,n}{N}\right)^2}}-\frac{1}{\lambda_{mn}}=
+\frac{2\delta_0}{N}-\frac{\widetilde{\alpha}^2\mu^2(p\,q)^2}{\pi^2 N\nu}-\frac{1}{\lambda_{mn}}>
+$$
+\begin{equation*}
+> \frac{2\delta_0}{N}-\frac{\alpha^2\mu^2}{\pi^2N\nu}-\frac{\alpha}{\pi N\nu}
+>\frac{1}{N}\left(2\delta_0-\frac{\alpha\mu^2T}{\pi^2}-\frac{T}{\pi}\right)=\frac{C_4}{N}.
+\end{equation*}
+The last estimate shows that it is enough for us to show that the constant $C_4>0$. To do this, we determine the number $\delta$ from the inequality of the Liouville theorem in terms of $\nu$. Since $\nu$ is a quadratically irrational number, it is the root of a second-degree polynomial with integer coefficients
+\begin{equation*}
+x^2-\nu^2=0.
+\end{equation*}
+Based on the results of [8, p. 65--66], where the formula for calculating $\delta$ in terms of the polynomial coefficients is obtained, we have
+$$
+\delta=\frac{1}{\nu+\sqrt{\nu^2+1}}>\delta_0=\frac{1}{\alpha\left[\sqrt{\cfrac{1}{p^2}+\cfrac{1}{q^2}}+ \sqrt{\cfrac{1}{p^2}+\cfrac{1}{q^2}+\cfrac{1}{\alpha^2}}\right]}>\frac{pq}{2 \sqrt{(\alpha p)^2+(\alpha q)^2+(pq)^2}}.
+$$
+From this estimate it follows that the constant $C_4$ will be greater than zero if the inequality
+$$
+\frac{pq}{\sqrt{(\alpha p)^2+(\alpha q)^2+(pq)^2}}-\frac{\alpha\,\mu^2\,T}{\pi^2}-\frac{T}{\pi}>0.
+$$
+The obtained relation is equivalent to the inequality from the conditions of the lemma. Then we get
+\begin{equation*}
+|\delta_{mn}(\nu)|=\sqrt{1+\lambda^2_{mn}}\frac{C_4}{N}>\lambda_{mn}\frac{C_4}{N}>\frac{\pi N \nu}{\alpha}(1+\theta_{mn})\frac{C_4}{N}>\frac{\pi \nu C_4}{\alpha}=C_5>0.
+\end{equation*}
+
+Then the inequalities obtained imply the lemma for all $N>N_0$, where $N_0=N_4$, $C_0=\min\limits\{C_3,C_5\}$.
+\end{proof}
+
+
+\textbf{Remark 2.} Since $\nu$ -- depends on $n$ and $m$, what should be the given problems $\alpha$, $p$ and $q$ so that $\nu$ takes only rational or only irrational algebraic values. Let the relation $q/p$ be rational. In this case, without loss of generality, we can assume that $p$ and $q$ are integers and they are coprime. Then $\nu$ can be rewritten as
+$$\nu=
+\begin{cases}
+\displaystyle{\frac{\alpha}{q}\sqrt{1+\left(\frac{q\,m}{p\,n}\right)^2}=\frac{\alpha}{q}\nu_+} & \text{при} \quad n>m,\\
+\displaystyle{\frac{\alpha}{q}\sqrt{1+\left(\frac{q}{p}\right)^2}=\frac{\alpha}{q}\nu_0} & \text{при} \quad n=m,\\
+\displaystyle{\frac{\alpha}{q}\sqrt{\left(\frac{q}{p}\right)^2+\left(\frac{n}{m}\right)^2}=\frac{\alpha}{q}\nu_-} & \text{при} \quad n<m.
+\end{cases}
+$$
+By virtue of Theorem 310 [21, p. 308] the square roots of $\nu_+$ and $\nu_-$ take rational values only when
+\begin{equation*}
+m=(a^2-b^2)p,\quad n=2abq \quad \text{дл€} \quad \nu_+,
+\end{equation*}
+\begin{equation*}
+n=(a^2-b^2)q,\quad m=2abp \quad \text{дл€} \quad \nu_-,
+\end{equation*}
+where $a>b>0$, $(a,b)=1$, and from the natural numbers $a$ and $b$ one of them is even and the other is odd.  орень $\nu_0$ принимает рациональные значени€ только тогда, когда
+\begin{equation*}
+q=(a^2-b^2),\quad p=2ab.
+\end{equation*}
+From these statements it follows that there are countable sets of values $n$, $m$, $p$ and $q$ for which the roots $\nu_+$, $\nu_-$ and $\nu_0$ take only rational values. If these conditions are violated, then the roots $\nu_+$, $\nu_-$ and $\nu_0$ are algebraic numbers of degree 2. Therefore, if the product $a\,T$ is a rational number, then $\nu$ takes rational values under the conditions for $n$, $m$, $p$ and $q$, and if these conditions are violated, irrational algebraic values.
+
+
+
+\begin{lemma}
+Let $\nu$ be an algebraic number of degree $k=1$ or $k=2$. Then, for all $N>N_0$, the estimates:
+\begin{equation*}
+|u_{mn}(t)|\leq C_{6}\left(N|\psi_{mn}|+|\Phi_{1mn}(t_1)|+|\Phi_{2mn}(t_2)|\right), -\alpha\leq t\leq\beta,
+\end{equation*}
+\begin{equation*}
+|u'_{mn}(t)|\leq C_7\Big(N^2|\psi_{mn}|+N|\Phi_{1mn}(t_1)|+N|\Phi_{2mn}(t_2)|\Big), \quad -\alpha\leq t\leq\beta,
+\end{equation*}
+\begin{equation*}
+|u''_{mn}(t)|\leq C_{8}\Big(N^3|\psi_{mn}|+N^2|\Phi_{1mn}(t_1)|+N^2|\Phi_{2mn}(t_2)|\Big), -\alpha\leq t\leq0,
+\end{equation*}
+where
+$
+|\Phi_{1mn}(t_1)|=\max\limits_{0\leq t\leq \beta}|\Phi_{1mn}(t)|$, $t_1$ is fixed point $[0,\beta]$,
+$
+|\Phi_{2mn}(t_2)|=\max\limits_{-\alpha\leq t\leq 0}|\Phi_{2mn}(t)|$, $t_2$ is fixed point $[-\alpha,0]$,
+$C_i$ are hereinafter positive constants.
+\end{lemma}
+
+
+\begin{proof}
+Preliminarily, taking into account Lemmas 1 and 2, we estimate the coefficients $a_{mn}$ of \eqref{2pgu16}:
+$$
+|a_{mn}|\leq \frac{|\psi_{mn}|}{|\delta_{mn}(\alpha)|}+\frac{1}{|\delta_{mn}(\alpha)|}\left|\frac{\Phi_{1mn}(0+0)}{\lambda_{mn}}\sin\lambda_{mn}\alpha\right|+
+$$
+$$
++\frac{1}{\lambda_{mn}|\delta_{mn}(\alpha)|}\left|\int\limits_{-\alpha}^0\Phi_{2mn}(s)\sin\left[\lambda_{mn}(s+\alpha)\right]\,ds\right|\leq
+$$
+\begin{equation*}
+\leq\widetilde{C}_1|\psi_{mn}|+\widetilde{C}_2\lambda^{-1}_{mn}|\Phi_{1mn}(t_1)|+\widetilde{C}_3\lambda^{-1}_{mn}|\Phi_{2mn}(t_2)|,
+\end{equation*}
+where $\widetilde{C}_i$ are hereinafter positive constants.
+
+We evaluate expression $u_{mn}(t)$ at $t\in[0,\beta]$. From \eqref{2pgu16}, by the estimate for $|a_{mn}|$ we get
+$$
+|u_{mn}(t)|=\left|a_{mn}e^{-\lambda^2_{mn}t}+\int\limits_0^t \Phi_{1mn}(s)e^{-\lambda^2_{mn}(t-s)}\,ds\right|\leq
+$$
+$$
+\leq|a_{mn}|+\widetilde{C}_4\frac{1}{\lambda^2_{mn}}|\Phi_{1mn}(t_1)|\leq \widetilde{C}_5\left(|\psi_{mn}|+\lambda^{-1}_{mn}|\Phi_{1mn}(t_1)|+\lambda^{-1}_{mn}|\Phi_{2mn}(t_2)|\right).
+$$
+Similarly, we obtain an estimate for $u_{mn}'(t)$ when $t\in[0,\beta]$:
+$$
+|u_{mn}'(t)|=\big|-\lambda^2_{mn}u_{mn}(t)+\Phi_{1mn}(t)\big|\leq
+$$
+$$
+\leq \widetilde{C}_6\Big(\lambda^{2}_{mn}|\psi_{mn}|+\lambda_{mn}|\Phi_{1mn}(t_1)|+\lambda_{mn}|\Phi_{2mn}(t_2)|\Big).
+$$
+
+Now, based on the formula \eqref{2pgu16} taking into account the estimate for $|a_{mn}|$ we evaluate the expression $u_{mn}(t)$ at $t\in[-\alpha,0]$:
+$$
+|u_{mn}(t)|\leq  |a_{mn}\left(\cos\lambda_{mn}t-\lambda_{mn}\sin\lambda_{mn}t\right)|+\left|\frac{\Phi_{1mn}(0+0)}{\lambda_{mn}}\sin\lambda_{mn}t\right|+ $$
+$$
++\left|\frac{1}{\lambda_{mn}}\int\limits_t^0 \Phi_{2mn}(s)\sin\left[\lambda_{mn}(t-s)\right]\,ds\right|\leq
+$$
+$$
+\leq \widetilde{C}_7\lambda_{mn}|\psi_{mn}|+\widetilde{C}_8|\Phi_{1mn}(t_1)|+\widetilde{C}_9|\Phi_{2mn}(t_2)|+ \widetilde{C}_{10}\lambda^{-1}_{mn}|\Phi_{1mn}(t_1)|+ \widetilde{C}_{11}\lambda^{-1}_{mn}|\Phi_{2mn}(t_2)|\leq
+$$
+$$
+\leq \widetilde{C}_{12}\Big(\lambda_{mn}|\psi_{mn}|+|\Phi_{1mn}(t_1)|+|\Phi_{2mn}(t_2)|\Big).
+$$
+Evaluate expression $u_{mn}'(t)$ at $t\in[-\alpha,0]$:
+$$
+|u_{mn}'(t)|=\bigg|a_{mn}\lambda_{mn}\left(-\sin\lambda_{mn}t-\lambda_{mn}\cos\lambda_{mn}t\right)+\Phi_{1mn}(0+0)\cos\lambda_{mn}t-
+$$
+$$
+-\int\limits_t^0 \Phi_{2mn}(s)\cos\left[\lambda_{mn}(t-s)\right]\,ds\bigg|\leq
+$$
+$$
+\leq \widetilde{C}_{13}\lambda^2_{mn}|\psi_{mn}|+\widetilde{C}_{14}\lambda_{mn}|\Phi_{1mn}(t_1)|+\widetilde{C}_{15}\lambda_{mn}|\Phi_{2mn}(t_2)|+
+$$
+$$
++\widetilde{C}_{16}|\Phi_{1mn}(t_1)|+ \widetilde{C}_{17}|\Phi_{2mn}(t_2)|\leq
+$$
+$$
+\leq\widetilde{C}_{18}\left(\lambda^2_{mn}|\psi_{mn}|+\lambda_{mn}|\Phi_{1mn}(t_1)|+\lambda_{mn}|\Phi_{2mn}(t_2)|\right).
+$$
+From the last inequalities, by the representation $\lambda_{mn}=\frac{\pi N\nu}{\alpha}\widetilde{\lambda}_{mn}$ we obtain the required first two estimates of the lemma.
+
+Since $u_{mn}''(t)=-\lambda_{mn}^2u_{mn}(t)+\Phi_{2mn}(t)$, then, based on the estimate for $|u_{mn}(t)|$ we obtain the third estimate of the lemma.
+\end{proof}
+
+
+Now formally, from \eqref{2pgu180} by term by term differentiation, we compose the series
+$$
+u_{t}(x,y,t)=\sum\limits_{m,n=1}^{\infty} u'_{mn}(t)v_{mn}(x,y)= -\sum\limits_{m,n=1}^{\infty} \left(\lambda^2_{mn}u_{mn}(t)-\Phi_{1mn}(t)\right)v_{mn}(x,y)=
+$$
+\begin{equation*}
+=-\sum\limits_{m,n=1}^{\infty} \lambda^2_{mn}u_{mn}(t)v_{mn}(x,y)+F_1(x,y,t), \quad t>0,
+\end{equation*}
+$$
+u_{tt}(x,y,t)=\sum\limits_{m,n=1}^{\infty} u''_{mn}(t)v_{mn}(x,y)=-\sum\limits_{m,n=1}^{\infty} \left(\lambda^2_{mn}u_{mn}(t)-\Phi_{2mn}(t)\right)v_{mn}(x,y)=
+$$
+\begin{equation*}
+=-\sum\limits_{m,n=1}^{\infty} \lambda^2_{mn}u_{mn}(t)v_{mn}(x,y)+F_2(x,y,t), \quad t<0,
+\end{equation*}
+\begin{equation*}
+u_{xx}(x,y,t)=\sum\limits_{m,n=1}^{\infty} u_{mn}(t)v_{mnxx}(x,y)= -\left(\frac{\pi}{p}\right)^2\sum\limits_{m,n=1}^{\infty} m^2u_{mn}(t)v_{mn}(x,y),
+\end{equation*}
+\begin{equation*}
+u_{yy}(x,y,t)=\sum\limits_{m,n=1}^{\infty} u_{mn}(t)v_{mnyy}(x,y)= -\left(\frac{\pi}{q}\right)^2\sum\limits_{m,n=1}^{\infty} n^2u_{mn}(t)v_{mn}(x,y).
+\end{equation*}
+The series \eqref{2pgu180} and the series of derivatives of this series found above, by virtue of Lemma 3, for any points $(x,y,t)\in\overline{Q}$ are majorized by the number series
+\begin{equation}\label{2vol34}
+C_{9}\sum\limits_{N>N_0} \Big(N^3|\psi_{mn}|+N^2|\Phi_{1mn}(t_1)|+N^2|\Phi_{2mn}(t_2)|\Big).
+\end{equation}
+
+\begin{lemma}
+Let $\psi(x,y)\in C^{5+h_1}(\overline{D})$, $0<h_1<1$,
+$$\psi(0,y)=\psi_{xx}(0,y)=\psi_{xxxx}(0,y)=\psi(p,y)=\psi_{xx}(p,y)=\psi_{xxxx}(p,y)=0, \quad 0\leq y\leq q,$$
+$$\psi(x,0)=\psi_{yy}(x,0)=\psi_{yyyy}(x,0)=\psi(x,q)=\psi_{yy}(x,q)=\psi_{yyyy}(x,q)=0 \quad 0\leq x\leq p,$$
+$F_1(x,y,t)\in C(\overline{Q}_+)\cap C^{4+h_2,4+h_2,0}_{x,y,t}(\overline{Q}_+)$, $0<h_2<1$,
+$$F_1(0,y,t)=F_{1xx}(0,y,t)=F_1(p,y,t)=F_{1xx}(p,y,t)=0, \quad 0\leq y\leq q, \quad 0\leq t\leq \beta,$$
+$$F_1(x,0,t)=F_{1yy}(x,0,t)=F_1(x,q,t)=F_{1yy}(x,q,t)=0, \quad 0\leq x\leq q, \quad -\alpha\leq t\leq 0,$$
+$F_2(x,y,t)\in C(\overline{Q}_+)\cap C^{4+h_3,4+h_3,0}_{x,y,t}(\overline{Q}_+)$, $0<h_3<1$,
+$$F_2(0,y,t)=F_{2xx}(0,y,t)=F_2(p,y,t)=F_{2xx}(p,y,t)=0, \quad 0\leq y\leq q, \quad 0\leq t\leq \beta,$$
+$$F_2(x,0,t)=F_{2yy}(x,0,t)=F_2(x,q,t)=F_{2yy}(x,q,t)=0, \quad 0\leq x\leq q, \quad -\alpha\leq t\leq 0.$$
+Then the estimates
+\begin{equation*}
+|\psi_{mn}|\leq\frac{C_{10}}{N^{5+h_1}},
+\end{equation*}
+\begin{equation*}
+|\Phi_{1mn}(t)|<\frac{C_{11}}{N^{4+h_2}}, \quad |\Phi_{2mn}(t)|<\frac{C_{12}}{N^{4+h_3}}, \quad i=1,2.
+\end{equation*}
+\end{lemma}
+
+
+The proof is similar [22, p. 333].
+
+
+In the series \eqref{2vol34} the number of members of the series with a given $N$ is of the order of $ N $. Based on this lemma, the series \eqref{2vol34} is majorized by the convergent series
+$$
+\sum\limits_{N=N_0+1}^{\infty} \Big(N^3|\psi_{mn}|+N^2|\Phi_{1mn}(t_1)|+N^2|\Phi_{1mn}(t_2)|\Big)\leq C_{13}\sum\limits_{N=N_0+1}^{\infty} \frac{1}{N^{1+h}},
+$$
+where $h=\min\{h_1,h_2,h_3\}$.
+
+If for the numbers $\nu$ from Lemma 1 or 2 for some $N=N_1,N_2,...,N_k$, where $1\leq N_1<N_2<...<N_k\leq N_0$, $N_i$, $i=\overline{1,k}$, and $k$ are given natural numbers, $\delta_{mn}(\nu)=0$, then for the solvability of the problem \eqref{2pgu2} -- \eqref{2pgu6} is necessary and sufficient to
+\begin{equation}\label{2vol39}
+\Phi_{1mn}(0+0)\sin\lambda_{mn}\alpha- \int\limits_{-\alpha}^0\Phi_{2mn}(s)\sin\left[\lambda_{mn}(s+\alpha)\right]\,ds=0,\quad N=N_1,N_2,...,N_k.
+\end{equation}
+In this case the solution of the problem \eqref{2pgu2} -- \eqref{2pgu6} is defined as the sum of the series
+\begin{equation}\label{2vol40}
+u(x,y,t)=\left(\sum\limits_{N=1}^{N_1-1}+\dots +\sum\limits_{N_{k-1}+1}^{N_{k}-1}+\sum\limits_{N=N_k+1}^{+\infty}\right) u_{mn}(t)v_{mn}(x,y)+
+\sum\limits_{N} u_{mn}(t)v_{mn}(x,y),
+\end{equation}
+where in the last sum $N$ takes values $N_1,N_2,...,N_k$, $u_{mn}(t)$ and $v_{mn}(x,y)$ are determined by the formulas \eqref{2pgu16} and \eqref{2pgu8} respectively, if in the final sums on the right side of \eqref{2vol40} the upper limit is less than the lower, then they should be considered zeros.
+
+
+Thus, the following statement holds.
+
+\begin{theorem}
+Let the constants $\alpha$, $p$, $q$ and $b$ satisfy the conditions of the lemmas $1$ and $2$, and the functions $\psi(x,y)$ and $F_i(x,y,t)$, $i=1,2$, satisfy the conditions of the lemma $4$. Then, if $\delta_{mn}(\nu)\neq0$ for $N=\overline{1,N_0}$, then there is a unique solution to the problem \eqref{2pgu2} -- \eqref{2pgu6} and this solution is given by the series \eqref{2pgu180}; if $\delta_{mn}(\nu)=0$ for some $N=N_1,N_2,...,N_k\leq N_0$, then the problem \eqref{2pgu2} -- \eqref{2pgu6} is solvable only then when the conditions \eqref{2vol39} holds and the solution is given by the series \eqref{2vol40}.
+\end{theorem}
+
+\medskip
+
+\textbf{Acknowledgments:} The reported study was funded by RFBR, project number 19-31-60016.
+
+
+
+
+%
+% The Bibliography
+%
+
+\begin{thebibliography}{99}
+\bibitem{1}
+\refitem{article}
+I.~M. GelТfand, \textquotedblleft Some questions of analysis and differential equations, \textquotedblright Usp. Mat. Nauk \textbf{14} (3), 3--19 (1959).
+
+\bibitem{2}
+\refitem{article}
+Ya.~S. Uflyand, \textquotedblleft On the question of the propagation of oscillations in compound electric lines,\textquotedblright Engineering and Physics Journal \textbf{7} (1), 89--92 (1964).
+
+\bibitem{3}
+\refitem{article}
+Ya.~S. Uflyand, I.~T. Lozanovskaya, \textquotedblleft On a Class of Problems of Mathematical Physics with a Mixed Spectrum of Eigenvalues, \textquotedblright Dokl. Academy of Sciences of the USSR \textbf{164} (5), 1005--1007 (1965).
+
+\bibitem{4}
+\refitem{book}
+T.~D. Dzhuraev, A.~Sopuev, M.~Mamazhanov, \emph{Boundary value problems for parabolic-hyperbolic equations} (Fan,  Tashkent, 1986).
+
+\bibitem{5}
+\refitem{article}
+O.~A. Ladyzhenskaya, L. Stupyalis, \textquotedblleft On mixed-type equations, \textquotedblright Bulletin of Leningrad State University, A series of mathematics, mechanics and astronomy \textbf{19} (4), 38--46 (1965).
+
+\bibitem{6}
+\refitem{article}
+L. Stupyalis, \textquotedblleft Initial-boundary value problems for equations of mixed type, \textquotedblright Proceedings of the Steklov Institute of Mathematics \textbf{127}, 135--170 (1975).
+
+\bibitem{7}
+\refitem{article}
+K.~B. Sabitov, \textquotedblleft Tricomi Problem for a Mixed ParabolicЦHyperbolic Equation in a Rectangular Domain, \textquotedblright Math. Notes \textbf{86} (2), 249--254 (2009).
+
+\bibitem{8}
+\refitem{book}
+K.~B. Sabitov, \emph{Direct and inverse problems for equations of mixed parabolic-hyperbolic type} (Nauka, Moskow, 2016).
+
+\bibitem{9}
+\refitem{article}
+K.~B. Sabitov, \textquotedblleft Initial boundary and inverse problems for the inhomogeneous equation of a mixed parabolic-hyperbolic equation, \textquotedblright Math. Notes \textbf{102} (3), 378--395 (2017).
+
+\bibitem{10}
+\refitem{article}
+S.~N. Sidorov, \textquotedblleft Nonlocal problem for a degenerate parabolic-hyperbolic equation, \textquotedblright Reports of the Adyghe International Academy of Sciences \textbf{14} (3), 34--44 (2012).
+
+\bibitem{11}
+\refitem{article}
+K.~B. Sabitov, S.~N. Sidorov, \textquotedblleft On a nonlocal problem for a degenerating parabolic-hyperbolic equation, \textquotedblright Differential Equations \textbf{50} (3), 352--361 (2014).
+
+\bibitem{12}
+\refitem{article}
+S.~N. Sidorov, \textquotedblleft Nonlocal problems for an equation of mixed parabolic-hyperbolic type with power degeneration, \textquotedblright Russian Math. (Iz. VUZ) \textbf{59} (12), 46--55 (2015).
+
+\bibitem{13}
+\refitem{article}
+K.~B. Sabitov, S.~N. Sidorov, \textquotedblleft Nachal'no-granichnaya zadacha dlya neodnorodnykh vyrozhdayushchikhsya uravneniy smeshannogo parabolo-giperbolicheskogo tipa, \textquotedblright Itogi nauki i tekhn. Ser. Sovrem. mat. i yeye pril. Temat. obz. \textbf{137}, 26--60 (2017) [in Russian].
+
+\bibitem{14}
+\refitem{article}
+K.~B. Sabitov, S.~N. Sidorov, \textquotedblleft Initial-Boundary-Value Problem for Inhomogeneous Degenerate Equations of Mixed Parabolic-Hyperbolic Type, \textquotedblright Journal of Mathematical Sciences \textbf{236} (6), 603--640 (2019).
+
+\bibitem{15}
+\refitem{article}
+K.~B. Sabitov, E.~M. Safin, \textquotedblleft The inverse problem for an equation of mixed parabolic-hyperbolic type, \textquotedblright Math. Notes \textbf{87} (6), 880--889 (2010).
+
+\bibitem{16}
+\refitem{article}
+K.~B. Sabitov, S.~N. Sidorov, \textquotedblleft Inverse problem for degenerate parabolic-hyperbolic equation with nonlocal boundary condition, \textquotedblright Russian Math. (Iz. VUZ) \textbf{59} (1), 39--50 (2015).
+
+\bibitem{17}
+\refitem{article}
+S.~N. Sidorov, \textquotedblleft Inverse problems for a mixed parabolic-hyperbolic equation with a degenerate parabolic part, \textquotedblright Sib. Elektron. Mat. Izv. \textbf{16}, 144--157 (2019).
+
+\bibitem{18}
+\refitem{article}
+S.~N. Sidorov, \textquotedblleft Inverse problems for a degenerate mixed parabolic-hyperbolic equation on finding time-depending factors in right hand sides, \textquotedblright Ufa Math. J. \textbf{11} (1), 75--89 (2019).
+
+\bibitem{19}
+\refitem{article}
+K.~B. Sabitov, \textquotedblleft Boundary-Value Problem for Non-Homogeneous Mixed Parabolic-Hyperbolic Type Equation, \textquotedblright Lobachevskii Journal of Mathematics \textbf{38} (1), 137--147 (2017).
+
+\bibitem{20}
+\refitem{book}
+A.~Ya. Khinchin, \emph{Continued Fractions} (Dover, Mineola, New York, 1997).
+
+\bibitem{21}
+\refitem{book}
+A.~A. Bukhshtab \emph{Teoriya chisel} (Lan', Sankt-Peterburg, 2008) [in Russian].
+
+\bibitem{22}
+\refitem{book}
+V.~A. Il'in, V.~A. Sadovnichiy, B.~L. Sendov \emph{Matematicheskiy analiz. T. 2} (Izd-vo MGU, Moskva, 1987) [in Russian].
+
+
+
+\end{thebibliography}
+\end{document}

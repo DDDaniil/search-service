@@ -1,0 +1,1 @@
+Closely calculating the singular integral calculation methods with a shift, the singular integrates acting in various functional spaces, and their close -up methods are calculated 235

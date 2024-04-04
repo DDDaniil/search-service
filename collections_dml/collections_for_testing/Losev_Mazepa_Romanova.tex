@@ -1,0 +1,560 @@
+\documentclass[
+11pt,%
+tightenlines,%
+twoside,%
+onecolumn,%
+nofloats,%
+nobibnotes,%
+nofootinbib,%
+superscriptaddress,%
+noshowpacs,%
+centertags]%
+{revtex4}
+\usepackage{ljm}
+
+\newtheorem{proposition}{Proposition}
+%\newtheorem{definition}{Definition}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{corollary}{Corollary}
+%\newtheorem{lemma}{Lemma} %for running heads
+ %\editor{N.M.~Editor}
+
+ \setcounter{page}{1}
+
+ \begin{document}
+\titlerunning{Eigenfunctions of the Laplace operator and harmonic functions}
+\authorrunning{Losev A., Mazepa E., Romanova I.}
+
+\title{Eigenfunctions of the Laplace operator and harmonic functions on model Riemannian manifolds}
+
+\author{\firstname{A.}~\surname{Losev}, \firstname{E.}~\surname{Mazepa}, \firstname{I.}~\surname{Romanova}}
+\email[E-mail: ]{alexander.losev@volsu.ru,elena.mazepa@volsu.ru,Irina.romanova@volsu.ru} \affiliation{IMIT, Volgograd State University, pr. Universitetsky 100, Volgograd, 400062, Russia}
+
+
+%\firstcollaboration{(Submitted by ) }
+
+%\received{date}
+
+\begin{abstract}
+This article explores and develops opportunities Fourier method of separation of variables for the study of the asymptotic behavior of harmonic functions on noncompact Riemannian manifolds of a special form. These manifolds generalize spherically symmetric manifold and are called model ones in a series of works. In the first part of the paper, an estimate of the eigenfunctions of the Laplace operator is obtained  on compact Riemannian manifolds $S$ in the norm $C^m(S)$. In the second part of the paper, the conditions for the unique solvability of the Dirichlet problem for harmonic functions on model manifolds with smooth boundary data at "infinity" are found. It was shown that the solution of this boundary value problem converges to the boundary data in the $C^1$-norm.
+
+\end{abstract}
+\subclass{31C12}
+\keywords{eigenfunctions of the Laplace operator, Dirichlet problem, model Riemannian manifold, asymptotic behavior of harmonic functions}
+
+\maketitle
+
+\section{Introduction}\label{intro}
+
+This paper is devoted to the development of the Fourier method in the theory of differential equations on Riemannian manifolds. The theory of elliptic equations on noncompact Riemannian manifolds has been quite actively developed over the past decades. The following problems are most popular in this area of mathematics.
+\begin{enumerate}
+  \item Find conditions guaranteeing that every solution of the equation from a given class is trivial (Liouville-type thiorems).
+  \item Find the conditions providing unique solvability of boundary value problems.
+\end{enumerate}
+
+Most of the research is devoted to Liouville-type theorems. An overview of the current state of research on this issue can be obtained for example, from the work \cite{G5}. In the theory of boundary value problems on noncompact Riemannian manifolds, most of the research is devoted to the solvability of the Dirichlet problems.  Notice that the common statement of the
+Dirichlet problem on such manifolds could turn out nontrivial \cite{M1}. However, in some cases, the geometric compactification of a manifold allows this to be done in a classical formulation. One of the classes of Riemannian manifolds on which the statement of the Dirichlet problem has natural geometric interpretation is manifolds with negative sectional curvature (see, for example, \cite{An}). Another class of manifolds admitting traditional statement of the Dirichlet problem is the manifold of the next form, called model manifolds.
+
+Will describe their structure: $M_{g}=B\cup D$, where $B$ is some precompact with the
+non-empty interior, and $D$ is isometric to the direct product $[r_{0};+\infty)\times S$
+($r_{0}>0$ and $S$ -- à compact Riemannian manifold, for example, a sphere)
+with metric
+\begin{equation}
+ds^{2}=dr^{2}+g^{2}\left(r\right)d\theta^{2}.\label{metric}
+\end{equation}
+Here $g(r)$ be an arbitrary positive, smooth function on $[r_{0};+\infty)$
+ and $d\theta^{2}$ be Riemannian metric on $S$. Examples of such manifolds are Euclidean space $R^n$, hyperbolic space $H^n$, surfaces of revolution, and others.
+
+We introduce the following notation
+$$
+J=\int\limits_{r_0}^{\infty}\frac{dt}{g^{n-1}\left(t\right)}\int\limits_{r_0}^t g^{n-3}\left(z\right)dz,
+$$
+where $r_{0}=\text{const}>0$ and $n=\dim M$.
+
+The exact conditions for the fulfillment of Liouville-type theorems and the solvability of boundary value problems for linear homogeneous and inhomogeneous equations on model Riemannian manifolds were found in \cite{L91,Mu1,Mu2,L96,LM99,Los_de}. In particular, the following statement is proved.
+
+\medskip
+\noindent {\bf Theorem A~\cite{L96,LM99}}. {\it~Let the manifold $M_g$
+such that  $J<\infty$. Then for any functions $\varphi\left(\theta\right)\in C\left(S\right)$
+and $\psi\left(\theta\right)\in C\left(S\right)$ there exists a unique
+harmonic function on $ D $ such that}
+$$
+u\left(r_{0},\theta\right)=\varphi\left(\theta\right)\qquad\mbox{and}\qquad
+\underset{r\rightarrow\infty}{\lim}u\left(r,\theta\right)=\psi\left(\theta\right).
+$$
+\medskip
+
+Note that the boundary condition at infinity in the above statement is understood as follows
+\[
+\underset{r\rightarrow\infty}{\lim}\left\Vert u\left(r,\theta\right)-\psi\left(\theta\right)\right\Vert _{C\left(D\smallsetminus B\left(r\right)\right)}=0.
+\]
+
+A number of studies have been devoted to the study of the asymptotic behavior of derivatives of harmonic functions \cite[p.~232]{mihlin}. In this regard, the natural problem is the convergence of harmonic functions to boundary conditions in the norm of differentiable functions. In this paper, we will consider a similar problem with the boundary condition at infinity of the following form
+\[
+\underset{r\rightarrow\infty}{\lim}\left\Vert u\left(r,\theta\right)-\psi\left(\theta\right)\right\Vert _{C^{1}\left(D\smallsetminus B\left(r\right)\right)}=0.
+\]
+
+Note that in the study of solutions of elliptic equations on model manifolds, the Fourier method of separation of variables was actively used. The latter is related to their topological structure. An important role was played by estimates of the eigenfunctions of the Laplace operator on compact Riemannian manifolds in the $C$-norm.
+However, this task in itself is of considerable interest. A number of studies were devoted to obtaining exact estimates of the $C$-norms of the eigenfunctions of the Laplace operator on compact Riemannian manifolds (see, for example, \cite{sogge}, \cite{grieser},
+\cite{cianchi-mazya}).
+
+In this paper, we give estimates of the eigenfunctions of Laplace operators on compact manifolds in the $C^m$ -norm. Next, using the Fourier method, the conditions for the unique solvability of the Dirichlet problem for harmonic functions are found, provided that the solution converges to the boundary data in the $C^1$-norm.
+%----------------------------------------------------------------
+
+\section{Eigenfunctions and eigenvalues}
+\label{sec1}
+
+Let $L_{\theta} = -\mbox{div}\left(\phi\left(\theta\right)\nabla\right)$
+is an operator defined on $S$.
+Here $\phi\left(\theta\right)$ is positive, smooth on $S$
+function. In the case of $\phi\left(\theta\right)\equiv 1$ the operator $L_{\theta}$
+coincides with the Laplace-Beltrami operator $-\Delta_{\theta}$ on $S$. We assume that
+$\dim S=n.$
+
+This section is devoted to estimating the norms of the eigenfunctions of the operator $-L_{\theta}$
+on compact Riemannian manifolds $S$ without boundary.
+
+Denote by $ W^{k, p}\left(S\right)$ the Banach space of functions having generalized derivatives of order $ k $ summable in $ L^{p}\left(S\right) $, for which
+\[
+\left\Vert f\right\Vert _{W^{k,p}\left(S\right)}=\left(\underset{S}{\int}\underset{\left\Vert \alpha\right\Vert \leq k}{\sum}\left|\nabla^{\alpha}f\right|^{p}d\theta\right)^{\frac{1}{p}}.
+\]
+
+By $ W_{0}^{k,p}\left(S\right)$ we denote the closure of $C_{0}^{k}\left(S\right)$ in the metric $ W^{k, p}\left(S\right)$. In the case $p = 2$ of the space $W^{k, 2}\left(S\right)$
+and $W_{0}^{k, 2}\left(S\right)$ are Hilbert spaces with the scalar product
+\[
+\left(u,v\right)_{k}=\underset{S}{\int}\underset{\left\Vert \alpha\right\Vert \leq k}{\sum}\nabla^{\alpha}u\nabla^{\alpha}v\:d\theta,
+\]
+which we denote by $H^k(S)$ and $H^k_0(S$ respectively.
+
+
+
+Note that the operator $-L_{\theta}$ on $H_{0}^{1}\left(S\right)$
+corresponds to a quadratic functional
+$$
+L\left(w,w\right)=\underset{S}{\int}\phi\left(\theta\right)\left|\nabla w\right|^{2}d\theta.
+$$
+The relation  $J\left(w\right)=\frac{L\left(w,w\right)}{\left(w,w\right)}$ (where
+$w\neq0$, $w\in H_{0}^{1}\left(S\right)$) is called the Rayleigh relation
+for the operator $-L_{\theta}$. It is known that the first eigenvalue
+for the operator $-L_{\theta}$ can be calculated by the formula $\lambda_{1}=\text{inf}\:J\left(w\right)$.
+Here the infimum is taken over all functions $w\in H_{0}^{1}\left(S\right)$
+and is achieved on the first eigenfunction $w_{1}$. Similarly $\lambda_{k}=\text{inf}\:J\left(w\right)$,
+where the  infimum is taken over all functions $w\in H_{0}^{1}\left(S\right)$
+such that $\left(w,w_{i}\right)=0$, $i=1,\ldots,k-1$ and is achieved on the eigenfunction  $w_{k}$ (for example, \cite{gilbarg89}
+p. 203).
+
+The next estimate of the eigenvalues of an elliptic operator $-L_{\theta}$ on a compact set is well known (\cite[p.190]{mihailov76}).
+\medskip
+
+\noindent {\bf Theorem B~\cite{mihailov76}.} {\it Let
+$\left\{ \lambda_{k}\right\} $ be the eigenvalues of an elliptic operator $-L_{\theta}$
+on $S$.  Then there are constants $c_{1}$, $c_{2}$  $(0<c_{1}\leq c_{2})$
+and the number $k_{0}$, such that for all $k\geq k_{0}$ the next inequality is true}
+$$
+c_{1}k^{\frac{2}{n}}\leq\lambda_{k}\leq c_{2}k^{\frac{2}{n}}.
+$$
+\medskip
+
+A series of papers have been devoted to evaluating various norms of eigenfunctions of Laplace operator. In particular, in \cite{sogge}, \cite{grieser} it was proved that there is a constant $C_{1}$ such that
+$$
+\left\Vert w_{k}\right\Vert _{C\left(S\right)}\leq C_{1}\lambda_{k}^{\frac{n-1}{4}}.
+$$
+
+
+
+Using the Sobolev embedding theorems, a similar estimate was obtained in \cite{L91}.
+\medskip
+
+\noindent {\bf Theorem C~\cite{L91}.} {\it Let
+$w_{k}$ be the $k$-th eigenfunction of the operator $-L_{\theta}$ on compact
+$S$. Then there are positive constants $C$ and $p$, as well as
+number $k_{0}$ such that for all $k\geq k_{0}$ we have}
+$$
+\left\Vert w_{k}\right\Vert _{C\left(S\right)}\leq Ck^{p}.
+$$
+\medskip
+
+In this paper, we obtain a similar estimate for the eigenfunctions of the operator $-L_{\theta}$ in the norm $C^{m}\left(S\right)$.
+
+\begin{theorem} Let
+$w_{k}$ be the $k$-th eigenfunction of the operator $-L_{\theta}$ on compact
+$S$. Then for all integers $m\geq0$ there are positive constants $C$ and
+$p$, as well as the number $k_{0}$, such that for all $k\geq k_{0}$ we have
+$$
+\left\Vert w_{k}\right\Vert _{C^{m}\left(S\right)}\leq Ck^{p}.
+$$
+\end{theorem}
+
+\begin{proof}
+Since $S$ is compact, it is sufficient
+show the inequality for an arbitrary region $\varOmega\subset\subset S$
+with sufficiently smooth boundary. Let $S\supset\supset\varOmega_{j}\supset\supset\varOmega_{j-1}\supset\supset\ldots\supset\supset\varOmega_{1}\supset\supset\varOmega$ be an arbitrary sequence of compact sets with smooth boundaries.
+Moreover $j = \left[\frac{n}{2}\right] + m$, where $ m\geq0 $ is an arbitrary integer.
+
+Given that the function $\phi\left(\theta\right)$ in the operator $-L_{\theta}$ is positive and continuous
+on the compact set $S$, we have $\underset{S}{\min}\left\{ \phi\left(\theta\right)\right\} >0$. Denote by $a=\min\left\{ 1,\:\underset{S}{\min}\left\{ \phi\left(\theta\right)\right\} \right\} >0$,
+then taking into account the estimate $a\leq\phi\left(\theta\right)$, the definition $\lambda_{k}$ and normalization of eigenfunctions, we obtain
+$$
+\underset{S}{\int}\left|\nabla w_{k}\right|^{2}d\theta=\frac{1}{a}\underset{S}{\int}a\left|\nabla w_{k}\right|^{2}d\theta
+\leq\frac{1}{a}\underset{S}{\int}\phi\left(\theta\right)\left|\nabla w_{k}\right|^{2}d\theta\leq\frac{1}{a}\lambda_{k}.
+$$
+
+Further, by the definition of the norm for the eigenfunctions of the operator $-L_{\theta}$, we have
+$$
+\left\Vert w_{k}\right\Vert _{W^{1,2}\left(S\right)}=\left(\underset{S}{\int}\left|w_{k}\right|^{2}d\theta+\underset{S}{\int}\left|\nabla w_{k}\right|^{2}d\theta\right)^{\frac{1}{2}}\leq\left(1+\frac{1}{a}\lambda_{k}\right)^{\frac{1}{2}}.
+$$
+Since $\frac{1}{a}\lambda_{k}\geq0$ we have $\left(1+\frac{1}{a}\lambda_{k}\right)^{\frac{1}{2}}\leq\left(1+\frac{1}{a}\lambda_{k}\right)$ and so
+\begin{equation}
+\left\Vert w_{k}\right\Vert _{W^{1,2}\left(S\right)}\leq1+\frac{1}{a}\lambda_{k}.
+\label{m1}
+\end{equation}
+
+First we apply the theorem on increasing smoothness for the norm $\left\Vert w_{k}\right\Vert _{W^{2,2}\left(\varOmega_{2}\right)}$ (see, for example \cite[p.177]{gilbarg89}) for the solve of the equation $-L_{\theta}w_{k}=\lambda_{k}w_{k}$ and obtain
+\begin{equation}
+\left\Vert w_{k}\right\Vert _{W^{2,2}\left(\varOmega\right)}\leq C_{2}\left(\left\Vert w_{k}\right\Vert _{W^{1,2}\left(\varOmega_{1}\right)}+\lambda_{k}\left\Vert w_{k}\right\Vert _{L^{2}\left(\varOmega_{1}\right)}\right)=C_{2}\left(1+\frac{1}{a}\lambda_{k}\right)^2.
+\label{m2}
+\end{equation}
+
+Next, we use the theorem on increasing smoothness for the norm $\left\Vert w_{k}\right\Vert _{W^{3,2}\left(\varOmega_{2}\right)}$ (see, for example \cite[p.179]{gilbarg89}) for the solve of the equation $-L_{\theta}w_{k}=\lambda_{k}w_{k}$ and get
+$$
+\left\Vert w_{k}\right\Vert _{W^{3,2}\left(\varOmega\right)}\leq C_{3}\left(\left\Vert w_{k}\right\Vert _{W^{1,2}\left(\varOmega_{1}\right)}+\lambda_{k}\left\Vert w_{k}\right\Vert _{W^{1,2}\left(\varOmega_{1}\right)}\right)=C_{3}\left(1+\lambda_{k}\right)\left\Vert w_{k}\right\Vert _{W^{1,2}\left(\varOmega_{1}\right)}.
+$$
+
+Taking into account inequality (\ref{m1}) and the condition $0<a\leq1$ we have
+$$
+\left\Vert w_{k}\right\Vert _{W^{3,2}\left(\varOmega\right)}\leq C_{3}\left(1+\frac{1}{a}\lambda_{k}\right)^{2}\leq C_{3}\left(1+\frac{1}{a}\lambda_{k}\right)^{3}.
+$$
+
+Let be $C_{k}^{*}=\max\left\{ 1,\:C_{k}\right\}$ for $k=2,3$.  Then, as above, it is easy to obtain the inequality
+\begin{equation}
+\left\Vert w_{k}\right\Vert _{W^{2,2}\left(\varOmega_{2}\right)}\leq C_{2}^{*}\left(1+\frac{1}{a}\lambda_{k}\right)^2,\qquad
+\left\Vert w_{k}\right\Vert _{W^{3,2}\left(\varOmega_{2}\right)}\leq C_{3}^{*}\left(1+\frac{1}{a}\lambda_{k}\right)^{3}.
+\label{m3}
+\end{equation}
+
+Similarly applying the theorem on increasing smoothness and taking into account the condition
+$\varOmega_{1}\supset\supset\varOmega$ evaluate
+$$
+\left\Vert w_{k}\right\Vert _{W^{4,2}\left(\varOmega\right)}\leq\left\Vert w_{k}\right\Vert _{W^{4,2}\left(\varOmega_{1}\right)}\leq C_{4}\left(\left\Vert w_{k}\right\Vert _{W^{1,2}\left(\varOmega_{2}\right)}+\lambda_{k}\left\Vert w_{k}\right\Vert _{W^{2,2}\left(\varOmega_{2}\right)}\right).
+$$
+
+We continue to estimate the norm  $\left\Vert w_{k}\right\Vert _{W^{4,2}\left(\varOmega\right)}$ using inequalities (\ref{m1})--(\ref{m3})
+$$
+\left\Vert w_{k}\right\Vert _{W^{4,2}\left(\varOmega\right)}\leq C_{4}\left(1+\frac{1}{a}\lambda_{k}+C_{2}^{*}\lambda_{k}\left(1+\frac{1}{a}\lambda_{k}\right)^{2}\right)\leq C_{2}^{*}C_{4}\left(1+\frac{1}{a}\lambda_{k}+\lambda_{k}\left(1+\frac{1}{a}\lambda_{k}\right)^{2}\right)\leq $$
+$$
+\leq C_{4}^{*}\left[\left(1+\frac{1}{a}\lambda_{k}\right)^{2}+\lambda_{k}\left(1+\frac{1}{a}\lambda_{k}\right)^{2}\right]\leq C_{4}^{*}\left(1+\frac{1}{a}\lambda_{k}\right)^{4},
+$$
+where $C_{4}^{*}=\max\left\{ 1,\:C_{2}^{*}C_{4}\right\} $.
+
+Similarly, applying the smoothness theorem for an arbitrary norm $\left\Vert w_{k}\right\Vert _{W^{j+2,2}\left(\varOmega_{j}\right)}$
+$$
+\left\Vert w_{k}\right\Vert _{W^{j+2,2}\left(\varOmega_{j}\right)}\leq C_{j+2}\left(\left\Vert w_{k}\right\Vert _{W^{1,2}\left(\varOmega_{1}\right)}+\lambda_{k}\left\Vert w_{k}\right\Vert _{W^{j,2}\left(\varOmega_{j+2}\right)}\right),
+$$
+we  can obtain the following estimate
+$$
+\left\Vert w_{k}\right\Vert _{W^{j,2}\left(\varOmega\right)}\leq C_{j}^{*}\left(1+\frac{1}{a}\lambda_{k}\right)^{j},
+$$
+where $C_{j}^{*}=C_{j}^{*}\left(\varOmega,\varOmega_{1},\,\ldots\,,\:\varOmega_{j},\:S\right).$
+
+Using the Theorem~B, we obtain for large enough $k$
+$$
+\left\Vert w_{k}\right\Vert _{W^{j,2}\left(\varOmega\right)}\leq c'k^{\frac{2j}{n}}.
+$$
+
+Further by the Sobolev embedding theorem for any eigenfunction we get
+$$
+\left\Vert w_{k}\right\Vert _{C^m}\left(\varOmega\right)\leq c''\left\Vert w_{k}\right\Vert _{W^{j,2}\left(\varOmega\right)},\:0\leq m\leq j-\frac{n}{2}.
+$$
+
+Since the choice of a subset of $\varOmega_{j}$ depends entirely on $\varOmega$
+and $S$ follows $c''=c''\left(\varOmega,\:S\right).$ Combining the last two inequalities and taking into account the arbitrariness of the choice of $m$, we obtain
+required.
+\end{proof}
+
+
+\section{On asymptotic behavior of Dirichlet problem's solutions for Laplacian equation}
+\label{sec_R1}
+
+In this section we prove an existence of  Dirichlet problem with a special condition on infinity.
+
+\begin{theorem}
+{\it Let $D$ be a manifold such that $J<\infty$ and $g^{''}\left(r\right)>0$. Then for any functions $\phi\left(\theta\right)\in C^{\infty}\left(S\right)$
+and $\psi\left(\theta\right)\in C^{\infty}\left(S\right)$ there exists a harmonic function $u\left(r,\theta\right)$ defined on $D$ such that
+$$
+u\left(r_{0},\theta\right)=\phi\left(\theta\right)
+$$
+and}
+$$
+\underset{r\rightarrow\infty}{\lim}\left\Vert u\left(r,\theta\right)-\psi\left(\theta\right)\right\Vert _{C^{1}\left(D\smallsetminus B\left(r\right)\right)}=0.
+$$
+\end{theorem}
+
+\begin{proof}
+The solvability of the boundary problem
+\begin{equation}
+\left\{ \begin{array}{l}
+\Delta u\left(r,\theta\right)=0\\
+u\left(r_{0},\theta\right)=\phi\left(\theta\right)\\
+\underset{r\rightarrow\infty}{\lim}\left\Vert u\left(r,\theta\right)-\psi\left(\theta\right)\right\Vert _{C\left(D\smallsetminus B\left(r\right)\right)}=0
+\end{array}\right.\label{eq:task1}
+\end{equation}
+was prooved in \cite{LM99}. So we should show that the following limit equality holds
+$$
+\underset{r\rightarrow\infty}{\lim}\left\Vert u\left(r,\theta\right)-\psi\left(\theta\right)\right\Vert _{C^{1}\left(D\smallsetminus B\left(r\right)\right)}=0
+$$
+or in other terms
+\begin{equation}
+\underset{r\rightarrow\infty}{\lim}\underset{D\setminus B\left(r\right)}{\max}\left|\nabla\left(u\left(r,\theta\right)-\psi\left(\theta\right)\right)\right|=0.\label{eq:main_condition}
+\end{equation}
+
+To find solutions to the problem (\ref{eq:task1}) the Fourier method was used and the solution was found in the form
+\[
+u\left(r,\theta\right)=\sum\limits_{k=0}^{\infty}v_{k}\left(r\right)w_{k}\left(\theta\right).
+\]
+Here the functions $v_{k}$ are solutions of the next equation
+\begin{equation}
+v^{''}\left(r\right)+\left(n-1\right)\frac{g^{'}\left(r\right)}{g\left(r\right)}v^{'}\left(r\right)-\frac{\lambda_k}{g^{2}\left(r\right)}v\left(r\right)=0,\label{spectral_equation}
+\end{equation}
+$w_{k}$ are eigenfunctions of the Laplace operator $-\Delta_{\theta}$ on the compact $S$, i.e. satisfy the equation
+\[
+\Delta_{\theta}w\left(\theta\right)+\lambda_k w\left(\theta\right)=0,
+\]
+and $\lambda_k$ is the corresponding eigenvalues.
+
+Next we will use the next representation of the gradient in the metric of the manifold $M_g$
+$$
+\nabla\left(u\left(r,\theta\right)-\psi\left(\theta\right)\right)=\left(\begin{array}{c}
+u_{r}^{'}\left(r,\theta\right)\\
+\frac{1}{g^{2}\left(r\right)}{\sum\limits_{k=2}^{n}}p^{2k}\left(\theta\right)\left[u_{\theta_{k}}^{'}\left(r,\theta\right)-\psi_{\theta_{k}}^{'}\left(\theta\right)\right]\\
+\frac{1}{g^{2}\left(r\right)}{\sum\limits_{k=2}^{n}}p^{3k}\left(\theta\right)\left[u_{\theta_{k}}^{'}\left(r,\theta\right)-\psi_{\theta_{k}}^{'}\left(\theta\right)\right]\\
+\vdots\\
+\frac{1}{g^{2}\left(r\right)}{\sum\limits_{k=2}^{n}}p^{nk}\left(\theta\right)\left[u_{\theta_{k}}^{'}\left(r,\theta\right)-\psi_{\theta_{k}}^{'}\left(\theta\right)\right]
+\end{array}\right),
+$$
+where
+$
+d\theta^{2}=\sum_{i,j=2}^{n}p_{ij}d\theta_{i}d\theta_{j}
+$
+be the metric on compact $S$, $p^{ij}$ be the elements of the inverse matrix of the metric tensor on $S$ and $\theta=(\theta_2,\dots, \theta_n)$.
+
+Now we can get an absolute value of the obtained  vector
+$$
+\left|\nabla\left(u\left(r,\theta\right)-\psi\left(\theta\right)\right)\right|=\Biggl(u_{r}^{2}\left(r,\theta\right)+\frac{1}{g^{2}\left(r\right)}
+{\sum\limits_{i,j=2}^{n}}p_{ij}\left(\theta\right)\times
+$$
+$$
+\left.\times{\sum\limits_{k=2}^{n}}p^{ik}\left(\theta\right)\left[u_{\theta_{k}}^{'}\left(r,\theta\right)-\psi_{\theta_{k}}^{'}\left(\theta\right)\right]
+{\sum\limits_{m=2}^{n}}p^{jm}\left(\theta\right)\left[u_{\theta_{m}}^{'}\left(r,\theta\right)-\psi_{\theta_{m}}^{'}\left(\theta\right)\right]\right)^{\frac{1}{2}}
+$$
+To prove that the equality (\ref{eq:main_condition}) holds we need to show that the following conditions are true
+$$
+\begin{array}{rl}
+\textbf{(I)} & \underset{r\rightarrow\infty}{\lim}u_{r}\left(r,\theta\right)=0;\\
+\textbf{(II)} & \underset{r\rightarrow\infty}{\lim}g\left(r\right)=\infty;\\
+\textbf{(III)} & \underset{r\rightarrow\infty}{\lim}u_{\theta_{m}}^{'}\left(r,\theta\right)=c_{m}\left(\theta\right)<\infty\;\;\forall m=\overline{2,n}.
+\end{array}
+$$
+
+Let's notice that {\bf (I)} follows from
+$$
+{\sum\limits_{k=0}^{\infty}}v_{k}^{'}\left(r\right)w_{k}\left(\theta\right)<\infty \quad \mbox{for all } (r,\theta)\in D.
+$$
+
+Let's obtain
+\[
+\left|v_{k}^{'}\left(r\right)\right|\leq\max\left\{ \left|v_{k}^{'}\left(r_{0}\right)\right|,\;\frac{\lambda_{k}}{n-1}\frac{1}{\left|g^{'}\left(r_{0}\right)\right|g\left(r_{0}\right)}\left(\left|a_{k}\right|+\left|b_{k}\right|\right)\right\} ,
+\]
+where
+\[
+a_{k}=\underset{S}{\int}\phi\left(\theta\right)w_{k}\left(\theta\right)d\theta\qquad\mbox{and}\qquad
+b_{k}=\underset{S}{\int}\psi\left(\theta\right)w_{k}\left(\theta\right)d\theta.
+\]
+
+Concider the set
+ $X\subset\left[r_{0};+\infty\right)$ such that  $v_{k}^{''}\left(r\right)>0$ for all $r\in X$. By using
+(\ref{spectral_equation}) we obtain
+\[
+v_{k}^{''}\left(r\right)=\frac{\lambda_{k}}{g^{2}\left(r\right)}v_{k}\left(r\right)-\left(n-1\right)\frac{g^{'}\left(r\right)}{g\left(r\right)}v_{k}^{'}\left(r\right)>0
+\]
+or
+\[
+\left(n-1\right)\frac{g^{'}\left(r\right)}{g\left(r\right)}v_{k}^{'}\left(r\right)<\frac{\lambda_{k}}{g^{2}\left(r\right)}v_{k}\left(r\right).
+\]
+Hence
+\[
+v_{k}^{'}\left(r\right)<\frac{\lambda_{k}}{n-1}\frac{1}{g^{'}\left(r\right)g\left(r\right)}v_{k}\left(r\right).
+\]
+From the inequality \cite{LM99}
+\[
+\left|v_{k}\left(r\right)\right|\leq\left|a_{k}\right|+\left|b_{k}\right|
+\]
+and the condition $g^{''}\left(r\right)>0$ we get required estimate
+\[
+\left|v_{k}^{'}\left(r\right)\right|<\frac{\lambda_{k}}{n-1}\frac{1}{\left|g^{'}\left(r\right)\right|g\left(r\right)}\left|v_{k}\left(r\right)\right|\leq\frac{\lambda_{k}}{n-1}\frac{1}{\left|g^{'}\left(r_{0}\right)\right|g\left(r_{0}\right)}\left(\left|a_{k}\right|+\left|b_{k}\right|\right).
+\]
+%
+Now let concider the set
+ $Y=\left[r_{0};+\infty\right)\setminus X$. This means that  $v_{k}^{''}\left(r\right)\leq0$ for all $r\in Y$  and
+$v_{k}^{'}\left(r\right)$ is a nonincreasing function as well.
+Therefore,
+\[
+\left|v_{k}^{'}\left(r\right)\right|\leq\max\left\{ \left|v_{k}^{'}\left(r_{0}\right)\right|,\;\frac{\lambda_{k}}{n-1}\frac{1}{\left|g^{'}\left(r_{0}\right)\right|g\left(r_{0}\right)}\left(\left|a_{k}\right|+\left|b_{k}\right|\right)\right\} \quad \mbox{ for all }r\in Y.
+\]
+Since $X\cup Y=\left[r_{0};+\infty\right)$ we get the required estimate for  $|v_{k}^{'}|$.
+
+Now let us show that
+\[
+\left|v_{k}^{'}\left(r_{0}\right)\right|<C_{1}k^{-\frac{2q_{1}}{n}}
+\]
+holds for any positive number $q_{1}$. By using Green's formula and definition of  $w_{k}\left(\theta\right)$ for $k\neq0$ we obtain
+\[
+\left|v_{k}^{'}\left(r_{0}\right)\right|=\left|\underset{S}{\int}u_{r}^{'}\left(r_{0},\theta\right)w_{k}\left(\theta\right)d\theta\right|=
+\frac{1}{\lambda_{k}}\left|\underset{S}{\int}u_{r}^{'}\left(r_{0},\theta\right)\Delta_{\theta}w_{k}\left(\theta\right)d\theta\right|=
+\frac{1}{\lambda_{k}}\left|\underset{S}{\int}\Delta_{\theta}u_{r}^{'}\left(r_{0},\theta\right)w_{k}\left(\theta\right)d\theta\right|.
+\]
+Using the Green's formula $q_{1}$ times we get
+\[
+\left|v_{k}^{'}\left(r_{0}\right)\right|=\frac{1}{\lambda_{k}^{q_{1}}}\left|\underset{S}{\int}\Delta_{\theta}^{q_{1}}u_{r}^{'}\left(r_{0},\theta\right)w_{k}\left(\theta\right)d\theta\right|.
+\]
+
+Applyng the Cauchy~--- Schwarz inequality to the right part of the last equation we have
+\[
+\left|v_{k}^{'}\left(r_{0}\right)\right|\leq\frac{1}{\lambda_{k}^{q_{1}}}\sqrt{\underset{S}{\int}\left[\Delta_{\theta}^{q_{1}}u_{r}^{'}\left(r_{0},\theta\right)\right]^{2}d\theta}\sqrt{\underset{S}{\int}w_{k}^{2}\left(\theta\right)d\theta}=\frac{\tilde{C}_{1}}{\lambda_{k}^{q_{1}}},
+\]
+where $\tilde{C}_{1}$ is a constant depending on $q_{1}$. From Weyl's asymptotics (see Theorem~B) follows
+\[
+\left|v_{k}^{'}\left(r_{0}\right)\right|<\tilde{C}_{2}\frac{\tilde{C}_{1}}{\left(k^{\frac{2}{n}}\right)^{q_{1}}}=C_{1}k^{-\frac{2q_{1}}{n}}.
+\]
+Now we should obtain the same estimate
+\[
+\frac{\lambda_{k}}{n-1}\frac{1}{\left|g^{'}\left(r_{0}\right)\right|g\left(r_{0}\right)}\left(\left|a_{k}\right|+\left|b_{k}\right|\right)<C_{2}k^{-\frac{2q_{2}}{n}}
+\]
+Similarly we get estimates for  $\left|a_{k}\right|$ and $\left|b_{k}\right|$ as way as we do it for  $\left|v_{k}^{'}\left(r_{0}\right)\right|$.
+Hence
+\[
+\frac{\lambda_{k}}{n-1}\frac{\left|a_{k}\right|+\left|b_{k}\right|}{\left|g^{'}\left(r_{0}\right)\right|g\left(r_{0}\right)}
+\leq\tilde{C}_{3}\lambda_{k}\left(\left|a_{k}\right|+\left|b_{k}\right|\right)\leq
+\tilde{C}_{3}\tilde{C}_{4}k^{\frac{2}{n}}\left(\tilde{C}_{5}k^{-\frac{2q_{3}}{n}}+\tilde{C}_{6}k^{-\frac{2q_{4}}{n}}\right)<C_{2}k^{-\frac{2q_{2}}{n}}
+\]
+where $q_{2}$ is an arbitrary positive number. We assume $C=\max\left\{ C_{1},C_{2}\right\} $
+and $q=\min\left\{ q_{1},q_{2}\right\} $, then
+\[
+\left|v_{k}^{'}\left(r\right)\right|\leq Ck^{-\frac{2q}{n}}.
+\]
+
+So according to Theorem~C the next estimate takes place
+\[
+\left|{\sum\limits_{k=0}^{\infty}}v_{k}^{'}\left(r\right)w_{k}\left(\theta\right)\right|\leq
+{\sum\limits_{k=0}^{\infty}}\left|v_{k}^{'}\left(r\right)\right|\left|w_{k}\left(\theta\right)\right|\leq
+{\sum\limits_{k=0}^{\infty}}\left|v_{k}^{'}\left(r\right)\right|Ck^{p}\leq
+C{\sum\limits_{k=0}^{\infty}}k^{p-\frac{2q}{n}}<\infty
+\]
+for enough large $q$, that is, the series converge uniformly.
+
+Now we can prove that condition {\bf (I)} holds.
+
+Since $g^{''}\left(r\right)>0$ it's easily shown that
+\[
+\underset{r\rightarrow\infty}{\lim}\frac{{\int\limits_{r_0}^{r}}g^{n-3}\left(t\right)dt}{g^{n-1}\left(r\right)}=
+\underset{r\rightarrow\infty}{\lim}\frac{g^{n-3}\left(r\right)}{\left(n-1\right)g^{'}\left(r\right)g^{n-2}\left(r\right)}=
+\frac{1}{n-1}\underset{r\rightarrow\infty}{\lim}\frac{1}{g^{'}\left(r\right)g\left(r\right)}=0.
+\]
+Given the previously proved uniform convergence of the series, we have
+\[
+\underset{r\rightarrow\infty}{\lim}{\sum\limits_{k=0}^{\infty}}v_{k}^{'}\left(r\right)w_{k}\left(\theta\right)=
+{\sum\limits_{k=0}^{\infty}}\underset{r\rightarrow\infty}{\lim}v_{k}^{'}\left(r\right)w_{k}\left(\theta\right)=
+\]
+\[
+={\sum\limits_{k=0}^{\infty}}\underset{r\rightarrow\infty}{\lim}\left[\lambda_{k}\frac{1}{g^{n-1}\left(r\right)}
+{\int\limits_{r_0}^{r}}g^{n-3}\left(t\right)v_{k}\left(t\right)dt+
+\frac{g^{n-1}\left(r_{0}\right)}{g^{n-1}\left(r\right)}v_{k}^{'}\left(r_{0}\right)\right]w_{k}\left(\theta\right)=0.
+\]
+
+The condition {\bf (II)} follows easily from $g^{''}\left(r\right)>0$.
+
+Concider the condition {\bf (III)} more careful. At first we prove that the series
+\[
+{\sum\limits_{k=0}^{\infty}}v_{k}\left(r\right)\left(w_{k}\left(\theta\right)\right)_{\theta_{m}}^{'}
+\]
+ converges uniformly on $D$ for all $m=\overline{2,n}$.
+
+According the Theorem~1 we get
+\[
+\left|{\sum\limits_{k=0}^{\infty}}v_{k}\left(r\right)\left(w_{k}\left(\theta\right)\right)_{\theta_{m}}^{'}\right|
+\leq{\sum\limits_{k=0}^{\infty}}\left|v_{k}\left(r\right)\right|\left|w_{k}\left(\theta\right)\right|_{\theta_{m}}^{'}
+\leq{\sum\limits_{k=0}^{\infty}}\left(\left|a_{k}\right|+\left|b_{k}\right|\right)C_{1}k^{p}.
+\]
+Since
+\[
+\left|a_{k}\right|+\left|b_{k}\right|<C_{2}k^{-\frac{2q}{n}}
+\]
+for an arbitrary positive number $q_{2}$, than
+\[
+\left|{\sum\limits_{k=0}^{\infty}}v_{k}\left(r\right)\left(w_{k}\left(\theta\right)\right)_{\theta_{m}}^{'}\right|\leq C{\sum\limits_{k=0}^{\infty}}k^{p-\frac{2q}{n}}<\infty
+\]
+holds for enough large $q$. Hence,
+\[
+\underset{r\rightarrow\infty}{\lim}u_{\theta_{m}}^{'}\left(r,\theta\right)=
+\underset{r\rightarrow\infty}{\lim}{\sum\limits_{k=0}^{\infty}}v_{k}\left(r\right)\left(w_{k}\left(\theta\right)\right)_{\theta_{m}}^{'}=
+\]
+\[
+={\sum\limits_{k=0}^{\infty}}\underset{r\rightarrow\infty}{\lim}v_{k}\left(r\right)\left(w_{k}\left(\theta\right)\right)_{\theta_{m}}^{'}=
+{\sum\limits_{k=0}^{\infty}}b_{k}\left(w_{k}\left(\theta\right)\right)_{\theta_{m}}^{'}<\infty\quad\forall m=\overline{2,n}.
+\]
+
+So as soon as conditions {\bf (I)}, {\bf (II)} and {\bf (III)} are true the equation (\ref{eq:main_condition}) holds true as well.
+The theorem is proved.
+\end{proof}
+
+%%%%%%%%%%%55%---------------------------------------------------------------
+
+\begin{thebibliography}{99}
+
+\bibitem{G5} A. Grigor'yan {\it Analitic and
+geometric background of recurence and non-explosion of the
+Brownian motion on Riemannian manifolds}, Bull. Amer. Math.
+Soc., \textbf{36}, 135--249 (1999).
+
+\bibitem{M1} E.A. Mazepa  \textit{On the solvability of boundary value problems for Poisson’s equation on noncompact
+Riemannian manifolds}, Math. Phys. Comput. Simul., \textbf{40}, no.~3, 136–147 (2017).
+
+\bibitem{An}
+A. Ancona {\it Negative curved manifolds, elliptic operators, and the
+Martin boundary},  Ann. of Math.(2), \textbf{125}, no.~3, 495--536 (1987).
+
+\bibitem{gilbarg89} D.~Gilbarg, N.~S.~Trudinger \textit{Elliptic partial
+differential equations of second order},  (Springer-Verlag, Berlin-New York, 1983).
+
+\bibitem{L91} A.G. Losev \textit{Some Liouville theorems on Riemannian manifolds of a special form},  Russian Mat. Izv., Ser. Mat., no.~12, 15-24 (1991).
+
+\bibitem{L96} A.G. Losev \textit{On a criterion for the hyperbolicity of noncompact Riemannian manifolds of a special type}, Mathematical notes, \textbf{59},  no.~4, 558-564 (1996).
+
+\bibitem{Mu1} M. Murata \textit{Positive harmonic functions
+on rotationary symmetric Riemannian manifolds}, Potential
+Theory. ed. by M. Kishi, 251--259 (1991).
+
+\bibitem{Mu2} M. Murata, T. Tsuchida \textit{Uniqueness of $L^1$-harmonic functions
+on rotationary symmetric Riemannian manifolds}, Kodai Math.J, no.~37, 1-15 (2014).
+
+\bibitem{LM99} A.G. Losev, E.A. Mazepa \textit{On the asymptotic behavior of solutions of certain equations of elliptic type on noncompact Riemannian manifolds} Russian Mat. Izv., Ser. Mat., no.~6, 41-49 (1999).
+
+\bibitem{Los_de} A.G. Losev \textit{On the solvability of the Dirichlet problem for the Poisson equation on some noncompact Riemannian manifolds},
+Differential equations, \textbf{53}, no.~12. 1643-1652 (2017).
+
+\bibitem{mihlin} S.G. Michlin \textit{Partial linear equations}  (Moscow: Vysshaya Shkola,  1977).
+
+\bibitem{sogge} C.D. Sogge \textit{Concerning the ${L}^{p}$ norm of spectral clusters for second-order elliptic operators on compact manifolds}, Journal of Functional Analysis,  \textbf{77}, 123-131 (1988).
+
+\bibitem{grieser} D. Grieser \textit{Uniform bounds for eigenfunctions of the Laplacian on manifolds with boundary}, Communications in Partial Differential Equations,  \textbf{27}, 1283-1299 (2001).
+
+\bibitem{cianchi-mazya} A.Cianchi, V.G.Maz'ya \textit{Bounds for eigenfunctions of the Laplacian on noncompact Riemannian manifolds},  American Journal of Mathematics. \textbf{135}, no.~3, 579-635 (2011).
+
+\bibitem{mihailov76}  V.P.~Mikhailov \textit{Partial Differential Equations},  (Moscow: Nauka,  1976).
+
+
+
+
+\end{thebibliography}
+
+
+\end{document}

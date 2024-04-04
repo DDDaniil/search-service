@@ -1,0 +1,1225 @@
+%\pdfmapfile{+literat.map}
+%Avkhadiev%%
+%% ****** Generated 31.03.19 by LJM TeX-constructor******
+%%
+\documentclass[
+11pt,%
+tightenlines,%
+twoside,%
+onecolumn,%
+nofloats,%
+nobibnotes,%
+nofootinbib,%
+superscriptaddress,%
+noshowpacs,%
+centertags]%
+{revtex4}
+\usepackage{ljm}
+
+
+
+\setcounter{page}{3}
+
+\begin{document}
+\titlerunning{Strong Hardy inequalities} % for running heads
+\authorrunning{Avkhadiev} % for running heads
+%\authorrunning{First-Author, Second-Author} % for running heads
+
+\title{A strong form of Hardy Type Inequalities on Domains  \\
+of the Euclidean Space}
+% Splitting into lines is performed by the command \
+% The title is written in accordance with the rules of capitalization.
+
+\author{\firstname{F.~G.}~\surname{Avkhadiev}}
+\email[E-mail: ]{avkhadiev47@mail.ru} \affiliation{Kazan Federal
+University, Russia, 420008, Kazan, 35, Kremlyovskaya ul., Room 601}
+
+
+
+
+%\noaffiliation % If the author does not specify a place of work.
+
+\firstcollaboration{(Submitted by A. M. Elizarov)} % Add if you know submitter.
+%\lastcollaboration{ }
+
+
+ \received{March 11, 2020; revised March 18, 2020; accepted April 10, 2020}
+
+
+\begin{abstract} % You shouldn't use formulas and citations in the abstract.
+We prove new integral inequalities for real-valued test functions
+defined on  subdomains of the Euclidean space. Namely, we obtain several new Hardy-type inequalities that contain  the scalar product of gradients of test functions and of the gradient of the distance function from the boundary of an open subset of the Euclidean space.
+
+
+\quad Our method of proof is based on  interior and exterior approximations of a given domain by sequences of simplest domains and has two important ingredients. The first one is  approximations of a given domain by elementary  domains that admit a special partition. The second ingredient is presented in this paper by theorems 1 and 2 about  convergence everywhere of the  sequences of distance functions from boundary of approximating elementary domains as well as about  convergence almost everywhere for their gradients. In the proofs we also use some basic theorems  due to Rademacher, Hardy, Motzkin and Hadwiger.
+\end{abstract}
+\subclass{26D15, 26D10} % Enter 2010 Mathematics Subject Classification.
+\keywords{Hardy inequality, Euclidean maximal modulus, distance function, Rademacher theorem, Motzkin theorem, hyperbolic radius.} % Include keywords separeted by comma.
+
+\maketitle
+
+% Text of article starts here.
+
+
+\section{Introduction}
+\label{intro}
+
+
+On open sets $\Omega\subset\mathbb{R}^n$ such that   $n\geq 2$ and  $\Omega\neq\mathbb{R}^n$ we will consider inequalities for   test functions $u\in C_0^1(\Omega)$, where $C_0^1(\Omega)$ is the family of smooth real-valued functions with compact supports
+in the open set  $\Omega$. Let  ${\rm dist}(x,\partial \Omega)$ be the distance from the point
+$x\in \Omega$  to the boundary of $\Omega$, i. e.
+$$
+{\rm dist}(x,\partial \Omega)= \inf_{y\in \mathbb{R}^n \setminus \Omega} |x-y|.
+$$
+This distance function is well studied  (see for instance $\cite{BEL}$, ch. 2.). It has the following basic property:
+\begin{equation}\label{f002}
+|{\rm dist}(x,\partial \Omega) - {\rm dist}(y,\partial \Omega)|\leq  |x-y|, \quad \forall x, y\in \Omega.
+\end{equation}
+By Rademacher's theorem \cite{R}, published in  1919,  every Lipschitz function   $f:  \Omega \to \mathbb{R}$ is almost everywhere differentiable in $\Omega$, therefore the distance function is differentiable in $\Omega \setminus S(\Omega)$, where $S(\Omega)$ is the set of all singular points such that the Lebesgue measure $mes_n S(\Omega)=0$. Consequently, at any   point $x\in \Omega \setminus S(\Omega)$ the gradient  $\nabla {\rm dist}(x,\partial \Omega)$ is well defined and
+\begin{equation}\label{f003}
+{\rm dist}(x+h,\partial \Omega)  - {\rm dist}(x,\partial \Omega) = \nabla {\rm dist}(x,\partial \Omega) \cdot h +o(|h|), \,\,\, \forall x\in  \Omega \setminus S(\Omega),\,\, x+h \in \Omega,\,\,  |h|\to 0,
+\end{equation}
+where $\nabla {\rm dist}(x,\partial \Omega) \cdot h$ is the Euclidean scalar product of vectors. From (\ref{f002}) and (\ref{f003}) it follows  that
+\begin{equation}\label{f004}
+|\nabla {\rm dist}(x,\partial \Omega) |= 1, \quad \forall x\in  \Omega \setminus S(\Omega).
+\end{equation}
+As is indicated in   \cite{BEL}, p. 52, the assertion (\ref{f004}) is due to K. S. Motzkin  \cite{Mot}, and later it is proved independently  by several other mathematicians. In addition, by Motzkin's theorem a point $x\in \Omega \setminus S(\Omega)$ if and only if there exists a unique point $x'\in \partial \Omega$
+such that ${\rm dist}(x,\partial \Omega) =|x-x'|$ and that
+$$
+\nabla {\rm dist}(x,\partial \Omega) = \frac{x-x'}{|x-x'|}.
+$$
+Moreover,  the gradient $\nabla {\rm dist}(x,\partial \Omega) $ of the distance function is a continuous function on its domain of definition, i. e. on the set $ \Omega \setminus S(\Omega)$.
+
+
+There are many  papers on  Hardy type
+inequalities (see, for instance the papers \cite{BaF}--\cite{Av20}). One can  find the basic results  with
+detailed proofs in  the   book  \cite{BEL} by A.~A.~Balinsky,
+W.~D.~Evans and  R.~T.~Lewis.
+
+
+Suppose that   parameters  $p\in [1, \infty)$ and  $s\in (-\infty, \infty)$. For  real-valued functions $u\in C_0^1(\Omega)$ we   will study  a new  Hardy type inequality:
+\begin{equation}
+\label{HI}
+\int_{\Omega}\frac{|\nabla u(x)\cdot \nabla{\rm dist}(x, \partial \Omega)|^p dx}{{\rm dist}^{s-p}(x, \partial \Omega)}\geq c^*_{p}(s, \Omega)\int_{\Omega}\frac{|u(x)|^p dx}{{\rm dist}^{s}(x, \partial\Omega)} \quad \forall u\in C_0^1(\Omega),
+\end{equation}
+where   $\nabla u$  denotes the  gradient of the function $u: \Omega \to \mathbb{R}$, $\nabla u(x)\cdot \nabla{\rm dist}(x, \partial \Omega)$ is the scalar product. The constant  $c^*_{p}(s, \Omega)\in [0, \infty)$ is defined to be maximal, i.e. it is defined by the following formula
+\begin{equation}
+\label{HI1}
+c^*_{p}(s, \Omega) = \inf_{ u\in C_0^1(\Omega), \, u\not \equiv 0} {\int_{\Omega}\frac{|\nabla u(x)\cdot \nabla{\rm dist}(x, \partial \Omega)|^p dx}{{\rm dist}^{s-p}(x, \partial \Omega)} dx}\left/{\int_{\Omega}\frac{|u(x)|^p dx}{{\rm dist}^{s}(x, \partial\Omega)}}\right.
+\end{equation}
+Notice that    $c^*_{p}(s, \Omega)$ is invariant under linear conformal transformation. In particular, one has that $c^*_{p}(s, \Omega)= c^*_{p}(s, a\Omega +b),$
+where  $a\Omega + b = \{y\in \mathbb{R}^n: y=ax+b,  x\in \Omega \}$ with a fixed point  $b \in \mathbb{R}^n$ and a fixed number $a\neq 0$.
+
+
+
+
+%\medskip
+
+Inequality  (\ref{HI}) is well studied by Hardy in the case when $n=1$ and   $\Omega = ( 0, \infty)\subset \mathbb{R}$. In this case one has that  ${\rm dist}(x,\partial \Omega)= |x|$. Hardy considered separately three cases for 1) $p=s=2$ and   2) $p\geq 1$, $s>1$ and 3) $p\geq 1$,  $s<1$. The following theorem presents a unified version of Hardy's results in a form suitable for our considerations.
+
+{\bf Theorem A}   (compare \cite{HLP}).
+  {\it Suppose that $p\in [1, \infty)$  and  $s\in \mathbb{R}$. Then for every function  $f: (0, \infty) \to  \mathbb{R}$, satisfying the conditions $f\in C_0^1((0, \infty))$ and $f \not \equiv 0$,  the following inequality is valid
+\begin{equation}
+\label{Th_A_1}
+\int_{0}^{\infty}\frac{|f'(t)|^p}{t^{s-p}} dt > \frac{|s-1|^p}{p^p}\int_{0}^{\infty}\frac{|f(t)|^p}{t^{s}} dt,
+\end{equation}
+where the constant  ${|s-1|^p}/{p^p}$ is sharp}.
+
+The following theorem is presented by A.~A.~Balinsky, W.~D.~Evans in  \cite{BE}.
+
+
+{\bf Theorem B}   ( \cite{BE}). { \it  Suppose that $n\geq 2$ and $\Omega\subset\mathbb{R}^n$ is a convex domain such that $\Omega \neq\mathbb{R}^n$.  If the parameter  $p\in (1, \infty)$, then
+\begin{equation}
+\label{Th_B_1}
+\int_{\Omega}{|\nabla u(x)\cdot \nabla dist (x, \partial \Omega)|^p dx}\geq \frac{(p-1)^p}{p^p}\int_{\Omega}\frac{|u(x)|^p dx}{dist^{p}(x, \partial\Omega)} \quad \forall u\in C_0^1(\Omega),
+\end{equation}
+where the constant ${(p-1)^p}/{p^p}$ is sharp  for every convex domain $\Omega \neq\mathbb{R}^n$ such that its boundary is  smooth in a  neighborhood of a point $y\in \partial \Omega$}.
+
+ We give (see Theorem 3, below) a new proof of this theorem in a generalized and improved form. More precisely, we prove that $c^*_p(s, \Omega) = {(s-1)^p}/{p^p}$
+for every convex domain $\Omega\subset\mathbb{R}^n$, $\Omega \neq\mathbb{R}^n$ and arbitrary fixed parameters $p\in [1, \infty)$ and  $s\in (1, \infty)$.
+
+Also, we will prove an improved version (see Theorem 5, below) of the following theorem due to the author.
+
+
+{\bf Theorem C}  (see \cite{Av1} and \cite{Av2}).
+ {\it Suppose that  $n\geq 2$, $p\in [1, \infty)$, $s\in [n, \infty)$, $\Omega\subset\mathbb{R}^n$ is an open set such that  $\Omega \neq\mathbb{R}^n$. Then
+\begin{equation}
+\label{Th_C}
+\int_{\Omega}\frac{|\nabla u(x)|^p dx}{{\rm dist}^{s-p}(x, \partial \Omega)}\geq \frac{(s-n)^p}{p^p}\int_{\Omega}\frac{|u(x)|^p dx}{{\rm dist}^{s}(x, \partial\Omega)} \quad \forall u\in C_0^1(\Omega),
+\end{equation}
+where the constant  ${(s-n)^p}/{p^p}$ is optimal one, i.e. there exist domains $\Omega \subset\mathbb{R}^n$, $\Omega \neq\mathbb{R}^n$, for which  the quantity   ${(s-n)^p}/{p^p}$ is the best possible constant.}
+
+In our recent paper \cite{Av141} it is  proved the following hyperbolic analog of Theorem B. Instead of the distance function we use
+the hyperbolic radius $R(x, \Omega)$, satisfying the Liouville equation
+$$
+2 \, R(x, \Omega) \Delta R(x, \Omega) = {n}\, |\nabla R(x, \Omega)|^2 - 4\, n, \quad x\in \Omega,
+$$
+and the boundary condition $R(x, \Omega)|_{\partial \Omega}=0$. Notice that the  hyperbolic radius is a smooth function such  that $R(x, \Omega)\geq {\rm dist}(x, \partial \Omega)$. In particular,  for the unit ball $B=\{x\in \mathbb{R}^n: |x|<1\}$ and the half-space $H_n^+=\{(x_1,  ..., x_n)\in \mathbb{R}^n: x_1>0\}$ one has that $R(x, B)=1- |x|^2$ and that  $R(x,H_n^+)= 2\, x_1$.
+
+ {\bf Theorem BH}  (see \cite{A15} and \cite{Av141}).
+ {\it Suppose that
+  $n\geq 2$,  $1\leq p< \infty$, $1+n/2 \leq s <\infty$,  $\Omega \subset\mathbb{R}^n$ is a domain of hyperbolic type. Then for every real-valued function $u\in C_0^1(\Omega)$ the following inequality is valid:
+$$
+\int_{\Omega}\frac{\left|\nabla u(x) \cdot \nabla R(x, \Omega)\right|^p dx}{R^{s-p}(x, \Omega)}\geq \frac {2^pn^p}{p^p}\int_{\Omega}\frac{|u(x)|^p dx}{R^{s}(x, \Omega)}.
+$$
+ If $s=1+n/2$ and $\Omega=H_n^+$, then the constant  ${2^pn^p}/{p^p}$ in this inequality is sharp  for any $p \in [1, \infty)$ and any $n\geq 2$.}
+
+We will need the following result of Hadwiger on convex bodies.
+
+{\bf Theorem D}  (compare \cite{H}). {\it Let $A\subset \mathbb{R}^n$ be a convex compact set
+with $0\in {A}$ and $0 \notin \partial A$, i. e. the origin is an interior point of $A$. Then for  every $ \lambda>1$ there
+exists an $n$-dimensional  convex polytope  $P(\lambda)$ such that
+ $  P(\lambda)\subset A \subset
+\lambda  P(\lambda).$}
+
+ Notice that for an $n$-dimensional  convex polytope  $P(\lambda)$ the set  $P(\lambda)\setminus(\partial P(\lambda))$ is a bounded convex subdomain of $\mathbb{R}^n$.
+It is not difficult to  obtain the following corollary of Hadwiger's theorem.
+\begin{corollary}\label{Co:1.1_1}
+{\it Let $A\subset \mathbb{R}^n$ be a convex compact set
+with $0\in {A}$ and $0 \notin \partial A$, i. e. the origin is an interior point of $A$, and let $K\subset A\setminus (\partial A)$ be a compact set. Then there
+exist a number  $ \lambda>1$ and a corresponding $n$-dimensional convex polytope  $P(\lambda)$ such that
+ $ K\subset  P(\lambda)\setminus(\partial P(\lambda))\subset A \subset
+\lambda  P(\lambda).$}
+\end{corollary}
+
+ Suppose that $p\in[1, \infty)$, $s\in \mathbb{R}$. Let $c_p(s, \Omega)$ be the best constant in the inequality
+$$
+\int_{\Omega}\frac{|\nabla u(x)|^p dx}{{\rm dist}^{s-p}(x, \partial \Omega)}\geq c_p(s, \Omega)\int_{\Omega}\frac{|u(x)|^p dx}{{\rm dist}^{s}(x, \partial\Omega)} \forall u \in C_0^1(\Omega),
+$$
+i. e.
+$$
+c_{p}(s, \Omega) = \inf_{ u\in C_0^1(\Omega), \, u\not \equiv 0} {\int_{\Omega}\frac{|\nabla u(x)|^p dx}{{\rm dist}^{s-p}(x, \partial \Omega)} dx}\left/{\int_{\Omega}\frac{|u(x)|^p dx}{{\rm dist}^{s}(x, \partial\Omega)}}\right.
+$$
+Since $|\nabla u(x)|\geq |\nabla u(x)\cdot \nabla {\rm dist} (x, \partial \Omega)|$ for almost all $x\in \Omega$, one has that
+$
+c_p(s, \Omega)\geq c^*_p(s, \Omega).
+$
+
+Notice that Theorems 1 -- 5, below, were announced in the short communication \cite{Av20}.
+
+
+
+\section{Convergence theorems for distance functions}
+\label{sec:1}
+
+For an open set $\Omega\subset \mathbb{R}^n$  we will consider two approximations by open sets
+$\Omega_j\subset \mathbb{R}^n$, $j\in \mathbb{N}$, and we will study convergence of the distance functions $\delta_j(x)= {\rm dist}(x, \partial \Omega_j)$ and their gradients on an arbitrary compact set $K\subset \Omega$.
+
+1) {\bf Interior approximation}.
+Suppose that $\Omega\neq\mathbb{R}^n$,  $\Omega_j \subset \Omega_{j+1}$ for all  $j\in \mathbb{N}$ and
+$$
+\Omega= \bigcup_{j=1}^{\infty}\Omega_j.
+$$
+Note that for every compact set    $K\subset \Omega$ there exists a number  $N$ such that   $K\subset \Omega_j$ for any $j\geq N$. We will suppose that  $K\subset \Omega_j$ for all $j\in \mathbb{N}$.
+
+2) {\bf Exterior approximation}.
+ We suppose that  $\Omega={\rm int} \overline{\Omega} $ (i. e. $\Omega$ is the set of interior points of $\overline{\Omega}$ ), $\Omega_1\neq\mathbb{R}^n$,  $\Omega_{j+1} \subset \Omega_{j}$ for all $j\in \mathbb{N}$ and
+$$
+\overline{\Omega}= \bigcap_{j=1}^{\infty}\Omega_j.
+$$
+
+
+In the sequel we will need the set (compare \cite{BEL}, p. 49-- 52)
+$$
+P(x, \Omega):= \{x'\in \partial\Omega: {\rm dist}(x, \partial \Omega)= |x-x'|\}, \quad x \in \Omega.
+$$
+Evidently,  $P(x, \Omega)\subset \Omega$ is a non-empty set for every point $x\in \Omega$, since $\Omega\neq \mathbb{R}^n$.
+
+According to Motzkin's result \cite{Mot} (see also \cite{BEL}, p. 52), the distance function ${\rm dist}(x, \partial \Omega)$ is differentiable at the point $x\in \Omega$ if and only if the set $P(x, \Omega)$ contains one point, only. Consequently, a point   $x\in S(\Omega)$ if and only if the set  $P(x, \Omega)$ contains at least two points.
+
+
+ We have the following assertion for the case of the interior approximation.
+
+\begin{theorem}\label{Th:2.1_1}
+    Let  $n\geq 2$ and let $\Omega= \cup_{j=1}^{\infty}\Omega_j$, where  $\Omega$ and  $\Omega_j$ are open sets of the Euclidean space $\mathbb{R}^n$,   $\Omega\neq\mathbb{R}^n$, and let $K$ be a compact set. Denote $\delta(x)= {\rm dist}(x, \partial \Omega)$, $\delta_j(x)= {\rm dist}(x, \partial \Omega_j)$. Suppose that
+$$
+K\subset \Omega_j\subset \Omega_{j+1}\quad  \forall j\in \mathbb{N}.
+$$
+Then we have the following assertions:
+
+$(i)$  one has that    $\delta_j(x)\to\delta(x)$ as  $j\to \infty $ uniformly on the compact set $K$, i. e.
+$$
+ \lim _{j\to \infty}\max_{x\in K} |\delta(x) - \delta_j(x)|=0;
+$$
+
+$(ii)$ there exists a set $S\subset K$ such that $n$-dimensional Lebesgue measure  $mes_n S=0$ and at any point $x\in K\setminus S$
+$$
+ \lim _{j\to \infty} \nabla\delta_j(x) = \nabla \delta(x).
+$$
+\end{theorem}
+\begin{proof}
+
+
+For a fixed point $x\in K$ the sequence   $\delta_j(x)$ is non-decreasing and  bounded since   $\delta_j(x)\leq\delta(x)$.
+Therefore, there exists
+$$
+ \lim _{j\to \infty} \delta_j(x) =: \delta_0 \leq\delta(x).
+$$
+
+Next, we will prove that $\delta_0 = \delta(x)$. To this end we consider a sequence of points $x_j'\in P(x, \Omega_j)$ and its subsequence  $x'_{j_k}$, convergent to a point  $x'_0$ as $k\to \infty$. One has that $|x-x_0'|=\delta_0$. Clearly, if  $\delta_0 <\delta(x)$, then the point
+$x'_0\in \Omega$. Consequently, for all sufficiently big  $j$ the point  $x'_0$ with some its neighborhood lie in the set $\Omega_j$, that contradicts the choice of
+$x'_{j_k}\in \partial \Omega_{j_k}$ for any $k\in \mathbb{N}$ taking into account the fact that $\lim_{k\to \infty}x'_{j_k}=x'_0 $.
+
+Now,  we prove that  $\delta_j(x)\to\delta(x)$ as  $j\to \infty $ uniformly on the compact set $K$.
+Suppose the contrary. Then there exist a number  $\varepsilon_0>0$ and points $x_j\in K$ such that
+$|\delta(x_j) - \delta_j(x_j)|> \varepsilon_0$. Since  $ K$ is a compact set, there exists a subsequence  $x_{j_k}$ having a limit point
+$x_0\in K\subset \Omega$. One has that
+$$
+\varepsilon_0 \leq |\delta(x_{j_k}) - \delta_{j_k}(x_{j_k})| \leq |\delta(x_{j_k}) - \delta(x_0)| +|\delta(x_{0}) - \delta_{j_k}(x_0)| +|\delta_{j_k}(x_0) - \delta_{j_k}(x_{j_k})|.
+$$
+Therefore, taking into account the convergence $\delta_{j_k}(x_0) \to \delta(x_{0})$  and the Lipschitz condition $(\ref{f002})$ for the distance functions $\delta$ and  $\delta_j$ ($j\in \mathbb{N}$), one obtains a contradiction since
+$$
+\varepsilon_0 \leq 2\,|x_{j_k} - x_0)| +|\delta(x_{0}) - \delta_{j_k}(x_0)| \to 0 \quad \mbox {as}\quad k\to \infty.
+$$
+
+Now, we prove assertion $(ii)$. Define  $$S:= \left(\cup_{j=1}^{\infty}S(\Omega_j)\cup S(\Omega)\right)\cap K.$$
+According to Rademacher's theorem one has that   $mes_n S=0$.
+
+Let  $x\in K\setminus S$. According to the definition of the set $S$ the distance functions $\delta$ and  $\delta_j$ ($j\in \mathbb{N}$) are differentiable at this point. In addition, using the Motzkin result  (see \cite{BEL}, p. 52) we have that
+$$
+P(x, \Omega)=\{x'\}, \,\,  P(x, \Omega_j)=\{x'_j\},
+$$
+and that
+$$
+  \nabla \delta (x)= \frac {x-x'}{|x'-x|},\,\,\,\,\, \nabla \delta_j (x)= \frac {x-x'_j}{|x'_j-x|}
+$$
+for all $j\in \mathbb{N}$.
+
+We have to prove that $\lim_{j\to \infty} x_j'= x'$.
+Suppose that this is not true. Consequently, there exists a convergent subsequence $(x_{j_k})$ such that $\lim_{k\to \infty} x_{j_k}'= x'_0$ and that $x_0'\neq x'$.
+Since
+$$
+\delta_{j_k} (x)=|x-x_{j_k}|\to|x-x_0'|, \quad
+\delta_{j_k} (x)\to\delta (x) \,\, \mbox{ as} \,\, k\to \infty,
+$$
+one has that  $\delta (x)=|x-x_0'|$. Therefore,  $x_0'\in P(x, \Omega)=\{x'\}$, consequently,    $x_0'=x'$.
+We have a contradiction that completes the proof of the theorem.
+\end{proof}
+
+\begin{corollary}\label{Co:2.1_1}
+    Suppose that $p\in [1, \infty)$,     $s\in \mathbb{R}$ and  $n\geq 2$. Let $\Omega= \cup_{j=1}^{\infty}\Omega_j$, where  $\Omega\subset\mathbb{R}^n$ and  $\Omega_j\subset\mathbb{R}^n$ are open sets    such that $\Omega\neq\mathbb{R}^n$ and  that $ \Omega_j\subset \Omega_{j+1}$ for all $j\in \mathbb{N}$.
+Then
+$$
+c^*_{p}(s, \Omega) \geq \limsup\limits_{j\to \infty}c^*_{p}(s, \Omega_j)
+$$
+and
+$$
+c_{p}(s, \Omega) \geq \limsup\limits_{j\to \infty}c_{p}(s, \Omega_j).
+$$
+\end{corollary}
+\begin{proof} Consider a fixed function $u\in C_0^1(\Omega)$ with the compact support $K(u)\subset \Omega$. There exists a number$j_0$ such that  $K\subset \Omega_j$ for every $j\geq j_0$. Choosing a subsequence $j_m$ ($m\in \mathbb{N}$) such that $j_m\geq j_0$ and that
+$$
+\limsup\limits_{j\to \infty}c^*_{p}(s, \Omega_j)
+= \lim\limits_{m\to \infty} c^*_{p}(s, \Omega_{j_m}),
+$$
+one can write
+$$
+\int_{\Omega_{j_m}}\frac{|\nabla u(x)\cdot \nabla{\rm dist}(x, \partial \Omega_{j_m})|^p dx}{{\rm dist}^{s-p}(x, \partial \Omega_{j_m})}\geq c^*_{p}(s, \Omega_{j_m})\int_{\Omega_{j_m}}\frac{|u(x)|^p dx}{{\rm dist}^{s}(x, \partial\Omega_{j_m})}.
+$$
+Since $K(u)\subset \Omega_{j_m}\subset \Omega= \cup_{m=1}^{\infty}\Omega_{j_m}$ we can rewrite this inequality in the form
+$$
+\int_{\Omega}\frac{|\nabla u(x)\cdot \nabla{\rm dist}(x, \partial \Omega_{j_m})|^p dx}{{\rm dist}^{s-p}(x, \partial \Omega_{j_m})}\geq c^*_{p}(s, \Omega_{j_m})\int_{\Omega}\frac{|u(x)|^p dx}{{\rm dist}^{s}(x, \partial\Omega_{j_m})}.
+$$
+Letting $m\to \infty$ and applying Theorem 1 we get that
+$$
+\int_{\Omega}\frac{|\nabla u(x)\cdot \nabla{\rm dist}(x, \partial \Omega)|^p dx}{{\rm dist}^{s-p}(x, \partial \Omega)}\geq \lim\limits_{m\to \infty} c^*_{p}(s, \Omega_{j_m})\int_{\Omega}\frac{|u(x)|^p dx}{{\rm dist}^{s}(x, \partial\Omega)}.
+$$
+Since the  function $u$ is an arbitrary function $u\in C_0^1(\Omega)$  and  the constant  $c^*_{p}(s, \Omega)\in [0, \infty)$ is defined to be maximal
+(see (\ref{HI1})), we obtain that
+$$
+c^*_{p}(s, \Omega) \geq \lim\limits_{m\to \infty} c^*_{p}(s, \Omega_{j_m})=\limsup\limits_{j\to \infty}c^*_{p}(s, \Omega_j).
+$$
+By the same way one gets
+$$
+c_{p}(s, \Omega) \geq \lim\limits_{m\to \infty} c_{p}(s, \Omega_{j_m})=\limsup\limits_{j\to \infty}c_{p}(s, \Omega_j),
+$$
+whenever  a subsequence $j_m$ ($m\in \mathbb{N}$) is chosen such that $j_m\geq j_0$ and that
+$$
+\limsup\limits_{j\to \infty}c_{p}(s, \Omega_j)
+= \lim\limits_{m\to \infty} c_{p}(s, \Omega_{j_m}).
+$$
+\end{proof}
+An analog of Theorem 1 is valid for the exterior approximation, too.
+\begin{theorem}\label{Th:2.1_2}
+  Let $\Omega= \cap_{j=1}^{\infty}\Omega_j$, where $\Omega$ and $\Omega_j$ are open sets of the Euclidean space $\mathbb{R}^n$, $n\geq 2$,  $\Omega={\rm int} \overline{\Omega} $,   $\Omega_1\neq\mathbb{R}^n$, and let $K$ be a compact set such that $K\subset \Omega$. Denote $\delta(x)= {\rm dist}(x, \partial \Omega)$, $\delta_j(x)= {\rm dist}(x, \partial \Omega_j)$. Suppose that
+$$
+ \Omega_{j+1}\subset \Omega_{j},\quad  \forall j\in \mathbb{N}.
+$$
+
+Then the following two assertions are valid:
+
+$(i)$  one has that     $\delta_j(x)\to\delta(x)$ as $j\to \infty $ uniformly on the compact set $K$, i. e.
+$$
+ \lim _{j\to \infty}\max_{x\in K} |\delta(x) - \delta_j(x)|=0;
+$$
+
+$(ii)$ there exists a set $S\subset K$ such that the  $n$-dimensional  Lebesgue measure  $mes_n S=0$, and at any point $x\in K\setminus S$
+$$
+ \lim _{j\to \infty} \nabla\delta_j(x) = \nabla \delta (x).
+$$
+\end{theorem}
+\begin{proof}
+It is evident that for every point  $x\in \Omega$ the sequence   $\delta_j(x)$ is non-increasing and   $\delta_j(x)\geq\delta(x)$.
+Therefore, there exists
+$$
+ \lim _{j\to \infty} \delta_j(x) =: \delta_0 \geq\delta(x).
+$$
+On the other hand one has that  $\delta_j(x)\geq\delta_0$ for all  $j\in \mathbb{N}$. Therefore, the  set $\overline{\Omega}= \cap_{j=1}^{\infty}\Omega_j$ contains the ball $B_{\delta_0}(x)=\{y\in \mathbb{R}^n:  |x-y|< \delta_0\}$. Since $\Omega={\rm int} \overline{\Omega} $, one has that $B_{\delta_0}(x)\subset \Omega$.
+
+ Consequently,  $\delta_0 \leq\delta(x)$. Thus, one obtains that  $\delta_0 =\delta(x)$.
+
+If the uniform convergence   $\delta_j(x)\to\delta(x)$ as  $j\to \infty $  on the compact set $K$ is not true, then
+ there exist a number  $\varepsilon_0>0$ and a subsequence  $x_{j_k}\in K$ points  such that
+ $$
+ \lim_{k\to \infty} x_{j_k}=x_0\in K, \quad
+|\delta(x_{j_k}) - \delta_{j_k}(x_{j_k})|> \varepsilon_0.
+$$
+Using the convergence $\delta_{j_k}(x_0) \to \delta(x_{0})$,  the Lipschitz condition $(\ref{f002})$ for the  functions $\delta$ and  $\delta_j$ ($j\in \mathbb{N}$), and the inequalities
+$$
+\varepsilon_0 \leq |\delta(x_{j_k}) - \delta_{j_k}(x_{j_k})| \leq |\delta(x_{j_k}) - \delta(x_0)| +|\delta(x_{0}) - \delta_{j_k}(x_0)| +|\delta_{j_k}(x_0) - \delta_{j_k}(x_{j_k})|,
+$$
+we obtain the following contradiction
+$$
+\varepsilon_0 \leq 2\,|x_{j_k} - x_0)| +|\delta(x_{0}) - \delta_{j_k}(x_0)| \to 0 \quad \mbox {as}\quad k\to \infty.
+$$
+
+Using the scheme of proof of  the corresponding assertion in the proof of the precedent theorem, we easily  obtain the  convergence $\lim _{j\to \infty} \nabla\delta_j(x) = \nabla \delta (x)$ of the gradients of distance functions at every point  $x\in K\setminus S$.
+\end{proof}
+
+
+\begin{corollary}\label{Co:2.1_2}
+    Suppose that $p\in [1, \infty)$,     $s\in \mathbb{R}$ and  $n\geq 2$. Let $\overline{\Omega}= \cap_{j=1}^{\infty}\Omega_j$, where  $\Omega={\rm int} \overline{\Omega} $, $\Omega\subset\mathbb{R}^n$ and  $\Omega_j\subset\mathbb{R}^n$ are open sets    such that $\Omega_1\neq\mathbb{R}^n$ and  that $ \Omega_{j+1}\subset \Omega_{j}$ for all $j\in \mathbb{N}$.
+Then
+$$
+c^*_{p}(s, \Omega) \geq \limsup\limits_{j\to \infty}c^*_{p}(s, \Omega_j)
+$$
+and
+$$
+c_{p}(s, \Omega) \geq \limsup\limits_{j\to \infty}c_{p}(s, \Omega_j).
+$$
+\end{corollary}
+\begin{proof} First, as in the proof of Corollary \ref{Co:2.1_1} we consider a fixed function  $u\in C_0^1(\Omega)$ with the compact support $K(u)\subset \Omega$ and choose  a subsequence $j_m$ ($m\in \mathbb{N}$) such that
+$$
+\limsup\limits_{j\to \infty}c^*_{p}(s, \Omega_j)
+= \lim\limits_{m\to \infty} c^*_{p}(s, \Omega_{j_m}).
+$$
+Next,  for this  function $u$ we have that
+$$
+\int_{\Omega}\frac{|\nabla u(x)\cdot \nabla{\rm dist}(x, \partial \Omega_{j_m})|^p dx}{{\rm dist}^{s-p}(x, \partial \Omega_{j_m})}\geq c^*_{p}(s, \Omega_{j_m})\int_{\Omega}\frac{|u(x)|^p dx}{{\rm dist}^{s}(x, \partial\Omega_{j_m})}.
+$$
+Letting $m\to \infty$ and applying Theorem 2 we get that
+$$
+\int_{\Omega}\frac{|\nabla u(x)\cdot \nabla{\rm dist}(x, \partial \Omega)|^p dx}{{\rm dist}^{s-p}(x, \partial \Omega)}\geq \lim\limits_{m\to \infty} c^*_{p}(s, \Omega_{j_m})\int_{\Omega}\frac{|u(x)|^p dx}{{\rm dist}^{s}(x, \partial\Omega)}
+$$
+for this function $u$, consequently, for every function $u\in C_0^1(\Omega)$. Therefore, as in the proof of Corollary \ref{Co:2.1_1} we obtain that
+$$
+c^*_{p}(s, \Omega) \geq \lim\limits_{m\to \infty} c^*_{p}(s, \Omega_{j_m})=\limsup\limits_{j\to \infty}c^*_{p}(s, \Omega_j).
+$$
+Using  the same scheme of proof one obtains
+$$
+c_{p}(s, \Omega) \geq \lim\limits_{m\to \infty} c_{p}(s, \Omega_{j_m})=\limsup\limits_{j\to \infty}c_{p}(s, \Omega_j).
+$$
+
+
+
+\end{proof}
+
+\section{Main results}
+\label{sec:2}
+
+In the sequel we consider inequalities for real-valued functions $u\in C_0^1(\Omega)$.
+
+The following theorem generalizes the theorem B and improves and generalizes several results from the papers    \cite{BEL},   \cite{Av1},  \cite{Av2} and  \cite{ASh}. More precisely, we generalize Theorem B of Balinsky and Evans. In addition,  we improve the theorem by proving that the constant in the corresponding inequality is sharp for every convex domain $\Omega\subset\mathbb{R}^n$ such that $\Omega \neq\mathbb{R}^n$.
+
+
+
+
+\begin{theorem}\label{Th:2.1} Suppose that $n\geq 2$ and $\Omega\subset\mathbb{R}^n$ is a convex domain such that $\Omega \neq\mathbb{R}^n$.  If   $p\in [1, \infty)$ and  $s\in (1, \infty)$, then
+\begin{equation}\label{eq 9.1}
+\int_{\Omega}\frac{|\nabla u(x)\cdot \nabla dist (x, \partial \Omega)|^p dx}{dist^{s-p}(x, \partial \Omega)}\geq \frac{(s-1)^p}{p^p}\int_{\Omega}\frac{|u(x)|^p dx}{dist^{s}(x, \partial\Omega)} \quad \forall u\in C_0^1(\Omega),
+\end{equation}
+where the constant ${(s-1)^p}/{p^p}$ is sharp, more precisely,  for every convex domain $\Omega \neq\mathbb{R}^n$ and arbitrary fixed parameters $p\in [1, \infty)$ and  $s\in (1, \infty)$ one has that $c^*_p(s, \Omega) = {(s-1)^p}/{p^p}$.
+\end{theorem}
+\begin{proof} Suppose that  $n\geq 2$,   parameters $p\in [1, \infty)$ and  $s\in (1, \infty)$.
+In principle, we have to prove that $c^*_p(s, \Omega) = {(s-1)^p}/{p^p}$ for every convex domain $\Omega \subset \mathbb{R}^n$ such that $\Omega \neq\mathbb{R}^n$. To obtain this assertion we have to prove that $c^*_p(s, \Omega) \geq  {(s-1)^p}/{p^p}$ and that $c^*_p(s, \Omega) \leq  {(s-1)^p}/{p^p}$.
+
+{\it Proof of the inequality $c^*_p(s, \Omega) \geq  {(s-1)^p}/{p^p}$}.
+
+First,  we consider the case when $\Omega$ is a bounded  convex domain.  Clearly, on $\Omega$ it is sufficient to prove inequality
+(\ref{eq 9.1}) for an arbitrary, but fixed function  $ u\in C_0^1(\Omega)$. Let  $K(u)= {\rm supp} \,\,u $ be the compact support of this fixed function $ u\in C_0^1(\Omega)$ in the  bounded convex domain $\Omega$.
+
+According to Corollary \ref{Co:1.1_1} of Hadwiger's Theorem D, for the convex compact set $A=\overline {\Omega}$ there exist a constant $\lambda_1>1$ and the corresponding convex polytope $P(\lambda_1)$ such that
+ $$
+  K_1:=K(u)\subset  P(\lambda_1)\setminus(\partial P(\lambda_1))\subset \overline {\Omega} \subset
+\lambda_1  P(\lambda_1).
+$$
+By induction we construct  a sequence $\lambda_j$  and convex polytopes  $P(\lambda_j)$ such that $\lambda_j>1$ for any $j\in \mathbb{N}$ and that  $\lim_{j\to \infty}\lambda_j=1$ and that
+  $$
+  K_j:=P(\lambda_{j-1})\subset  P(\lambda_j)\setminus(\partial P(\lambda_j))\subset \overline {\Omega} \subset
+\lambda_j  P(\lambda_1),  \quad j\geq 2.
+$$
+ Evidently, one has that  $\Omega=\cup_{j=1}^{\infty} \Omega_j$, where $\Omega_j:=  P(\lambda_j)\setminus(\partial P(\lambda_j))$  are convex domain such that $K(u)\subset \Omega_1$ and that  $\overline {\Omega}_j \subset \Omega_{j+1}\subset \Omega$ for all $j\in \mathbb{N}$.
+
+It is clear that $\Omega_j$ is an intersection of finite number of open half-spaces. Suppose that the boundary of the open polytope  $\Omega_j$ consists on $m_j$ different faces $\pi_{j m}$ of dimension $n-1$.  Then
+$$
+\partial \Omega_j= \cup _{m=1}^{m_j}\pi_{j m}, \quad \Omega_j\setminus S(\Omega_j)= \cup _{m=1}^{m_j} \Omega_{j m},
+$$
+where $\Omega_{j m}$ is defined by $$\Omega_{j m}:= \{x\in \Omega_j: \, P(x, \Omega) \subset \pi_{j m} \}.$$
+
+ Let  $\check{\pi}_{j m}$ be the set of interior points  of $\pi_{j m}$, and let $\vec{n}_{j m}$ be the vector of interior normal to the face $\pi_{j m}$ of $\Omega_j$.
+ Suppose that  $P(x, \Omega)=\{y\}$, where   $y \in \check{\pi}_{j m}$. Then  there exists a continuous function
+ $$
+ \varphi_{j m}: \pi_{j m} \to [0, \infty)
+ $$
+ such that
+$$\Omega_{j m}=\{x\in \mathbb{R}^n: x=y + t\,\vec{n}_{j m}, \, y \in \check{\pi}_{j m}, \,t= {\rm dist} (x, \partial \Omega_j) \in (0,  \varphi_{j m}(y)\}.$$
+
+Suppose that $x=(x', t)\in \Omega_{j m}, \, x' \in \check{\pi}_{j m}, \,t= {\rm dist} (x, \partial \Omega_j)$. Therefore, by Fubini's theorem
+\begin{equation}\label{f005}
+\int_{\Omega_{j m}} g((x', t)) dx= \int_{\check{\pi}_{j m}} dx'\int_0^{\varphi_{j m}(x')} g((x', t)) dt
+\end{equation}
+for any bounded function  $g\in C(\Omega_{j m})$.
+
+Putting $p\in [1, \infty)$, $s\in (1, \infty)$, $x=(x', t)$ and applying the  Hardy inequality (see  Theorem A) to the function $u\in C_0^1(\Omega)$ with respect to the variable $\,t \in (0, {\varphi_{j m}(x')})$, one gets
+$$
+\int_0^{\varphi_{j m}(x')} \left|\frac{\partial u((x', t))}{\partial t}\right|^p t^{p-s}dt \geq \frac{(s-1)^p}{p^p} \int_0^{\varphi_{j m}(x')}  \left|{u((x', t))}\right|^p t^{-s}dt.
+$$
+ Taking into account formulas   $t={\rm dist} (x, \partial \Omega_j)$ and   (\ref{f005}) and the identity
+\begin{equation}\label{f006}
+\left|\frac{\partial u((x', t))}{\partial t}\right|= \left|\nabla u(x) \cdot \nabla {\rm dist} (x, \partial \Omega_j) \right|,
+\end{equation}
+we obtain
+$$
+\int_{\Omega_{jm}}\frac{|\nabla u(x)\cdot \nabla {\rm dist} (x, \partial \Omega_j)|^p dx}{{\rm dist}^{s-p}(x, \partial \Omega_j)}\geq \frac{(s-1)^p}{p^p}\int_{\Omega_{jm}}\frac{|u(x)|^p dx}{{\rm dist}^{s}(x, \partial\Omega_j)}.
+$$
+Since $\Omega_j\setminus S(\Omega_j)= \cup _{m=1}^{m_j} \Omega_{j m}$,  one gets
+$$
+\int_{\Omega_{j}}\frac{|\nabla u(x)\cdot \nabla {\rm dist} (x, \partial \Omega_j)|^p dx}{{\rm dist}^{s-p}(x, \partial \Omega_j)}\geq \frac{(s-1)^p}{p^p}\int_{\Omega_{j }}\frac{|u(x)|^p dx}{{\rm dist}^{s}(x, \partial\Omega_j)},
+$$
+ which is equivalent to the inequality
+$$
+\int_{\Omega}\frac{|\nabla u(x)\cdot \nabla {\rm dist} (x, \partial \Omega_j)|^p dx}{{\rm dist}^{s-p}(x, \partial \Omega_j)}\geq \frac{(s-1)^p}{p^p}\int_{\Omega}\frac{|u(x)|^p dx}{{\rm dist}^{s}(x, \partial\Omega_j)}
+$$
+because of the inclusions $K(u) \subset \Omega_j \subset \Omega$. Letting $j\to \infty$ in this inequality,  applying Theorem 1 and Lebesgue's theorem on the majorized  convergence of integrals, we obtain  inequality (\ref{eq 9.1}).
+
+
+
+
+
+Thus, inequality $c^*_p(s, \Omega) \geq  {(s-1)^p}/{p^p}$ is proved on every bounded convex domain $\Omega\subset\mathbb{R}^n$.
+
+Now, let $\Omega\subset\mathbb{R}^n$ be an unbounded convex domain such that $\Omega\neq\mathbb{R}^n$. Evidently, if the number $j_0$ is sufficiently big and $j\in \mathbb{N}$ then
+$
+\Omega_j:=\Omega \cap \{x\in \mathbb{R}^n: |x|<j_0+j\}\neq \emptyset
+$
+are convex bonded subdomains of $\Omega$ and $\Omega= \cup_{j=1}^{\infty}\Omega_j$. It is proved that $c^*_p(s, \Omega_j) \geq  {(s-1)^p}/{p^p}$.
+Therefore, applying Corollary \ref{Co:2.1_1} to the unbounded domain $\Omega\subset\mathbb{R}^n$ we obtain  the desired inequality:
+$$
+c^*_{p}(s, \Omega) \geq \limsup\limits_{j\to \infty}c^*_{p}(s, \Omega_j)\geq  {(s-1)^p}/{p^p}.
+$$
+
+
+
+
+
+{\it Proof of the inequality $c^*_p(s, \Omega) \leq  {(s-1)^p}/{p^p}$}. Let $\Omega\subset\mathbb{R}^n$ be a convex domain such that $\Omega \neq\mathbb{R}^n$. Suppose that $p\in[1, \infty)$, $s\in (1, \infty)$. Let $c_p(s, \Omega)$ the best constant in the inequality
+$$
+\int_{\Omega}\frac{|\nabla u(x)|^p dx}{{\rm dist}^{s-p}(x, \partial \Omega)}\geq c_p(s, \Omega)\int_{\Omega}\frac{|u(x)|^p dx}{{\rm dist}^{s}(x, \partial\Omega)}\quad \forall u \in C_0^1(\Omega).
+$$
+Since $|\nabla u(x)|\geq |\nabla u(x)\cdot \nabla {\rm dist} (x, \partial \Omega)|$, one has
+\begin{equation}\label{eq 9.11}
+c_p(s, \Omega)\geq c^*_p(s, \Omega)\geq \frac{(s-1)^p}{p^p}.
+\end{equation}
+
+Next, we need an additional fact. Suppose that $x \in \Omega\setminus S(\Omega)$. Then there exists a point $x'\in \partial \Omega$ such that $|x-x'|={\rm dist}(x, \partial \Omega)$. Let
+$$
+ B^+= \{y \in \mathbb{R}^n: |y-x|<|x-x'|\}, \,\,\,  B^-= \{y \in \mathbb{R}^n: |y-(2x'-x)|<|x-x'|\}.
+$$
+One has that  $ B^+\subset \Omega$ and $B^-\subset (\mathbb{R}^n\setminus \overline {\Omega})$. In addition, it is easy to show that   $x'\in\partial \Omega$ is a common boundary point for these balls.
+
+ According to Theorem 1 of the author and I. K. Shafigullin from \cite{ASh} we obtain that for such a domain $c_p(s, \Omega)\leq {(s-1)^p}/{p^p}$. Using this fact and inequalities (\ref{eq 9.11}) one gets  that  $c^*_p(s, \Omega)\leq {(s-1)^p}/{p^p}$ and this completes the proof of Theorem \ref{Th:2.1}.
+
+ Using Theorem 2 from \cite{ASh} and Theorem 3 one gets the following assertion.
+\end{proof}
+\begin{corollary}\label{Co:2.1_3}
+    Suppose that $p\in [1, \infty)$,     $s\in (1, \infty)$ and  $n\geq 2$. Then for every convex domain  $\Omega\subset\mathbb{R}^n$    such that $\Omega\neq\mathbb{R}^n$  the equalities
+$
+c^*_{p}(s, \Omega) = c_{p}(s, \Omega)=  {(s-1)^p}/{p^p}
+$
+are valid.
+\end{corollary}
+Letting $s=p$ in Theorem \ref{Th:2.1} we obtain
+\begin{corollary}\label{Co:2.1_3 1} Suppose that $p\in (1, \infty)$, $n\geq 2$ and $\Omega\subset\mathbb{R}^n$ is a convex domain such that $\Omega \neq\mathbb{R}^n$.  Then
+$$
+\int_{\Omega}{|\nabla u(x)\cdot \nabla dist (x, \partial \Omega)|^p dx}\geq \frac{(p-1)^p}{p^p}\int_{\Omega}\frac{|u(x)|^p dx}{dist^{p}(x, \partial\Omega)} \quad \forall u\in C_0^1(\Omega),
+$$
+where the constant ${(p-1)^p}/{p^p}$ is sharp, more precisely,  for every convex domain $\Omega \neq\mathbb{R}^n$ and arbitrary fixed parameters $p\in (1, \infty)$ one has that $c^*_p(p,  \Omega) = {(p-1)^p}/{p^p}$.
+\end{corollary}
+
+In the case $\, p=1\,$ one gets
+\begin{corollary}\label{Co:2.1_3 2} Suppose that $n\geq 2$ and $\Omega\subset\mathbb{R}^n$ is a convex domain such that $\Omega \neq\mathbb{R}^n$.  If     $s\in (1, \infty)$, then
+$$
+\int_{\Omega}\frac{|\nabla u(x)\cdot \nabla dist (x, \partial \Omega)| dx}{dist^{s-1}(x, \partial \Omega)}\geq {(s-1)}\int_{\Omega}\frac{|u(x)| dx}{dist^{s}(x, \partial\Omega)} \quad \forall u\in C_0^1(\Omega),
+$$
+where the constant $s-1$ is sharp, more precisely,  for every convex domain $\Omega \neq\mathbb{R}^n$ and every  $s\in (1, \infty)$ one has that $c^*_1(s, \Omega) = s-1$.
+\end{corollary}
+
+
+
+
+Next, we give an improvement of a result by the author and K.-J. Wirths from the paper   \cite{AW1} (see also  \cite{AW3}, \cite{AW4} and \cite{BEL} for related results). We will need the inradius $\delta_0(\Omega):= \sup_{x\in \Omega}\delta(x)$
+and the Lamb constant $\lambda_0\approx 0. 940$, defined as the first positive root of the equation $J_0(t)- 2 t J_1(t)=0$, where  $J_0$ and $J_1$ are Bessel's functions  of order  $0$ and  $1$ respectively.
+
+\begin{theorem}\label{Th:2.2} Let  $\Omega\subset\mathbb{R}^n$ be a convex domain such that $\delta_0(\Omega)<\infty$. Then for any real-valued function $ u\in C_0^1(\Omega)$ the following inequality is valid:
+\begin{equation}
+\label{eq 10.1}
+\int_{\Omega}{|\nabla u(x)\cdot \nabla {\rm dist} (x, \partial \Omega)|^2 dx}\geq \frac{1}{4}\int_{\Omega}\frac{|u(x)|^2 dx}{{\rm dist}^{2}(x, \partial\Omega)}+
+\frac{\lambda_0^2}{\delta_0^2(\Omega)}\int_{\Omega}{|u(x)|^2 dx},
+\end{equation}
+where the constant  $1/4$ is sharp for every convex domain $\Omega \subset\mathbb{R}^n$, $\Omega \neq\mathbb{R}^n$, the second constant  ${\lambda_0^2}/{\delta_0^2(\Omega)}$ is optimal, namely, for any $n\geq 2$ there are convex domains $\Omega\subset\mathbb{R}^n$ for which  $\delta_0(\Omega)<\infty$ and the second constant is sharp, too.
+\end{theorem}
+\begin{proof}
+
+
+First,  we prove the inequality (\ref{eq 10.1}) for
+ the case when $\Omega$ is a bounded  convex domain.  Clearly,  it is sufficient to prove the inequality
+for an arbitrary, but fixed function  $ u\in C_0^1(\Omega)$. Let  $K(u)= {\rm supp} \,\,u $.
+
+We will need the following inequality (see \cite{AW1})
+\begin{equation}\label{eq 13.1}
+ \int_0^a |g'(t)|^2 dt \geq \frac{1}{4}\int_0^a \frac {|g(t)|^2}{t^2}dt + \frac{\lambda_0^2}{a^2}\int_0^a |g(t)|^2 dt,
+\end{equation}
+which is valid with an arbitrary  constant $a>0$ for all functions $g\in C^1[0, a]$ such that $g(0)=0$.
+
+
+Using  Corollary \ref{Co:1.1_1} of Hadwiger's Theorem D as in the proof of Theorem 3,  we construct  a sequence $\lambda_j$  and convex polytopes  $P(\lambda_j)$ such that $\lambda_j>1$ for any $j\in \mathbb{N}$ and that  $\lim_{j\to \infty}\lambda_j=1$ and that
+  $$
+  K_j:=P(\lambda_{j-1})\subset  P(\lambda_j)\setminus(\partial P(\lambda_j))\subset \overline {\Omega} \subset
+\lambda_j  P(\lambda_1),  \quad j\geq 2.
+$$
+ Therefore, one has that  $\Omega=\cup_{j=1}^{\infty} \Omega_j$, where $\Omega_j:=  P(\lambda_j)\setminus(\partial P(\lambda_j))$  are convex domain such that $K(u)\subset \Omega_1$ and that  $\overline {\Omega}_j \subset \Omega_{j+1}\subset \Omega$ for all $j\in \mathbb{N}$.
+
+As in the proof of Theorem 3,  the boundary of the open polytope  $\Omega_j$ consists on $m_j$ different faces $\pi_{j m}$ of dimension $n-1$.  In addition, one has that
+$$
+\partial \Omega_j= \cup _{m=1}^{m_j}\pi_{j m}, \quad \Omega_j\setminus S(\Omega_j)= \cup _{m=1}^{m_j} \Omega_{j m},
+$$
+where $\Omega_{j m}$ is defined by $\Omega_{j m}:= \{x\in \Omega_j: \, P(x, \Omega) \subset \pi_{j m} \}.$
+
+As in the proof of Theorem 3, we define the set  $\check{\pi}_{j m}$, interior points  of $\pi_{j m}$, and the vector $\vec{n}_{j m}$  of interior normal to the face $\pi_{j m}$ of $\Omega_j$. Moreover, consider  $P(x, \Omega)=\{y\}$, where   $y \in \check{\pi}_{j m}$. Then  there exists a continuous function
+ $
+ \varphi_{j m}: \pi_{j m} \to [0, \infty)
+ $
+ such that
+$$\Omega_{j m}=\{x\in \mathbb{R}^n: x=y + t\,\vec{n}_{j m}, \, y \in \check{\pi}_{j m}, \,t= {\rm dist} (x, \partial \Omega_j) \in (0,  \varphi_{j m}(y)\}.$$
+Therefore, by Fubini's theorem
+$$
+\int_{\Omega_{j m}} f((x', t)) dx= \int_{\check{\pi}_{j m}} dx'\int_0^{\varphi_{j m}(x')} f((x', t)) dt
+$$
+for any bounded function  $f\in C(\Omega_{j m})$.
+
+Using this formula, putting  $x=(x', t)$ and applying the inequality (\ref{eq 13.1}) with $a=\varphi_{j m}(x')\leq \delta_0(\Omega_j)$
+  to the function $u\in C_0^1(\Omega)$ with respect to the variable $t$, one gets
+$$
+\int_0^{\varphi_{j m}(x')} \left|\frac{\partial u((x', t))}{\partial t}\right|^2 dt \geq \frac{1}{4} \int_0^{\varphi_{j m}(x')}  \frac {\left|{u((x', t))}\right|^2} {t^{2}}dt + \frac{\lambda_0^2}{\delta_0^2(\Omega_j)}\int_0^{\varphi_{j m}(x')} \left|{u((x', t))}\right|^2 dt.
+$$
+ Taking into account formulas   $t={\rm dist} (x, \partial \Omega_j)$ and   (\ref{f005}) and the identity  (\ref{f006})
+we obtain
+$$
+\int_{\Omega_{jm}}{|\nabla u(x)\cdot \nabla {\rm dist} (x, \partial \Omega_j)|^2 dx}\geq \frac{1}{4}\int_{\Omega_{jm}}\frac{|u(x)|^2 dx}{{\rm dist}^{2}(x, \partial\Omega_j)}+ \frac{\lambda_0^2}{\delta_0^2(\Omega_j)}\int_{\Omega_{jm}}{|u(x)|^2 dx}    .
+$$
+Using the formula  $\Omega_j\setminus S(\Omega_j)= \cup _{m=1}^{m_j} \Omega_{j m}$ and summing,  one gets
+\begin{equation}\label{eq 14.1}
+\int_{\Omega_{j}}{|\nabla u(x)\cdot \nabla {\rm dist} (x, \partial \Omega_j)|^2 dx}\geq \frac{1}{4}\int_{\Omega_{j}}\frac{|u(x)|^2 dx}{{\rm dist}^{2}(x, \partial\Omega_j)}+ \frac{\lambda_0^2}{\delta_0^2(\Omega_j)}\int_{\Omega_{j}}{|u(x)|^2 dx},
+\end{equation}
+ which is equivalent to the inequality
+$$
+\int_{\Omega}{|\nabla u(x)\cdot \nabla {\rm dist} (x, \partial \Omega_j)|^2 dx}\geq \frac{1}{4}\int_{\Omega}\frac{|u(x)|^2 dx}{{\rm dist}^{2}(x, \partial\Omega_j)}+ \frac{\lambda_0^2}{\delta_0^2(\Omega_j)}\int_{\Omega}{|u(x)|^2 dx}
+$$
+  since $K(u) \subset \Omega_j \subset \Omega$. Letting $j\to \infty$ in this inequality,  applying Theorem 1 and Lebesgue's theorem on the majorized  convergence of integrals, we obtain  inequality (\ref{eq 10.1}) in the case of bounded convex domains.
+
+Now, suppose that  $\Omega\subset\mathbb{R}^n$ is  an unbounded convex domain such that $\Omega\neq\mathbb{R}^n$. Consider a real-valued function $u\in C_0^1(\Omega)$ with the support $K(u)$.
+
+
+For a  sufficiently big number $j_0$ we will  use the following representation $\Omega= \cup_{j=1}^{\infty}\Omega_j$, where the sets  $\Omega_j:=\Omega \cap \{x\in \mathbb{R}^n: |x|<j_0+j\}\neq \emptyset$
+are convex bonded subdomains of $\Omega$ and $K(u)\subset \Omega_j$ for all $j\in \mathbb{N}$. On the bounded convex domain $\Omega_j$ we have the inequality (\ref{eq 14.1}). Letting $j\to \infty$ in the inequality (\ref{eq 14.1}),   we arrive to the   inequality (\ref{eq 10.1})  in the case of unbounded convex domains.
+
+To complete the proof of Theorem 4 we have to justify assertions on the sharpness of the constants $1/4$ and ${\lambda_0^2}/{\delta_0^2(\Omega)}$.
+
+From Theorem 3 it follows that $c^*_{2}(2, \Omega) =  {1}/{4}$. Therefore, the constants $1/4$ in the inequality (\ref{eq 14.1}) is sharp  for every convex domain $\Omega\subset\mathbb{R}^n$  such that $\Omega\neq\mathbb{R}^n$.
+
+ In the paper \cite{AW1} it is proved that the constants ${\lambda_0^2}/{\delta_0^2(\Omega)}$ in the inequality
+$$
+\int_{\Omega}{|\nabla u(x)|^2 dx}\geq \frac{1}{4}\int_{\Omega}\frac{|u(x)|^2 dx}{{\rm dist}^{2}(x, \partial\Omega)}+
+\frac{\lambda_0^2}{\delta_0^2(\Omega)}\int_{\Omega}{|u(x)|^2 dx},  \quad \forall u\in C_0^1(\Omega),
+$$
+is sharp for certain  convex domains, in particular, for domains  of the form $\Omega= (0, 1)\times \mathbb{R}^{n-1}$. Since  $|\nabla u(x)|\geq |\nabla u(x)\cdot \nabla {\rm dist} (x, \partial \Omega)|$, we have that the constants ${\lambda_0^2}/{\delta_0^2(\Omega)}$ in the inequality (\ref{eq 14.1}) is sharp  for domains  of the form $\Omega= (0, 1)\times \mathbb{R}^{n-1}$, too.
+ This completes the proof.
+
+\end{proof}
+
+
+
+
+We will need a numerical characteristic of the open set   $\Omega \subset \mathbb{R}^n$, $n\geq 2$, namely, the Euclidean maximum modulus  $M_0(\Omega)$. By definition,
+$$
+M_0(\Omega)=\sup_{A }(2\pi)^{-1} \ln ({R_A}/{r_A}),
+$$
+where the supremum is taken over all domains
+$$
+ A= A(b_A; r_A, R_A)=\{x \in \mathbb{R}^n: r_A<|x-b_A|< R_A \},
+$$
+having the following properties:
+ $A \subset \Omega$;
+ $\quad b_A \in \partial \Omega $, $\quad 0< r_A < R_A<\infty$.
+If such a domain  $A \subset \Omega$ doesn't exist then we take by definition that   $M_0(\Omega)=0$ (compare \cite{Av1} and \cite{Av141}).
+
+The following theorem improves a result of the author ( see the papers  \cite{Av1} and \cite{Av2}).
+
+\begin{theorem}\label{Th:2.3}  Let $n\geq 2$, and let  $\Omega\subset\mathbb{R}^n$ be an open set such that   $\Omega \neq\mathbb{R}^n$.  Suppose that  $p\in [1, \infty)$, $s\in [n, \infty)$, then
+\begin{equation}
+\label{eq 12.1}
+\int_{\Omega}\frac{|\nabla u(x)\cdot \nabla {\rm dist} (x, \partial \Omega)|^p dx}{{\rm dist}^{s-p}(x, \partial \Omega)}\geq \frac{(s-n)^p}{p^p}\int_{\Omega}\frac{|u(x)|^p dx}{{\rm dist}^{s}(x, \partial\Omega)} \quad \forall u\in C_0^1(\Omega),
+\end{equation}
+where the constant  ${(s-n)^p}/{p^p}$ is optimal, namely, one has the sharp value  $c^*_p(s, \Omega)={(s-n)^p}/{p^p}$ for every open set $\Omega\subset\mathbb{R}^n$  such that $\Omega \neq\mathbb{R}^n$
+ and that  $M_0(\Omega)=\infty$.
+\end{theorem}
+\begin{proof} It suffices to prove the desired inequality for the case when  $\Omega$ is a domain, since an open set of the Euclidean space is a finite or countable union of domains. Clearly, if the inequality is established for every component of the open set $\Omega$, then summing one obtains the desired inequality on the open set    $\Omega$.
+
+
+To prove the inequality on a domain  $\Omega\neq \mathbb{R}^n$ for a given function $ u\in C_0^1(\Omega)$, $K={\rm supp} \, u$,  we use an interior approximation of $\Omega$ with a sequence of  non-decreasing cubic open sets $\Omega_j$, where every $\overline{\Omega}_j$ is a union of finite number of cubes with faces parallel to the coordinate planes. Evidently, we use approximations similar to approximations  used to construct the interior Jordan measure.
+
+In \cite{Av1} and  \cite{Av2} we used a special representation of such a set  $\Omega_j\setminus S(\Omega_j)$ as a union of its simplest subdomains  $\Omega_{j m}$.
+For integral over  subdomains $\Omega_{j m}$ it is possible to use formulas similar to equations   (\ref{f005}) and  (\ref{f006}),  with a coordinate  $t= \delta _j(x)=dist (x, \partial \Omega_j)$, that are interpreted as a Cartesian coordinate or the radius in some generalized polar system of coordinates.
+
+Now, we describe our construction of the approximating sequence for the domain    $\Omega \neq \mathbb{R}^n$.
+
+ Let $K\subset \Omega$ be a compact set. We suppose that  $K\subset \Omega$ is the compact support of the given function $ u\in C_0^1(\Omega)$.
+
+ For a sufficiently small number $h \in (0, 1)$
+we consider the  covering of the Euclidean space  ${\mathbb R}^n$ by the cubes
+$$
+C(z, h)= \{ x\in \mathbb{R}^n: x=h z + y, y \in [0, h]^n  \}, \quad
+z\in {\mathbb Z}^n.
+$$
+Define   $\Omega (h)$ as the set of interior points of the union of all cubes $ C(z, h)$ such that
+$$
+  C(z, h)\subset \Omega \cap \{x \in {\mathbb R}^n: |x|<1/ h\}.
+$$
+We suppose that the parameter   $h \in (0, 1)$ is sufficiently small. Then  $\Omega (h)$ is  a non-empty open set, and its closure consists on finite number of cubes $ C(z, h)$. In addition, we suppose that
+  $$
+  0<h< d(K,\partial \Omega)/\sqrt{n},
+  $$
+ where
+$$
+d(K,\partial \Omega) = {\rm dist} (K, \partial\Omega): = \inf \{|x-y|: x\in K, y\in \partial\Omega\} \in (0, \infty).
+$$
+Clearly, for such a parameter $h$ the compact set  $K\subset \Omega (h)$ and
+$$1 \leq {{\rm dist} (x,\partial\Omega)}/{{\rm dist} (x, \partial \Omega(h))}\leq 1 +  h {\sqrt{n}}/{d(K,\partial \Omega)}$$ for all points $x\in K$.
+
+Now, we define $\Omega_j:= \Omega(h_j)$, where $h_j=h/2^{j-1}$, $j\in \mathbb{N}$. One has that
+$$
+\Omega= \cup_{j=1}^{\infty}\Omega_j, \quad   K\subset \Omega_{j}\subset \Omega_{j+1}\,\,\,  (\forall j\in \mathbb{N}).
+$$
+Next, we need a partition of the boundary of the domain  $\Omega _j$ ($j\in \mathbb{N}$).
+It is clear that  $\partial \Omega _j$ is a union of  $(n-1)$-dimensional faces of some cubes  $C(z, h_j)$.
+We will precise this partition of the boundary set using cubic faces of dimension smaller than  $(n-1)$.
+
+Let  $k\in \{0, 1,   ...,n-1\}$, and let $\overline{G}_{jm}\subset
+\partial \Omega _j$ be a $k$-dimensional face of a cube $C(z, h_j)$. First, we remark that
+the singular set $S(\Omega_j)$ consists on points $x\in \Omega_j$, such that $P(x,  \Omega_j)\cap \overline{G}_{jm}\neq \emptyset$ and
+$P(x,  \Omega_j)\cap \overline{G}_{jm'}\neq \emptyset$, where $\overline{G}_{jm}\neq\overline{G}_{jmí'}$.  It is easy to show that the set of all points  $x\in \Omega_j$, disposed in a same distance from the different cubic faces,
+is a bounded subset of an  $(n-1)$-dimensional plane or an $(n-1)$-dimensional surface of second order. Since
+ $\partial{\Omega } _j$ contains a finite number of our cubic faces, then ${mes}_n S(\Omega_j) ={mes}_n \overline{S}(\Omega_j)= 0$, where
+$\overline{S}(\Omega_j)$ means the closure in   $\Omega_j$ of the set ${S}(\Omega_j)$.
+
+We define sets $G_{jm}$ in the following way:
+
+if $dim\, G_{jm}=0$, i. e. this face is a corner of a cube, then we put that $G:=\overline{G}$;
+
+if  $dim \,G_{jm}=k\in \{1,   ...,n-1\}$,   then we assume that, up to rotations and translations,  the set $G_{jm}$  is identic to  $(0, h)^k$ and $G_{jm}\subset \overline{G}_{jm}$, and,  consequently, the closure of   $G_{jm}$ is the face  $\overline{G}_{jm}\subset
+\partial \Omega _j$.
+
+It is clear that there exist a finite number of sets $G_{jm}$, $m\in \{1, 2,   ...,m_j\}$,   such that $G_{jm} \neq G_{jm'}$ for $m\neq m'$, and that
+$$
+\partial \Omega _j=\cup_{m=1}^{m_j}G_{jm}.
+$$
+Now, we define a subset of the set $\Omega _j$ by
+$$
+W(G_{jm}) = \{x\in \Omega_j \setminus S(\Omega_j):    P(x, \Omega_j ) =\{y\},  y\in G_{jm}\}.
+$$
+Clearly, for every bounded continuous  function  $g \in C(\overline{\Omega}_j)$  one can write
+$$
+\int _{\Omega _j} g(x) d x = \sum _{m=1}^{m_j}\int _{W(G_{jm})} g(x) d x.
+$$
+Denote
+$$
+{\mathbb R}_{+}^{n-k} = \{(t_1, ..., t_{n-k})\in {\mathbb R}^{n-k}:
+t_1> 0,... ,t_{n-k}> 0 \}
+$$
+ and   $S_{+}^{n-k} = \{t \in {\mathbb
+R}_{+}^{n-k}: |t| = 1\}$.
+
+Let
+$G_{jm}$ be a face of dimension  $k\in \{0, 1,   ...,n-1\}$, and let   ${mes}_n W(G_{jm})>0$. Then, up to rotations and translations, the set $W(G_{jm})$  can be presented as a subset of the orthogonal product  $G_{jm}\times {\mathbb R}_{+}^{n-k}$, more precisely,
+$$
+W(G_{jm}) = \{y + \delta \omega :y\in G_{jm}, \omega \in S_{+}^{n-k}, 0 < \delta < \varphi _{k}(y, \omega ; G_{jm}, \Omega _j)\},
+$$
+where  $\varphi _{k}$ is a continuous function, satisfying the inequalities
+$$
+0 \leq \varphi _{k}(y, \omega ; G_{jm}, \Omega _j) \leq \delta _0(\Omega_j).
+$$
+
+Let   $a_k \in (0, \infty]$, and let $x=(y, r)$, where $r = \delta=
+dist(x, \partial\Omega_j)$.  For the given function $ u\in C_0^1(\Omega)$  we will need the following inequalities
+\begin{equation}\label{f007}
+\int_0^{a_k} \left|\frac{\partial u((y, r))}{\partial r}\right|^p r^{p-s+n-1-k}dr \geq \frac{(s-n+k)^p}{p^p} \int_0^{a_k}  \frac{\left|u((y, r))\right|^p}
+{r^{s-n+1+k}} dr,
+\end{equation}
+where $k\in \{0, 1,   ...,n-1\}$. Inequalities  (\ref{f007}) follow from the Hardy inequalities
+$$
+\int_0^{a_k} \left|\frac{\partial u((y, r))}{\partial r}\right|^p r^{p-s_k}dr \geq \frac{(s_k-1)^p}{p^p} \int_0^{a_k}  \frac{\left|u((y, r))\right|^p}
+{r^{s_k}} dr
+$$
+for  $s_k\geq 1$ in the case $s_k=s-n+1+k$, where  $s\geq n$.
+
+Since $s_k-1=s-n+k\geq s-n$ for every  $k\in \{0, 1,   ...,n-1\}$, then  (\ref{f007}) imply that
+\begin{equation}\label{f008}
+\int_0^{a_k} \left|\frac{\partial u((y, r))}{\partial r}\right|^p r^{p-s+n-1-k}dr \geq \frac{(s-n)^p}{p^p} \int_0^{a_k}  \frac{\left|u((y, r))\right|^p}
+{r^{s-n+1+k}} dr,
+\end{equation}
+where  $p\in [1, \infty)$, $s\in [n, \infty)$, $k\in \{0, 1,   ...,n-1\}$.
+
+To compute integrals over the set $W(G_{jm})$  with the variable $r = \delta=
+dist(x, \partial\Omega_j)$, as a component of the space variable of integration,
+we will use spherical, cylindric or Cartesian coordinates. Using Fubini's theorem, one obtains
+ $n$ different formulas for iterated integrals which contain functions
+ $\varphi _{k}(y, \omega ) = \varphi _{k} (y, \omega
+; G_{jm}, \Omega _j) \in [0, \delta_0 (\Omega_j)]$. More precisely, one has the following cases:
+
+if ${\rm dim}(G_{jm}) = n-1$, then
+$$
+\int _{W(G_{jm})} g(x) d x = \int _{G_{jm}} d y \int _0^{\varphi _{n-1}(y,\,
+\omega _0)} g(y + r\omega _0) d r;
+$$
+
+if ${\rm dim}(G_{jm}) = n-k$, ${mes}_n W(G_{jm})>0$   and   $2\leq k\leq n-1$, then
+$$
+\int _{W(G_{jm})}g(x)d x = \int _{G_{jm}} d y \int _{S_{+}^k} d\omega \int
+_0^{\varphi _{n-k}(y,\, \omega )} g(y + r\omega )r^{k-1} d r;
+$$
+
+
+ if  $\rm{dim}(G_{jm}) = 0$, i. e. $G_{jm} = \{x_0\}$, and   ${mes}_n W(G_{jm})>0$,  then
+$$
+ \int _{W(G_{jm})}g(x)d x = \int _{S_{+}^n} d \omega \int _0^{\varphi _0 (x_0,\, \omega )} g(x_0 + r\omega )r^{n-1} d r.
+$$
+
+ Taking into account these formulas and the identity  (\ref{f006}), applying one-dimensional integral inequalities of the form  (\ref{f008}) with respect to the variable   $$r= \delta _j(x)={\rm dist} (x, \partial \Omega_j),$$
+ we obtain some inequalities for integrals over the set  $ W(G_{jm})$, ${mes}_n W(G_{jm})>0$. Summing for  $m=1, 2, ..., m_j$, one gets that
+\begin{equation}\label{f009}
+\int_{\Omega_j}\frac{|\nabla u(x)\cdot \nabla {\rm dist} (x, \partial \Omega_j)|^p dx}{{\rm dist}^{s-p}(x, \partial \Omega_j)}\geq \frac{(s-n)^p}{p^p}\int_{\Omega_j}\frac{|u(x)|^p dx}{{\rm dist}^{s}(x, \partial\Omega_j)}.
+\end{equation}
+Letting $j\to \infty$ in the inequality (\ref{f009}) and applying Theorem 1 and Lebesgue's theorem on the majorized  convergence of integrals, we obtain the final inequality (\ref{eq 12.1}). Consequently, $c^*_p(s, \Omega)\geq{(s-n)^p}/{p^p}$ for every open set $\Omega\subset\mathbb{R}^n$  such that $\Omega \neq\mathbb{R}^n$.
+
+Now, suppose that $p\in [1, \infty)$, $s\in [n, \infty)$, $\Omega\subset\mathbb{R}^n$ ia an open set such that $\Omega \neq\mathbb{R}^n$
+ and  $M_0(\Omega)=\infty$. We have to prove that $c^*_p(s, \Omega)\leq {(s-n)^p}/{p^p}$.
+
+ By definition of the maximal Euclidean modulus, the condition   $M_0(\Omega)=\infty$ implies that there exists a sequence of domains  $A_k =A(b_k; r_k, R_k)\subset \Omega$,
+such that
+$$
+b_k \in \partial \Omega, \quad 0< r_k < R_k<\infty, \quad \lim _{k\to \infty}(R_k/r_k) =\infty.
+$$
+It is evident that $|x-b_k|\geq {\rm dist}(x, \partial \Omega)\geq |x-b_k|-r_k $ for  $x\in A_k$, $r_k<|x-b_k|\leq (r_k+R_k)/2$. We define a new sequence of subdomains by
+ $A'_k =A'(b_k; r'_k, R'_k)\subset \Omega$, where $r'_k=r'_k$, $R'_k=R'_k$. We have that  $|x-b_k|\geq{\rm dist}(x, \partial \Omega)\geq |x-b_k|-r_k $ for all  $x\in A'_k$ and that
+$$
+b_k \in \partial \Omega, \quad 0< r'_k < R'_k<\infty, \quad \lim _{k\to \infty}(R'_k/r'_k) =\infty.
+$$
+By definition of the constant $c^*_p(s, \Omega)$ (see (\ref{HI}) and (\ref{HI1})) for the chosen $\Omega$ one can write
+$$
+\int_{A'_k }\frac{|\nabla u(x)\cdot \nabla {\rm dist} (x, \partial \Omega)|^p dx}{{\rm dist}^{s-p}(x, \partial \Omega)}\geq c^*_p(s, \Omega)\int_{A'_k }\frac{|u(x)|^p dx}{{\rm dist}^{s}(x, \partial\Omega)} \quad \forall u\in C_0^1(A'_k ), k\in \mathbb{N}.
+$$
+From this it follows that
+$$
+\int_{A'_k }\frac{|\nabla u(x)|^p dx}{\min \{|x-b_k|^{s-p}, (|x-b_k|-r'_k)^{s-p}\}}\geq c^*_p(s, \Omega)\int_{A'_k }\frac{|u(x)|^p dx}{|x-b_k|^{s}} \quad \forall u\in C_0^1(A'_k ), k\in \mathbb{N}.
+$$
+We  consider a change of variables in integrals of the latter inequality, taking  $y= (x-b_k)/ \sqrt{r_k R_k}$. Denote
+$$
+\Omega_k= \{ (x-b_k)/ \sqrt{r_k R_k}:  x \in \Omega \}, \quad A''_k= \{ (x-b_k)/ \sqrt{r_k R_k}:  x \in A'_k \}.
+$$
+By straightforward computations one gets that
+$$
+\theta:=(0, 0, ... , 0)\in \partial \Omega_k, \quad A''_k =A(\theta; q_k, 1/q_k)\subset \Omega_k, \quad q_k = \sqrt{r'_k /R'_k}, \quad \lim _{k\to \infty}q_k=0,
+$$
+and that
+\begin{equation}\label{f0081}
+\int_{A''_k }\frac{|\nabla u(y)|^p dy}{\min \{|y|^{s-p}, (|y|-q_k)^{s-p}\}}\geq c^*_p(s, \Omega)\int_{A''_k }\frac{|u(y)|^p dy}{|y|^{s}} \quad \forall u\in C_0^1(A''_k ), k\in \mathbb{N}.
+\end{equation}
+
+
+Let us consider a fixed real-valued function  $f\in C_0^1(\mathbb{R}^n\setminus \{0\})$. For all sufficiently big  $k\in \mathbb{N}$ the support of the function $f$ lies in the domain  $A''_k$.
+Applying the inequality (\ref{f0081}) to the function  $u=f$ and letting $k \to \infty$, one has that
+$$
+\int_{\mathbb{R}^n} \frac{|\nabla f(y)|^p \,dy}{|y|^{n-p}}\geq
+ c^*_p(s, \Omega)\int_{\mathbb{R}^n}\frac{|f(y)|^p\, dy}{|y|^{n}}
+$$
+for the function $f$, consequently, for all $f\in C_0^1(\mathbb{R}^n\setminus \{0\})$. Taking  radial functions $f(y)\equiv \varphi(|y|)$,  we obtain that
+$$
+\int_{0}^{\infty} \frac{|\varphi'(r)|^p \,dr}{r^{s-n+ 1-p}}\geq
+ c^*_p(s, \Omega)\int_{0}^{\infty}\frac{|\varphi(r)|^p\, dr}{r^{s-n+1}}
+\quad \forall \varphi\in C_0^1((0, \infty)).
+$$
+From the Hardy inequality (see Theorem A) it follows that
+$$
+\int_{0}^{\infty} \frac{|\varphi'(r)|^p \,dr}{r^{s-n+ 1-p}}\geq
+ \frac{|s-n|^p}{p^p}\int_{0}^{\infty}\frac{|\varphi(r)|^p\, dr}{r^{s-n+1}}
+\quad \forall \varphi\in C_0^1((0, \infty)).
+$$
+ with sharp constant ${|s-n|^p}/{p^p}$. Therefore, $ c^*_p(s, \Omega)\leq {(s-n)^p}/{p^p}$, and this completes the proof of Theorem 5.
+\end{proof}
+
+\begin{corollary}\label{Co:2.1_4}
+    Suppose that $p\in [1, \infty)$, $n\geq 2$ and     $s\in [n, \infty)$. Then for every open set $\Omega\subset\mathbb{R}^n$    such that $\Omega\neq\mathbb{R}^n$ and that $M_0(\Omega)=\infty$ the equalities
+$
+c^*_{p}(s, \Omega) = c_{p}(s, \Omega)=  {(s-n)^p}/{p^p}
+$
+are valid.
+\end{corollary}
+
+
+Letting $\,s=p\,$ in Theorem \ref{Th:2.3} we obtain
+\begin{corollary}\label{Co:2.1_41}  Let $n\geq 2$, and let  $\Omega\subset\mathbb{R}^n$ be an open set such that   $\Omega \neq\mathbb{R}^n$.  Suppose that  $p\in (n, \infty)$, then
+$$
+\int_{\Omega}{|\nabla u(x)\cdot \nabla {\rm dist} (x, \partial \Omega)|^p dx}\geq \frac{(p-n)^p}{p^p}\int_{\Omega}\frac{|u(x)|^p dx}{{\rm dist}^{p}(x, \partial\Omega)} \quad \forall u\in C_0^1(\Omega),
+$$
+where the constant  ${(p-n)^p}/{p^p}$ is optimal, namely, one has the sharp value  $c^*_p(p, \Omega)={(p-n)^p}/{p^p}$ for every open set $\Omega\subset\mathbb{R}^n$  such that $\Omega \neq\mathbb{R}^n$
+ and that  $M_0(\Omega)=\infty$.
+ \end{corollary}
+If  $\,p=1\,$ then  Theorem \ref{Th:2.3} implies
+\begin{corollary}\label{Co:2.1_42} Let $n\geq 2$, and let  $\Omega\subset\mathbb{R}^n$ be an open set such that   $\Omega \neq\mathbb{R}^n$.  Suppose that  $s\in (n, \infty)$, then
+$$
+\int_{\Omega}\frac{|\nabla u(x)\cdot \nabla {\rm dist} (x, \partial \Omega)| dx}{{\rm dist}^{s-1}(x, \partial \Omega)}\geq {(s-n)}\int_{\Omega}\frac{|u(x)| dx}{{\rm dist}^{s}(x, \partial\Omega)} \quad \forall u\in C_0^1(\Omega),
+$$
+where the constant  $s-n$ is optimal, namely, one has the sharp value  $c^*_1(s, \Omega)=s-n$ for every open set $\Omega\subset\mathbb{R}^n$  such that $\Omega \neq\mathbb{R}^n$
+ and that  $M_0(\Omega)=\infty$.
+ \end{corollary}
+
+
+
+\section{Some remarks}
+\label{sec:3}
+
+  Suppose that $p\in [1, \infty)$,    $s\in (1, \infty)$  and  $n\geq 2$. In the moment it is not clear, whether the equality $c^*_{p}(s, \Omega) = c_{p}(s, \Omega)$
+is valid for every open set $\Omega\subset\mathbb{R}^n$    such that $\Omega\neq\mathbb{R}^n$.
+
+One can ask for a more elementary problem: {\it find a domain
+$\Omega\subset\mathbb{R}^n$ such that $c_{p}(s, \Omega)>0$ but $c^*_{p}(s, \Omega) = 0$ for some values of $p\in [1, \infty)$ and     $s\in (1, \infty)$}.
+
+ Denote  $\overline{S}(\Omega)$ the closure in   $\Omega$ of the set of all singular points of the distance function. In  2003, C.~Mantegazza and A.~C.~Mennucci \cite{MM} presented an example of a bounded convex domain $\Omega^*\subset \mathbb{R}^2$,  for which the set  $\overline{S}(\Omega^*)$ has a positive two-dimensional Lebesgue measure. In principle, in \cite{MM} a family of such a domain  $\Omega^*\subset \mathbb{R}^2$ is presented. The geometric description of  $\Omega^*\subset \mathbb{R}^2$ is simple and based on  the  construction of Smith-Volterra-Cantor type sets on the unit circle $\{x\in \mathbb{R}: |x|=1\}$.
+
+ {\it
+Evidently, the example of Mantegazza and Mennucci may be generalized to the dimension $n\geq 3$. Clearly, one can take a sufficiently big number  $a>0$ and consider  the following $n$-dimensional convex domain  $\Omega^{**}:=\Omega^*\times (0, a)^{n-2}$, for which   $mes_n \overline{S}(\Omega^{**})>0$.}
+
+
+Notice that the domains considered in Theorems 3-5 may have similar properties, i. e. in the theorems are  admissible domains with the property $mes_n \overline{S}(\Omega)>0$. But in proofs of the theorems we used bounded approximating domains $\Omega_j$ such that  $S(\Omega_j)=\overline{S}(\Omega_j)$, therefore, $mes_n \overline{S}(\Omega_j)=0$.
+
+
+
+
+
+\begin{acknowledgments}
+This work was supported  by the Russian Science Foundation under Grant no. 18-11-00115.
+\end{acknowledgments}
+
+\begin{thebibliography}{20}
+
+
+
+\bibitem{BEL}
+\refitem{book}
+A.~A.~Balinsky, W.~D.~Evans and R.~T.~Lewis,
+\emph{The Analysis and Geometry of Hardy's Inequality},
+(Universitext,   Heidelberg -- New York -- Dordrecht -- London:
+Springer,  2015).
+
+
+\bibitem{R}
+\refitem{article}
+H.~Rademacher,
+\textquotedblleft \"{U}ber partielle und totale Differenzierbarkeit I\textquotedblright,
+Math. Ann., \textbf{89} (4), 340--359 (1919).
+
+
+
+\bibitem{Mot}
+\refitem{article}
+ T.~S.~Motzkin,
+\textquotedblleft Sur quelques propri\'{e}t\'{e}s charact\'{e}ristiques des ensembles convexes \textquotedblright,
+Atti Real. Accad. Naz. Lincei Rend.  Cl. Sci. Fis. Mat. Natur. Serie VI,  \textbf{21}, (1935),  562--567 (1935).
+
+
+\bibitem{BaF}
+\refitem{article}
+C.~Bandle and M.~Flucher,
+\textquotedblleft Table of inequalities in elliptic boundary value problems\textquotedblright,
+In ``Recent Progress in Inequalities''. V. Milovanovic (ed.) , Kluwer Academic Publ., 97--125 (1998).
+
+
+
+
+\bibitem{D1}
+\refitem{article}
+E.~B.~Davies,
+\textquotedblleft A Review of Hardy inequalities\textquotedblright,
+The Maz'ya anniversary Collection. Vol. 2. Oper. Theory Adv. Appl. \textbf{110} , 55--67 (1999).
+
+\bibitem{MiVu}
+\refitem{article}
+V.~M.~Miklyukov and M.~K.~Vuorinen,
+\textquotedblleft Hardy's inequality for $W_0^{1,p}$-functions on Riemanni an manifolds\textquotedblright,
+Proc. Amer. Math. Soc. \textbf{9} (127), 2145--2154 (1999).
+
+
+
+\bibitem{HOL}
+\refitem{article}
+M.~Hoffmann-Ostenhof, T.~Hoffmann-Ostenhof, and A.~Laptev,
+\textquotedblleft A Geometrical Version of Hardy's Inequality\textquotedblright,
+J. Func. Anal.  \textbf{189}, 539--548 (2002).
+
+
+
+\bibitem{Av1}
+\refitem{article}
+F.~G.~Avkhadiev,
+\textquotedblleft Hardy type inequalities in higher dimensions with explicit estimate of constants\textquotedblright,
+Lobachevskii J. Math. \textbf{21}, 3--31 (2006).
+
+
+
+
+\bibitem{Av2}
+\refitem{article}
+F.~G.~Avkhadiev,
+\textquotedblleft Hardy-type inequalities on Planar and Spacial Open Sets\textquotedblright,
+Proc. Steklov Inst. Math. \textbf{255}, 2--12 (2006).
+
+
+
+\bibitem{AW1}
+\refitem{article}
+F.~G.~Avkhadiev and K.~-J.~Wirths,
+\textquotedblleft  Unified  Poincar\'{e} and Hardy inequalities with
+sharp constants for convex domains\textquotedblright,
+Z. Angew. Math. Mech. (ZAMM),  \textbf{87} (8-9), 632--642 (2007).
+
+
+
+\bibitem{AL}
+\refitem{article}
+F.~G.~Avkhadiev and A.~Laptev,
+\textquotedblleft  Hardy Inequalities for Nonconvex
+Domains\textquotedblright,
+International Mathematical Series "Around Research of
+Vladimir Maz'ya, I". Function Spaces, Springer,  V.~11, 1--12 (2010).
+
+
+
+\bibitem{AW3}
+\refitem{article}
+F.~G.~Avkhadiev and K.~-J.~Wirths,
+\textquotedblleft  Weighted Hardy  inequalities with sharp  constants\textquotedblright,
+Lobachevskii J. Math. \textbf{31} (1), 1--7 (2010).
+
+
+
+\bibitem{BE}
+\refitem{article}
+A.~A.~Balinsky, W.~D.~Evans ,
+\textquotedblleft Some recent results on  Hardy-type inequalities\textquotedblright,
+Appl. Math. Inf. Sci., \textbf{4}  (2), 191--208 (2010).
+
+
+
+
+\bibitem{AW4}
+\refitem{article}
+F.~G.~Avkhadiev and K.~-J.~Wirths,
+\textquotedblleft Sharp Hardy-type inequalities with Lamb's constants\textquotedblright,
+Bull. Belg. Math. Soc. Simon Stevin \textbf{18}, 723--736 (2011).
+
+
+
+
+
+
+
+
+
+
+\bibitem{Av14}
+\refitem{article}
+F.~G.~Avkhadiev,
+\textquotedblleft A geometric description of domains whose Hardy constant is equal to 1/4\textquotedblright,
+Izv. Math. \textbf{78} (5), 855--876 (2014).
+
+
+
+\bibitem{ASh}
+\refitem{article}
+F.~G.~Avkhadiev and  I.~K.~Shafigullin,
+\textquotedblleft Sharp estimates of Hardy constants for domains with special boundary properties\textquotedblright,
+Russian Math. (Iz. VUZ), \textbf{58} (2), 58--61 (2014).
+
+
+
+
+
+
+\bibitem{A15}
+\refitem{article}
+F.~G.~Avkhadiev,
+\textquotedblleft Integral inequalities in hyperbolic-type domains and their applications\textquotedblright,
+ Sbornik: Mathematics \textbf{206} (12), 1657--1681 (2015).
+
+
+
+
+
+\bibitem{A}
+\refitem{article}
+F.~G.~Avkhadiev,
+\textquotedblleft Hardy-Rellich inequalities in domains of the Euclidean space\textquotedblright,
+J. Math. Anal. Appl. \textbf{442}, 469--484 (2016).
+
+
+
+\bibitem{Av4}
+\refitem{article}
+F.~G.~Avkhadiev,
+\textquotedblleft Sharp Hardy constants for annuli\textquotedblright,
+J. Math. Anal. Appl. \textbf{466}, 936--951 (2018).
+
+\bibitem{AM2019}
+\refitem{article}
+F.~G.~Avkhadiev, R.~V.~Makarov,
+\textquotedblleft Hardy Type Inequalities on Domains with Convex Complement
+and Uncertainty Principle of Heisenberg\textquotedblright,
+Lobachevskii J. Math. \textbf{40} (9), 1250--1259 (2019).
+
+\bibitem{Av141}
+\refitem{article}
+F.~G.~Avkhadiev,
+\textquotedblleft Conformally invariant inequalities in domains in Euclidean space \textquotedblright,
+  Izv. Math. \textbf{83} (5),\\ 909--931 (2019).
+
+\bibitem{Av20}
+\refitem{article}
+F.~G.~Avkhadiev,
+\textquotedblleft Properties and applications of the distance functions on open sets   of the Euclidean space\textquotedblright,
+Russian Math. (Iz. VUZ), \textbf{64} (4), 78--81 (2020).
+
+\bibitem{HLP}
+\refitem{book}
+G.~H.~Hardy, J.~E.~Littlewood and G.~Polya,
+\emph{Inequalities},
+(Cambridge Univ. Press, Cambridge, 1934).
+
+
+
+
+
+\bibitem{H}
+\refitem{book}
+H.~Hadwiger,
+\emph{Vorlesungen \"{u}ber Inhalt, Oberfl\"{a}cher und Isoperimetrie},
+(Springer, Berlin-G\"{o}ttingen-Heidelberg, 1957).
+
+
+
+
+
+
+
+
+\bibitem{MM}
+\refitem{article}
+C.~Mantegazza, A.~C.~Mennucci,
+\textquotedblleft Hamilton-Jacobi equations and distance functions on Riemannian manifolds\textquotedblright,
+ Appl. Math. Optim., \textbf{47},   1--25 (2003).
+
+
+
+
+\end{thebibliography}
+
+\end{document}
+
+
+
+\bibitem{UPF}
+\refitem{article}
+G.~B.~Folland and A.~Sitaram,
+\textquotedblleft The uncertainty principle: a mathematical survey\textquotedblright,
+J. Fourier Anal. Appl. \textbf{3} (3), 207--238 (1997).
+
+\bibitem{UPK}
+\refitem{article}
+I.~Kombe and M.~Ozaydin
+\textquotedblleft Improved Hardy and Rellich inequalities on Riemannian manifolds\textquotedblright,
+Trans. Amer. Math. Soc., \textbf{361} (12), 6191--6203 (2009).
+
+\bibitem{UPR}
+\refitem{manual}
+L.~Rupert.
+\textquotedblleft Sobolev inequalities and uncertainty principles in mathematical phsics. Part 1\textquotedblright,
+Lecture note  (LMU Munich), (2011).
+
+
+\bibitem{D1}
+\refitem{article}
+E.~B.~Davies,
+\textquotedblleft The Hardy constant\textquotedblright,
+ Quart. J. Math. Oxford  \textbf{46} (2), 417--431 (1995).
+
+
+\bibitem{R}
+\refitem{book}
+F.~Rellich,
+\emph{ Perturbation theory of eigenvalue problems},
+(New York-London-Paris:  Gordon and Breach,  1969).
+
+
+
+\bibitem{CM}
+\refitem{article}
+P.~Caldiroli and R.~Musina,
+\textquotedblleft Rellich  inequalities with weights\textquotedblright,
+Calc. Var. \textbf{45}, 147--164 (2012).
+
+\bibitem{MS}
+\refitem{article}
+T.~Matskewich and P.~E.~Sobolevskii,
+\textquotedblleft The best possible constant in a generalized  Hardy's inequality for convex domains  in $\mathbb{R}^n$\textquotedblright,
+Nonlinear Anal \textbf{28}, 1601--1610 (1997).
+
+\bibitem{BM}
+\refitem{article}
+H.~Brezis and M.~Marcus,
+\textquotedblleft Hardy's inequalities revisited\textquotedblright,
+Dedicated to Ennio De Giorgi, Ann. Scuola Sup. Pisa Cl. Sci. \textbf{25} (4), 217--237 (1997, 1998).
+
+\bibitem{MMP}
+\refitem{article}
+M.~Marcus, V.~J.~Mitzel, and Y.~Pinchover,
+\textquotedblleft On the best constant for Hardy's inequality in $\mathbb{R}^n$\textquotedblright,
+Trans. Amer. Math. Soc. \textbf{350}, 3237--3250 (1998).
+
+
+\bibitem{BaF}
+\refitem{article}
+C.~Bandle and M.~Flucher,
+\textquotedblleft Table of inequalities in elliptic boundary value problems\textquotedblright,
+In ``Recent Progress in Inequalities''. V. Milovanovic (ed.) , Kluwer Academic Publ., 97--125 (1998).
+
+
+

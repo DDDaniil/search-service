@@ -1,0 +1,382 @@
+\documentclass[
+11pt,%
+tightenlines,%
+twoside,%
+onecolumn,%
+nofloats,%
+nobibnotes,%
+nofootinbib,%
+superscriptaddress,%
+noshowpacs,%
+centertags]%
+{revtex4}
+\usepackage{ljm}
+\usepackage{epstopdf}
+
+%%%%%%%%%%%%%%%%%%%%%%% file template-ljm.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a general template file for the LaTeX package ljm-auth
+% for Lobachevskii Journal of Mathematics 2009/07/20
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article. Delete % signs as needed.
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%не было такого раньше
+\newtheorem{remark}{Remark}
+
+%\author{A.\,Author1, B.\,Author2, C.\,Author3%at al.} % for running heads
+% % for running heads%Insert your title here} %for running heads
+%
+
+\setcounter{page}{1}
+
+\begin{document}
+\titlerunning{Analysis of Kovalevskaya case on so(4)}
+\authorrunning{Kibkalo}
+
+\title{Topological Analysis of the Liouville Foliation for the Kovalevskaya Integrable Case on the Lie Algebra So(4)}
+
+\author{V. Kibkalo}
+\email[E-mail: ]{slava.kibkalo@gmail.com} \affiliation{Lomonosov Moscow State University, GSP-1, Leninskie Gory, Moscow, 119991, Russia}
+
+
+\firstcollaboration{(Submitted by E. K. Lipachev) }
+
+\received{June 26, 2017}
+
+\begin{abstract}
+In this paper we study the topology of the Liouville  foliation for
+the integrable case of Euler's equations on the Lie algebra
+$\textrm{so}(4)$ discovered by I. V.~Komarov, which is a
+generalization of the Kovalevskaya integrable case in rigid body
+dynamics. We generalize some results by A. V.~Bolsinov, P.
+H.~Richter and A. T.~Fomenko about the topology of the classical
+Kovalevskaya case. We also show how the Fomenko--Zieschang invariant
+can be calculated for every admissible curve in the image of the
+momentum map.
+\end{abstract}
+\subclass{37J35, 70E40} \keywords{Kovalevskaya integrable case,
+Fomenko--Zieschang invariant, marked molecule, critical point of
+centre-centre type}
+
+\maketitle
+
+
+
+\section{Introduction and main results}
+\label{intro} %Your text comes here.
+
+I. V.~Komarov in his paper \cite{Komarov} showed that the
+Kovalevskaya integrable case in rigid body dynamics can be included
+in a one-parameter family of integrable Hamiltonian systems on the
+pencil of Lie algebras $\textrm{so}(3, 1) - \textrm{e}(3) -
+\textrm{so}(4)$. The Kovalevskaya top was realized as a system on
+Lie algebra $\textrm{e}(3)$. We will briefly describe this
+construction.
+
+Consider the six-dimensional  space $\mathbb{R}^6(\bf{J},\bf{x})$
+and the following one-parameter family of Poisson brackets depending
+on the real parameter~$\kappa$:
+\[\{J_i, J_j\} =
+\varepsilon_{ijk}J_k, \quad \{J_i, x_j\} = \varepsilon_{ijk}x_k,
+\quad \{x_i, x_j\} = \kappa \varepsilon_{ijk}J_k,\]
+%
+where $\varepsilon_{ijk} = \mathrm{sign} %$ is the sign of permutation $
+(\{123\} \rightarrow \{ijk\})$. When %In the cases
+$\kappa >0, \kappa =0$ and $\kappa <0$ this bracket coincides with
+the Lie--Poisson bracket for the Lie algebras $\textrm{so}(4)$,
+$\textrm{e}(3)$ and $\textrm{so}(3,1)$ respectively. These brackets
+have two Casimir functions:  \[f_1 = x_1^2 + x_2^2 + x_3^2 +\kappa
+(J_1^2 + J_2^2 + J_3^2), \quad \quad f_2 = x_1 J_1 + x_2 J_2 + x_3
+J_3 . \] In the case of $\kappa \geq 0,~a >0$, the common level
+surfaces of the Casimir
+\[ M^4_{a, b} = \{ (\textbf{J}, \textbf{x})| \quad  f_1
+(\textbf{J}, \textbf{x}) = a, \quad f_2 (\textbf{J}, \textbf{x}) = b
+\}\] are orbits of the coadjoint representation and symplectic leaves.
+The Hamiltonian $H$ of the system and the integral $K$ are equal to
+\[H = J_1^2 + J_2^2 + 2J_3^2 + 2 c_1 x_1,\quad
+K = (J_1^2 - J_2^2-2c_1 x_1 + \kappa c_1^2)^2 + (2J_1J_2 - 2 c_1
+x_2)^2,\]
+where $c_1$ is an arbitrary constant. We may assume that
+$c_1=1$ and $\kappa =-1, 0$ or $1$. We do not consider the case of
+$\kappa <0$ in this paper.
+
+We discuss the topology of the Liouville foliation defined by  the
+momentum mapping $\mathfrak{F} = (H, K): M^4_{a,b} \rightarrow
+\mathbb{R}^2$ on every non-singular orbit $M^4_{a, b}$. Bifurcation
+diagrams $\Sigma_{a, b}$ of $\mathfrak{F}$ are often denoted by
+$\Sigma$ for short. They were constructed by M.~Kharlamov
+\cite{Kharlamov} when $\kappa =0$ and by I.~Kozlov \cite{Kozlov}
+when $\kappa > 0$. They consist of the smooth fragments of curves
+called arcs and the points of their tangency, intersection or cusps
+called singular points. Some families of arcs and singular points
+have analogs in the case of $\kappa =0$. These ``old'' families are
+denoted by $y_1, ..., y_{13}$ and $\alpha_1, ..., \delta_2$ in
+\cite{Kozlov} and \cite{BRF} respectively. Families of singular
+points that have no such analogs are denoted by $z_1, ..., z_{11}$
+in \cite{Kozlov}. We establish five families $\xi_i$, $i =1..5$ of
+such ``new'' arcs. Table \ref{Table_arcs} contains necessary
+information about new arcs of $\Sigma$ and families of Liouville
+tori denoted by (1), ..., (5) in \cite{BRF}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}[t]{|c|c|c|c|}
+\hline
+ class & bifurcation diagram arcs & atom &family of tori\\
+\hline
+$\xi_1$ & $(z_4, z_3), (z_4, z_5), (z_4, z_{11}), (z_4, z_8), (z_7, z_5), (z_7, z_8)$   & A & (1)  \\
+\hline
+$\xi_2$ & $(z_3, z_2), (z_5, z_2)$ & 2 A & (3) \\
+\hline
+$\xi_3$ & $(z_2, z_1), (z_{10}, z_1)$ & 2 A & (2) \\
+\hline
+$\xi_4$ & $(z_6, z_5), (z_6, z_8), (z_7, z_5), (z_7, z_8)$   & A & (4) \\
+\hline
+$\xi_5$ & $(z_8, z_9), (z_8, z_{10}), (z_{11}, z_{10}), (z_{11}, z_{9})$ & A & (1) \\
+\hline
+\end{tabular}\caption{
+Classes of new arcs of the bifurcation diagrams}
+\label{Table_arcs}
+\end{table}
+
+Our research is based on the theory of topological classification of
+integrable Hamiltonian systems developed by A. T.~Fomenko and his
+school and discussed in \cite{BF}. Marked molecule is an invariant
+that classifies Liouville foliations on three-dimensional manifolds.
+One should know some special coordinate basic cycles on the boundary
+tori of the neighborhoods of the critical fibers to calculate this
+invariant. Such bases are called admissible coordinate systems. The
+definition of admissible coordinate systems for all types of the
+3-atoms was given in \cite{BF}.
+
+A. V.~Bolsinov, P. H.~Richter and A. T.~Fomenko proved in \cite{BRF}
+that for the Kovalevskaya top the admissible coordinate systems near
+of every arc of $\Sigma_{a, b}$ can be expressed via the uniquely
+defined $\lambda$-cycles. The following theorem states that this
+result remains true for the case of $\textrm{so}(4)$:
+
+\begin{theorem} \label{Th_admiss_coord_systems}
+ The following coordinate systems $(\lambda_{\xi_i}, \mu_{\xi_i})$
+  are the admissible coordinate systems for the arcs $\xi_i, i =1..5$:
+  $$
+  \begin{pmatrix} \lambda_{\xi_1} \\ \mu_{\xi_1} \end{pmatrix} =
+    \begin{pmatrix} ~1 & -1 \\ ~1 & ~~0~  \end{pmatrix}
+    \begin{pmatrix} ~\lambda_{\gamma_1} \\ ~\lambda_{\gamma_3}
+    \end{pmatrix},
+    \quad \begin{pmatrix} \lambda_{\xi_2} \\ \mu_{\xi_2} \end{pmatrix} =
+    \begin{pmatrix} ~0 & ~~1~ \\ ~1 & ~~0~  \end{pmatrix}
+    \begin{pmatrix} ~\lambda_{\gamma_2} \\ -\lambda_{\beta_2}
+    \end{pmatrix},
+    \quad \begin{pmatrix} \lambda_{\xi_3} \\ \mu_{\xi_3} \end{pmatrix} =
+    \begin{pmatrix} ~0 & -1 \\ -1 & ~0  \end{pmatrix}
+    \begin{pmatrix} ~\lambda_{\delta_1} \\ ~\lambda_{\beta_1}
+    \end{pmatrix},
+  $$
+  $$
+    \begin{pmatrix} \lambda_{\xi_4} \\ \mu_{\xi_4} \end{pmatrix} =
+    \begin{pmatrix} ~1 & -1 \\ ~1 & ~~0~  \end{pmatrix}
+        \begin{pmatrix} ~\lambda_{\gamma_4} \\ ~\lambda_{\gamma_3}
+    \end{pmatrix}, \quad
+\begin{pmatrix} \lambda_{\xi_5} \\ \mu_{\xi_5} \end{pmatrix} =
+    \begin{pmatrix} ~0 & -1 \\ ~1 & ~~0~  \end{pmatrix}
+    \begin{pmatrix} ~\lambda_{\gamma_3} \\ ~\lambda_{\beta_1}
+    \end{pmatrix}.$$
+    \end{theorem}
+
+\begin{proof}
+Calculation of admissible coordinate systems for all $\xi_i, i
+=1..5,$ is based on well-known facts about the structure of
+Liouville foliation in neighborhoods of nondegenerate zero-rank
+critical points. The label $r$ is equal to infinity for a point of
+the centre-saddle type and therefore the $\lambda$-cycles for the
+corresponding arcs are equal up to a sign. We also use Theorem
+\ref{Th_centre_centre_eps} proved later about the admissible
+coordinate system for a critical point of centre-centre type.
+
+Let us show the calculation for the arc $\xi_1$. The arcs $\xi_3,
+\xi_4, \xi_5$ can be considered analogously. Since $z_5$ is the
+image of a centre-saddle point,  we have $\lambda_{\xi_1} = \pm
+\lambda_{\beta_2} = \pm (\lambda_{\gamma_3} - \lambda_{\gamma_1})$.
+The point $z_1$ is a critical point of centre-centre type, hence we
+choose the negative sign, and $\mu_{\xi_1} = \lambda_{\gamma_1}$.
+
+ We consider the point $z_3$ to calculate cycles for the arc $\xi_2$. This
+  critical point has the centre-saddle type, hence we can
+   take $\lambda_{\xi_2} = \sigma \lambda_{\beta_2}$ and $\mu_{\xi_2} = -\sigma \lambda_{\gamma_2}$,
+    where $\sigma = \pm 1$. Since $z_2$ is the image of a degenerate critical orbit of rank 1,
+    we need that $\mu_{\xi_2} = \lambda_{\gamma_2}$ and $\sigma =1$
+    (because both cycles are determined by $\mathrm{sgrad}\, H$).
+\end{proof}
+
+A smooth curve without self-intersections  in $\mathbb{R}^2$ is
+called \textit{admissible} if it intersects the arcs of bifurcation
+diagram $\Sigma$ transversely and does not pass through the singular
+points of $\Sigma$.
+
+\begin{remark}
+ Admissible coordinate systems for
+ arcs $\alpha_1, ..., \delta_2$ found in \cite{BRF} and the results of
+ our theorem are sufficient to compute the marked molecule of every admissible curve for the
+  Kovalevskaya system on $\mathrm{so}(4)$.
+\end{remark}
+
+\section{Theorem about a point of centre-centre type}
+
+In this section we describe the marked loop molecule for the
+$\mathfrak{F}$ image of a \textit{critical point of centre-centre
+type}. The loop molecule has the form A~$-$~A, the label $r =0$ and
+the label $\varepsilon = \pm 1$. So one should calculate this sign.
+Small neighborhood of this point has the structure of Cartesian
+product of two 2-atoms of the type A. The formal definition of such
+point can be found in \cite{BF}.  Its image will be called a
+\textit{singular point of centre-centre type}. For every arc of
+bifurcation diagram we consider a small (vertical) interval $I$ on
+the straight line $H = \mathrm{const}\,$ that intersects this arc
+transversely. The preimage of such interval is also the 3-atom A.
+Recall that it is a solid torus  $S^1 \times D^2$ foliated by
+Liouville tori and one singular elliptic orbit and the 2-atom A is
+its base.
+
+\begin{definition}
+Basis $(\lambda, \mu)$ of $\pi_1 (T^2)$ on the boundary torus is
+called admissible iff:
+\begin{enumerate}
+\item the cycle $\lambda$ is contractible;
+\item the orientation of the cycle $\mu$ is
+determined by the Hamiltonian vector field $\mathrm{sgrad}\, H$ on
+the singular fibre;
+\item basis $(\lambda, \mu)$ in $\pi_1(T^2)$ is positive on the boundary torus.
+\end{enumerate}
+We assume that basis $(u, v)$ in $T_x T^2$ is positive if the quadruple of vectors $(\mathrm{grad}\,H, N, u, v)$ is positive w.r.t the volume form $\omega \wedge \omega$. Here $N$ is the outward-pointing normal vector to the 3-atom.
+\end{definition}
+
+It is important that this way allows to determine the admissible
+coordinate systems near all  arcs \textit{simultaneously} as it was
+made in \cite{BRF}. It means that \textit{every} gluing $2 \times 2$
+matrix can be calculated as the transition matrix from the basis of
+the first arc to the basis near the other arc. In particular
+determinants of all gluing matrices for the \textit{isoenergy}
+surfaces $H = \mathrm{const}$ are equal to $-1$. If we consider a
+surface under the condition $K = \mathrm{const}\,$ then the
+determinants of all gluing matrices are equal to $1$.
+
+The bifurcation diagram is an angle near the singular point $L$
+under consideration.  We consider inward-pointing tangent vectors to
+arcs $\gamma_1$,~$\gamma_2$ of $\Sigma$ that intersect in $L$. Let
+the derivation of $H$ in the direction of a tangent vector be called
+\textit{the derivation of $H$ in the direction of the corresponding
+arc}.
+
+\begin{theorem}\label{Th_centre_centre_eps}
+Let point L be a singular point of a bifurcation diagram of
+centre-centre type.  Let $\varepsilon_i =\pm 1, i= 1,2$ be the signs
+of the derivatives of $H$ in the direction of the intersecting arcs
+$\gamma_i, i=1,2$ respectively. Admissible coordinate systems
+$(\lambda_i, \mu_i)$ for these arcs can be chosen s.t.
+\[  \begin{pmatrix} \lambda_2 \\ \mu_2 \end{pmatrix} =
+    \begin{pmatrix} 0 & \varepsilon_1 \\ \varepsilon_2 & 0 \end{pmatrix}
+    \begin{pmatrix} \lambda_1 \\ \mu_1  \end{pmatrix}.
+\]
+\end{theorem}
+
+\begin{proof}
+1. It is well-known that there exist local coordinates $p_1, p_2,
+q_1, q_2$ such that  the symplectic form $\omega$ is given by the
+following formula in a neighborhood of this critical point of
+centre-centre  type:
+\[\omega = dp_1\wedge dq_1 + dp_2\wedge dq_2,\]
+and the functions $H$, $K$ have the form
+$H~=~H(\alpha_1,\alpha_2)$,~ $K~=~K(\alpha_1,\alpha_2)$  in this
+neighborhood, where $\alpha_1 = (p_1^2+q_1^2)$ and $\alpha_2 =
+(p_2^2+q_2^2)$. We assume that $\alpha_i =0$ on the arc $\gamma_i,\
+i=1,2$.
+
+Liouville tori
+near the critical point of centre-centre type are the Cartesian product
+of two circles $\varphi_1,\ \varphi_2$ with tangent vector fields $u_1, u_2$.%
+
+\begin{center}
+$u_1 = (-q_1, 0, p_1, 0), \quad u_2 = (0, -q_2, 0, p_2).$
+\end{center}
+%Every
+
+2.  We claim that $(\lambda_i, \mu_i)$ for the arcs $\gamma_i$ have
+the following form: $$\left(\lambda_1, \mu_1\right) =
+\left(\varphi_1, \mathrm{sgn}\, \left(\cfrac{\partial H}{\partial
+\alpha_1 }\right) \varphi_2\right), \quad  \left(\lambda_2,
+\mu_2\right) = \left(\varphi_2, \mathrm{sgn}\, \left(\cfrac{\partial
+H}{\partial \alpha_2 }\right)\varphi_1\right).$$
+
+3. Let us denote tangent vector fields to the cycles $\mu_1, \mu_2$ as $v_1, v_2$:
+ \[v_1 = \cfrac{\partial H}{\partial \alpha_1}\ u_2 \quad v_2 = \cfrac{\partial H}{\partial \alpha_2}\ u_1.\]
+ The orientations of cycles  $\mu_i$ are determined by the %Hamiltonian
+ vector field $\mathrm{sgrad}\, H$:
+$$
+\mathrm{sgrad}\, H = \omega^{-1} dH = \left(- 2 q_1 \cfrac{\partial
+H}{\partial \alpha_1}, - 2 q_2 \cfrac{\partial H}{\partial
+\alpha_2}, 2 p_1 \cfrac{\partial H}{\partial \alpha_1}, 2 p_2
+\cfrac{\partial H}{\partial \alpha_2}\right).
+$$
+ To check the orientation of the $\lambda$-cycles we have to verify
+that two quadruples of vectors $\left(\mathrm{grad}\, H, N_i, u_i,
+v_i\right),\, i=1,2$ are positive w.r.t.~the volume form $\omega
+\wedge \omega$. Here $N_i$ is the outward-pointing normal vector to
+the isoenergy 3-atom A for the arc $\gamma_i, i =1,2.$ It can be
+easily checked that
+
+\begin{center}
+$N_1 = -\mathrm{sgn}\,\left(\cfrac{\partial H}{\partial \alpha_2}\right) N, \quad
+N_2 = \mathrm{sgn}\,\left(\cfrac{\partial H}{\partial \alpha_1}\right) N,$
+\end{center}
+where vector $N$ is the orthogonal to $\mathrm{grad}\, H, u_i, v_i:$
+
+\begin{center}
+$N = \left(-p_1 \alpha_2 \cfrac{\partial H}{\partial \alpha_2},\ p_2 \alpha_1 \cfrac{\partial H}{\partial \alpha_1},\ -q_1 \alpha_2 \cfrac{\partial H}{\partial \alpha_2},\ q_2 \alpha_1 \cfrac{\partial H}{\partial \alpha_1}\right).$
+\end{center}
+\end{proof}
+
+\begin{corollary}
+All elements of the gluing matrix in Theorem \ref{Th_centre_centre_eps} change their signs if one change the required orientation of the quadruple of vector fields in the definition of admissible coordinate system.
+\end{corollary}
+
+We assume that the critical point of centre-centre is the only point in the fibre. General case can be reduced to this one by considering the appropriate leaf of the bifurcation complex. A.T.~Fomenko suggested the concept of bifurcation complex for systems of different dimensions  in \cite{FAA} and \cite{topol_mult}. Their properties also were described there. Some applications %of this construction
+and links between it and other topological invariants are contained in \cite{NewAppr}.
+
+
+\begin{acknowledgments}
+This work was supported by the Russian Science Foundation grant (project No.17-11-01303).
+\end{acknowledgments}
+
+\begin{thebibliography}{7}
+
+\bibitem{BF}  A.~T.~Fomenko and A.~V.~Bolsinov,
+ \textit{Integrable Hamiltonian Systems: Geometry, Topology, Classification} (CRC Press, 2004).
+
+\bibitem{BRF} A.~V.~Bolsinov, P.~H.~Richter, and A.~T.~Fomenko, \textit{The method of loop molecules and the topology of the Kovalevskaya top}, Sb. Math. \textbf{191} (2), 151--188 (2000).
+
+\bibitem{Kozlov} I.~K.~Kozlov, \textit{The topology of the Liouville foliation for the Kovalevskaya integrable case on the Lie algebra so(4)}, Sb. Math. \textbf{205} (4), 532--572 (2014).
+
+\bibitem{Komarov} I.~V.~Komarov, \textit{Kowalewski basis for the hydrogen atom}, Theoret. and Math. Phys. \textbf{47} (1), 320--324 (1981) [In Russian].
+
+\bibitem{FAA}   A.~T.~Fomenko,
+\textit{Topological invariants of Hamiltonian systems that are integrable in the sense of Liouville}, Funct. Anal. Appl. \textbf{22} (4),  286--296 (1988).
+
+\bibitem{topol_mult} A.~T.~Fomenko, \textit{The theory of invariants of multidimensional integrable Hamiltonian systems}, Advances
+in Soviet Mathematics. American Math. Soc.  \textbf{6}, 1--27
+(1991).
+
+\bibitem{NewAppr} A.~T.~Fomenko and A.~Yu.~Konyaev, \textit{New approach to symmetries and singularities in integrable Hamiltonian systems}, Topology and its Applications \textbf{159}, 1964--1975 (2012).
+
+\bibitem{Kharlamov} M.~P.~Kharlamov, \textit{Bifurcation of common levels of first integrals of the Kovalevskaya problem}, J. Appl. Math. and Mech. \textbf{47}, 737--743 (1983).
+
+\end{thebibliography}
+
+\end{document}

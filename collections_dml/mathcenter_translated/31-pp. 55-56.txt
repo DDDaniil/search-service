@@ -1,0 +1,1 @@
+The existence of a generalized solution of a non -ink problem for the wave equation V. B. Dmitriev Samara State Academy of Railways Consider the equation LU ≡ UTT −4U = F (X, T) (1) 56

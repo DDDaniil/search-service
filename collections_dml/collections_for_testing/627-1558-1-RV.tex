@@ -1,0 +1,482 @@
+﻿\documentclass[
+11pt,%
+tightenlines,%
+twoside,%
+onecolumn,%
+nofloats,%
+nobibnotes,%
+nofootinbib,%
+superscriptaddress,%
+noshowpacs,%
+centertags]%
+{revtex4}
+\usepackage{ljm}
+
+
+
+\setcounter{page}{3}
+
+\begin{document}
+\titlerunning{On inverse boundary value problem }
+\authorrunning{Yuldashev}
+
+\title{On Inverse Boundary Value Problem for a Fredholm Integro-Differential Equation with Degenerate Kernel and Spectral Parameter}
+
+\author{\firstname{T. K.}~\surname{Yuldashev}}
+\email[E-mail: ]{tursunbay@rambler.ru}
+\affiliation{Siberian State University of Sciences and Technology, Krasnoyarskiy Rabochiy avenue 31, Krasnoyarsk, 660014, Russia}
+
+
+\firstcollaboration{(Submitted by ) }
+
+\received{}
+
+\begin{abstract}
+In this paper are considered the questions of unique solvability and redefinitions of a nonlocal inverse problem for the Fredholm integro-differential equation of the second order with degenerate kernel, integral condition, and spectral parameter. Calculations of the value of the spectral parameter are reduced to the solve of trigonometric equations. Systems of algebraic equations are obtained. The singularities that arose in determining arbitrary constants are studied. A criterion for unique solvability of the problem is established and the corresponding theorem is proved.
+\end{abstract}
+\subclass{}
+\keywords{Integro-differential equation, inverse boundary value problem, degenerate kernel, integral condition, unique solvability.}
+
+\maketitle
+
+
+
+\section{Problem statement}
+
+Mathematical modeling of many processes occurring in the real world often leads to the study of initial or inverse boundary value problems for ordinary differential and integro-differential equations. Integro-differential equations are mathematical models of the flow of many physical processes and the operation of technical systems (see, for exam. \cite{tur1}). In the cases, where the boundary of the flow domain of a physical process is not available for measurements, nonlocal conditions in integral form can serve as an additional information sufficiently for one-valued solvability of the problem. A large number of papers have been devoted to the study of integro-differential equations (see, for exam. \cite{tur2}--\cite{tur9}.
+
+In this paper we consider singularities in solving nonlocal inverse boundary value problem for the ordinary Fredholm integro-differential equation with degenerate kernel, integral condition and spectral parameter. The values of spectral parameter are calculated and for which the solvability of the inverse boundary value problem is established. Standard methods for solving the integro-differential equation do not pass here. Integro-differential equations with a degenerate kernel for other formulation of problems were considered, in particular, in \cite{tur10}--\cite{tur14}. 
+
+Thus, on a segment $[0 ; T]$ we consider an equation of the form
+\begin{equation} \label{tur-eq1}
+u'' (t)+\lambda^{\, 2} \, u (t)=\nu \, \int \limits_{0}^{T} K \, (t , s) \, u \, (s) \, d s+\beta \, \alpha \, (t)
+\end{equation}
+under the following conditions
+\begin{equation} \label{tur-eq2}
+u (T)=\int \limits_{0}^{T} u \, (t) \, t \, d t , \: u' (T)=\varphi ,
+\end{equation}
+\begin{equation} \label{tur-eq3}
+ u \, (0)=r ,
+\end{equation}
+where $0<T< \infty$ is given real number, $\lambda$ is positive spectral parameter, $\nu$ is real nonzero parameter, $\varphi , \, r= {\rm const}$ ,  $\beta$ is the coefficient of redefinition, $\alpha \, (t)  \in C [0 ; T]$, $K (t , s)=\sum \limits_{i=1}^{k} a_{\, i} (t) \, b_{\, i} (s)$, $a_{\, i} (t)  \in C [0 ; T]$, $b_{\, i} (s) \in C [0 ; T ]$. Here it is assumed that the nonzero functions $a_{\, i} (t)$ and  $b_{\, i} (s)$ are linearly independent.
+
+The question of the uniqueness of the solution of the inverse problem (\ref{tur-eq1})--(\ref{tur-eq3}) reduces to the question of the triviality of solution of the homogeneous integro-differential equation under the homogeneous condition  $u' (T)=0$.
+
+\section{Construction of solution of the direct boundary value problem (\ref{tur-eq1}), (\ref{tur-eq2})}
+
+Taking the degeneracy of the kernel into account, we write the equation (\ref{tur-eq1}) in the following form
+\begin{equation} \label{tur-eq4}	
+u'' \, (t)+\lambda^{\, 2} \, u \, (t)=\nu \, \int \limits_{0}^T \sum \limits_{i=1}^{k} a_{\, i} (t) \, b_{\, i} (s) \, u \, (s) \, d s+\beta \, \alpha \, (t) .
+\end{equation}
+
+	By the aid of notation  
+\begin{equation} \label{tur-eq5}
+\tau_{\, i}=\int \limits_{0}^T  b_{\, i} (s) \, u \, (s) \, d s 
+\end{equation}
+the equation (\ref{tur-eq4}) is rewritten as follows 
+\begin{equation} \label{tur-eq6}
+u'' \, (t)+\lambda^{\, 2} \, u \, (t)=\nu \, \sum \limits_{i=1}^{k} a_{\, i} (t) \, \tau_{\, i}+\beta \, \alpha \, (t) .
+\end{equation}
+
+Differential equation (\ref{tur-eq6}) is solved by the method of variation of arbitrary constants
+\begin{equation} \label{tur-eq7}	
+u \, (t)=A_{\, 1} \, \cos \, \lambda \, t+A_{\, 2} \, \sin \, \lambda \, t+\eta \, (t) ,
+\end{equation}
+where $A_{\, 1} , \, A_{\, 2}$ while arbitrary constants,
+$\eta \, (t)=\dfrac{\nu}{\lambda} \sum \limits_{i=1}^{k}  \tau_{\, i} \, h_{\, i} \, (t)+\dfrac{\beta}{\lambda} \, \delta_{\, 1} \, (t) $,
+$h_{\, i} \, (t)= \int \limits_{0}^t \sin  \, \lambda \, (t-s) \, a_{\, i} (s) \, d s , \: i=\overline{1 , k} $,  $ \delta_{\, 1} \, (t)= \int \limits_{0}^t \sin  \, \lambda \, (t-s) \, \alpha \, (s) \, d s$.
+
+	In order to find the unknown coefficients $A_{\, 1} $  and $A_{\, 2} $ in (\ref{tur-eq7}) we use the first condition from (\ref{tur-eq2}) and there we arrive at equality 
+\begin{equation} \label{tur-eq8}
+A_{\, 1} \, \sigma_{\, 1} (\lambda)=-A_{\, 2} \, \sigma_{\, 2} (\lambda)+\xi_{\, 0} ,
+\end{equation}
+where $\sigma_{\, 1} (\lambda)=\Big(1+\dfrac{1}{\lambda^{\, 2}} \Big) \cos \, \lambda \, T- \dfrac{T}{\lambda} \, \sin \, \lambda \, T+\dfrac{1}{\lambda^{\, 2}}$,
+$\sigma_{\, 2} (\lambda)=\Big(1+\dfrac{1}{\lambda^{\, 2}} \Big) \, \sin \, \lambda \, T+\dfrac{T}{\lambda} \, \cos \, \lambda \, T$, 
+$\xi_{\, 0}=\int \limits_{0}^T \eta (t) \, t \, d \, t-\eta (T)$.
+
+\subsection{Case 1}
+
+In (\ref{tur-eq8}), we assume that 
+\begin{equation} \label{tur-eq9}
+\sigma_{\, 1} (\lambda)=\sigma_{\, 2} (\lambda)=0 .
+\end{equation}
+
+Then we arrive at the trivial result: $\xi_{\, 0}=0$, i.e. $\nu=\beta=0$. In this case the corresponding model differential equation $u'' (t)+\lambda^{\, 2} \, u \, (t)=0$ has an infinite set of solutions $
+u \, (t)=\tilde A_{\, 1} \, \cos \, \lambda \, t+\tilde A_{\, 2} \, \sin \, \lambda \, t$, 
+where $\tilde A_{\, 1}, \: \tilde A_{\, 2}$ are arbitrary constants. 
+
+We calculate the values of the parameter  $\lambda$, for which (\ref{tur-eq9}) takes plase. Let be $\sigma_{\, 1 } (\lambda)=\Big(1+\dfrac{1}{\lambda^{\, 2}} \Big) \cos \, \lambda \, T- \dfrac{T}{\lambda} \, \sin \, \lambda \, T+\dfrac{1}{\lambda^{\, 2}}= 0 $ for some $\lambda$.  This condition is equivalent to equation $\big(1+\lambda^{\, 2} \big) \cos \, \lambda \, T- \lambda \, T \, \sin \, \lambda \, T+1=0$, which has solutions:
+\begin{equation} \label{tur-eq10}
+\lambda_{\, n}=\dfrac{1+(-1)^{\, n}}{T} \, \arcsin \, \dfrac{1+\lambda_{\, n}^{\, 2}}{\sqrt{\big( 1+\lambda_{\, n}^{\, 2} \big)^{\, 2}+\lambda_{\, n}^{\, 2} \, T^{\, 2}}}+\dfrac{\pi \, n}{T} \, , \: n \in N , 
+\end{equation}
+where $N$ is the set of natural numbers. The formula (\ref{tur-eq10}) is a transcendent equation with respect to  $\lambda_{\, n}$. It can be solved by the method of successive approximations  
+\[
+\lambda_{\, n , \, \mu+1}=\dfrac{1+(-1)^{\, n}}{T} \arcsin \dfrac{1+\lambda_{\, n , \, \mu}^{\, 2}}{\sqrt{\big( 1+\lambda_{\, n , \, \mu}^{\, 2} \big)^{\, 2}+\lambda_{\, n , \, \mu}^{\, 2} \, T^{\, 2}}}+
+\dfrac{\pi \, n}{T} \, , \: n \in N , \: \mu=1 , 2 , \dots
+\]
+or graphically
+\[
+\left\{  x=\lambda_{\, n} , \atop
+x=\dfrac{1+(-1)^{\, n}}{T} \, \arcsin \, y \, (\lambda_{\, n})+\dfrac{\pi \, n}{T} , \right. 
+\]
+where $y \, (\lambda_{\, n})=\dfrac{1+\lambda_{\, n}^{\, 2}}{\sqrt{\big( 1+\lambda_{\, n}^{\, 2} \big)^{\, 2}+\lambda_{\, n}^{\, 2} \, T^{\, 2}}}$.
+
+Suppose now, that for some $\lambda$ the following equality holds $\sigma_{\, 2 } (\lambda)=\Big(1+\dfrac{1}{\lambda^{\, 2}} \Big) \, \sin \, \lambda \, T+\dfrac{T}{\lambda} \, \cos \, \lambda \, T= 0 $.  This condition is equivalent to the trigonometric equation $\tan \, \lambda \, T=-\dfrac{\lambda \, T}{1+\lambda^{\, 2}}$. Hence we obtain solutions:
+\begin{equation} \label{tur-eq11}
+\lambda_{\, n}=-\dfrac{1}{T} \arctan \, \dfrac{\lambda_{\, n} \, T}{1+\lambda_{\, n}^{\, 2}}+\dfrac{\pi \, n}{T} , \: n \in N .
+\end{equation}
+
+The second formula in (\ref{tur-eq11}) is a transcendent equation with respect to  $\lambda_{\, n}$. It can be also solved by the method of successive approximations or graphically. 
+
+The set of all values of the parameter $\lambda_{\, n}$, defined by (\ref{tur-eq11}), we denote by $\Lambda_{\, 1}$.  The set of all values of the parameter $\lambda_{\, n}$,  defined by (\ref{tur-eq10}), we denote by $\Lambda_{\, 2}$. Total number of parameter values $\lambda_{\, n}$ is countable. Since  $0 \ll T<\infty$, then $\Lambda_{\, 1} \cap \Lambda_{\, 2}=\emptyset $. So, the function $
+u \, (t)=\tilde A_{\, 1} \, \cos \, \lambda \, t+\tilde A_{\, 2} \, \sin \, \lambda \, t$ can not be a solution of the boundary value problem (\ref{tur-eq1}), (\ref{tur-eq2}). Consequently, the boundary value problem (\ref{tur-eq1}), (\ref{tur-eq2}) does not have solutions in this case. 
+	
+	Thus, the following lemma is proved.
+	
+\begin{lemma} Suppose that conditions $(\ref{tur-eq9})$ are fulfilled. Then the boundary value problem $(\ref{tur-eq1}), (\ref{tur-eq2})$ has no solutions on the segment $[0 ; \, T]$ .
+\end{lemma}
+
+\subsection{Case 2}
+
+Suppose that
+ \begin{equation} \label{tur-eq12}
+ \sigma_{\, 1} (\lambda_{\, n}) \ne 0 , \quad  \sigma_{\, 2} (\lambda_{\, n}) = 0 .
+\end{equation}
+
+Then for the values of the spectral parameter $\lambda_{\, n} \in \Lambda_{\, 1}$ we construct the solution of the direct boundary value problem (\ref{tur-eq1}), (\ref{tur-eq2}). By virtue of (\ref{tur-eq12}), from (\ref{tur-eq8}) we obtain that $A_{\, 1}=\dfrac{\xi_{\, 0}}{\sigma_{\, 1} \, (\lambda_{\, n})}$ and
+$A_{\, 2}$ is an arbitrary number. Since the spectrum of the parameter $\lambda_{\, n}$ consists the set $\Lambda_{\, 1}$, defined by formula (\ref{tur-eq11}), the function (\ref{tur-eq7}) takes the form
+\begin{equation} \label{tur-eq13}
+u \, (t , \, \lambda_{\, n})=\dfrac{\xi_{\, 0}}{\sigma_{\, 1} \, (\lambda_{\, n})} \, \cos \, \lambda_{\, n} \, t+A_{\, 2} \, \sin \, \lambda_{\, n} \, t+\eta \, (t) .
+\end{equation}
+
+Taking $\xi_{\, 0}=\int \limits_{0}^T \eta (t) \, t \, d t-\eta (T)$, $ \eta \, (t)=\dfrac{\nu}{\lambda_{\, n}} \sum \limits_{i=1}^{k}  \tau_{\, i} \, h_{\, i} \, (t)+\dfrac{\beta}{\lambda_{\, n}} \, \delta_{\, 1} \, (t) $, $h_{\, i} \, (t)= \int \limits_{0}^t \sin  \, \lambda \, (t-s) \, a_{\, i} (s) \, d s , \: i=\overline{1 , k} $,  $ \delta_{\, 1} \, (t)= \int \limits_{0}^t \sin  \, \lambda \, (t-s) \, \alpha \, (s) \, d s$ into account we transform the expression (\ref{tur-eq13})
+\begin{equation} \label{tur-eq14}
+u \, (t , \, \lambda_{\, n})=A_{\, 2} \, \sin \, \lambda_{\, n} \, t+\dfrac{\nu}{\lambda_{\, n}} \sum \limits_{i=1}^{k}  \tau_{\, i} \, \xi_{\, i} \, (t)+\dfrac{\beta}{\lambda_{\, n}} \, \delta_{\, 0} \, (t) ,
+\end{equation}
+where $\xi_{\, i} \, (t)=\dfrac{\cos \, \lambda_{\, n} \, t}{\sigma_{\, 1} \, (\lambda_{\, n})} \, \bigg[ \int \limits_{0}^T h_{\, i} \, (t) \, t \, d t-h_{\, i} \, (T) \bigg]+h_{\, i} \, (t)$,  $ i=\overline{1 , k} $,
+
+$\delta_{\, 0} \, (t)=\dfrac{\cos \, \lambda_{\, n} \, t}{\sigma_{\, 1} \, (\lambda_{\, n})} \, \bigg[ \int \limits_{0}^T \delta_{\, 1} \, (t) \, t \, d t-\delta_{\, 1} \, (T) \bigg]+\delta_{\, 1} \, (t)$.
+
+	Substituting (\ref{tur-eq14}) into (\ref{tur-eq5}), we arrive at the system of algebraic equations (SAE) 
+\begin{equation} \label{tur-eq15}	
+\tau_{\, i}-\dfrac{\nu}{\lambda_{\, n}} \sum \limits_{j=1}^{k} \tau_{\, j} \, H_{\, i \, j}=A_{\, 2} \, 
+\Phi_{\, i}+\dfrac{\beta}{\lambda_{\, n}} \, B_{\, i} , \: i=\overline{1 , k} ,
+\end{equation}
+where $H_{\, i \, j}=\int \limits_{0}^{T} b_{\, i} (s) \, \xi_{\, j} \, (s) \, d s$,
+$\Phi_{\, i}=\int \limits_{0}^{T}  b_{\, i} (s) \, \sin \, \lambda_{\, n} \, s \, d s $,
+$B_{\, i}=\int \limits_{0}^{T}  b_{\, i} (s) \, \delta_{\, 0} \, (s) \, d s $.
+     
+SAE (\ref{tur-eq15}) is uniquely solvable for any finite right-hand side,  if fulfilled the following condition
+\begin {equation}\label{tur-eq16}
+\Delta_{\, 1} (\nu , \, \lambda_{\, n})=\left| \begin{array}{cccc}
+1-\dfrac{\nu}{\lambda_{\, n}} \, H_{\, 11 } & \dfrac{\nu}{\lambda_{\, n}} \, H_{\, 12 }& \ldots & \dfrac{\nu}{\lambda_{\, n}} \, H_{\, 1 k } \\
+\dfrac{\nu}{\lambda_{\, n}} \, H_{\, 21 } & 1-\dfrac{\nu}{\lambda_{\, n}} \, H_{\, 22 } &  \ldots & \dfrac{\nu}{\lambda_{\, n}} \, H_{\, 2 k } \\
+\vdots &  \vdots &  \ddots & \vdots \\
+\dfrac{\nu}{\lambda_{\, n}} \, H_{\, k 1 } & \dfrac{\nu}{\lambda_{\, n}} \, H_{\, k 2 } &   \ldots  & 1-\dfrac{\nu}{\lambda} \, H_{\, k k }
+\end{array} \right| \ne 0 .
+\end{equation}	
+             
+The determinant $\Delta_{\, 1} (\nu , \lambda_{\, n})$ in (\ref{tur-eq16}) is a polynomial with respect to $\dfrac{\nu}{\lambda_{\, n}}$ of the degree not higher than $k$.  So the equation $\Delta_{\, 1} (\nu , \lambda_{\, n})=0$ has no more than $k$ different roots. We denote them by $\mu_{\, m}$, $1 \le m \le k$. Then $\nu=\lambda_{\, n} \, \mu_{\, m}$ are called the characteristic numbers (eigenvalues) of the kernel of the integro-differential equation (\ref{tur-eq1}).	For other values $\nu \ne \lambda_{\, n} \, \mu_{\, m}$ solutions of SAE (\ref{tur-eq15}) are written in the form            
+\[
+\tau_{\, i }=A_{\, 2} \, \dfrac{\Delta_{\, 1 i }(\nu , \, \lambda_{\, n})}{\Delta_{\, 1} (\nu , \, \lambda_{\, n})}+\dfrac{\beta}{\lambda_{\, n}} \, \dfrac{\Delta_{\, 2 i }(\nu , \, \lambda_{\, n})}{\Delta_{\, 1} (\nu , \, \lambda_{\, n})} , \: i=\overline{1 , k} , 
+\]
+where 
+\[
+\Delta_{\, 1 i} (\nu , \, \lambda_{\, n})=\left| \begin{array}{ccccccc}
+1-\dfrac{\nu}{\lambda_{\, n}} \, H_{11 } & \ldots & \dfrac{\nu}{\lambda_{\, n}} \, H_{1 (i-1) } & \Phi_{\, 1 }  & \dfrac{\nu}{\lambda_{\, n}} \, H_{1 (i+1) } & \ldots & \dfrac{\nu}{\lambda_{\, n}} \, H_{1 k }\\
+\dfrac{\nu}{\lambda_{\, n}} \, H_{2 1 } & \ldots & \dfrac{\nu}{\lambda_{\, n}} \, H_{2 (i-1) }  & \Phi_{\, 2}  & \dfrac{\nu}{\lambda_{\, n}} \, H_{2 (i+1) } &  \ldots & \dfrac{\nu}{\lambda_{\, n}} \, H_{2 k } \\
+\vdots &  \vdots & \vdots & \vdots & \vdots &  \ddots & \vdots \\
+\dfrac{\nu}{\lambda_{\, n}} \, H_{k 1 } & \ldots & \dfrac{\nu}{\lambda_{\, n}} \, H_{k (i-1) } & \Phi_{\, k}  & \dfrac{\nu}{\lambda_{\, n}} \, H_{k (i+1) } & \ldots  & 1-\dfrac{\nu}{\lambda_{\, n}} \, H_{k k }
+\end{array} \right|, 
+\]
+while the determinant $\Delta_{\, 2 i} (\nu , \, \lambda_{\, n})$ differs from $\Delta_{\, 1 i} (\nu , \, \lambda_{\, n})$ that the column $\Phi_{\, i}$ in it is replaced by $B_{\, i}$. Substituting values of $\tau_{\, i }$ from last expression into (\ref{tur-eq14}), we derive 	
+\begin{multline} \label{tur-eq17}	
+u \, (t , \lambda_{\, n})=A_{\, 2} \bigg[ \sin \, \lambda_{\, n} \, t+\dfrac{\nu}{\lambda_{\, n}} \sum \limits_{i=1}^{k}  \frac{\Delta_{\, 1 i }(\nu , \, \lambda_{\, n})}{\Delta_{\, 1} (\nu , \, \lambda_{\, n})} \, \xi_{\, i} \, (t) \bigg]+\\
++\dfrac{\beta}{\lambda_{\, n}} \bigg[ \frac{\nu}{\lambda_{\, n}} \sum \limits_{i=1}^{k}  \dfrac{\Delta_{\, 2 i }(\nu , \, \lambda_{\, n})}{\Delta_{\, 1} (\nu , \, \lambda_{\, n})} \, \xi_{\, i} \, (t)+\delta_{\, 0} \, (t) \bigg].
+\end{multline} 
+	
+In order to uniquely determine $A_{\, 2}$ we use the second condition in (\ref{tur-eq2}). 
+\[
+A_{\, 2}=\dfrac{\varphi}{M_{\, 1 n}' \, (T , \lambda_{\, n})}-\beta \dfrac{M_{\, 2 n}' \, (T , \lambda_{\, n})}{M_{\, 1 n}' \, (T , \lambda_{\, n})} ,
+\]
+where
+\[
+M_{\, 1 n} \, (t , \lambda_{\, n})=\sin \, \lambda_{\, n} \, t+\frac{\nu}{\lambda_{\, n}} \sum \limits_{i=1}^{k}  \frac{\Delta_{\, 1 i }(\nu , \, \lambda_{\, n})}{\Delta_{\, 1} (\nu , \, \lambda_{\, n})} \, \xi_{\, i} \, (t) ,
+\]
+\[
+M_{\, 2 n} \, (t , \lambda_{\, n})=\frac{\nu}{\lambda_{\, n}} \sum \limits_{i=1}^{k}  \frac{\Delta_{\, 2 i }(\nu , \, \lambda_{\, n})}{\Delta_{\, 1} (\nu , \, \lambda_{\, n})} \, \xi_{\, i} \, (t)+\delta_{\, 0} \, (t) ,
+\]
+\[
+M_{\, 1 n}' \, (T , \lambda_{\, n})=\lambda_{\, n} \, \cos \, \lambda_{\, n} \, T+\frac{\nu}{\lambda_{\, n}} \sum \limits_{i=1}^{k}  \frac{\Delta_{\, 1 i }(\nu , \, \lambda_{\, n})}{\Delta_{\, 1} (\nu , \, \lambda_{\, n})} \, \xi_{\, i}' \, (T) ,
+\]
+\[
+M_{\, 2 n}' \, (T , \lambda_{\, n})=\frac{\nu}{\lambda_{\, n}} \sum \limits_{i=1}^{k}  \frac{\Delta_{\, 2 i }(\nu , \, \lambda_{\, n})}{\Delta_{\, 1} (\nu , \, \lambda_{\, n})} \, \xi_{\, i}' \, (T)+\delta_{\, 0}' \, (T) ,
+\]
+\[
+\xi_{\, i}' \, (T)=h_{\, i}' \, (T)-\frac{\lambda_{\, n} \, \sin \, \lambda_{\, n} \, T}{\sigma_{\, 1} \, (\lambda_{\, n})} \, \left[ \int \limits_{0}^T h_{\, i} \, (t) \, t \, d t-h_{\, i} \, (T) \right] ,
+\]
+\[
+\delta_{\, 0}' \, (T)=\delta_{\, 1}' \, (T)-\frac{\lambda_{\, n} \, \sin \, \lambda_{\, n} \, t}{\sigma_{\, 1} \, (\lambda_{\, n})} \, \left[ \int \limits_{0}^T \delta_{\, 1} \, (t) \, t \, d t-\delta_{\, 1} \, (T) \right] ,
+\]
+\[
+h_{\, i}' \, (T)= \lambda_{\, n} \int \limits_{0}^T \cos  \, \lambda_{\, n} \, (T-s) \, a_{\, i} \, (s) \, d s , \: 
+ \delta_{\, 1}' \, (T)=\lambda_{\, n} \int \limits_{0}^T \cos  \, \lambda_{\, n} \, (T-s) \, \alpha \, (s) \, d s .
+\]
+
+It is easy to see that $M_{\, 1 n}' \, (T , \lambda_{\, n}) \ne 0$, $\lambda_{\, n} \in \Lambda_{\, 1}$.
+Now from (\ref{tur-eq17}) we derive the solution of the boundary value problem (\ref{tur-eq1}), (\ref{tur-eq2})
+\begin{equation} \label{tur-eq18}	
+u \, (t , \lambda_{\, n})=\varphi \, V_{\, 1 n} \, (t , \lambda_{\, n})+\beta \, W_{\, 1 n} \, (t , \lambda_{\, n}) , \: \lambda_{\, n} \in \Lambda_{\, 1} , \: t \in [0 ; \, T] ,
+\end{equation}
+where $V_{\, 1 n} \, (t , \lambda_{\, n})=\dfrac{M_{\, 1 n} \, (t , \lambda_{\, n})}{M_{\, 1 n}' \, (T , \lambda_{\, n})}$, 
+
+$W_{\, 1 n} \, (t , \lambda_{\, n})=M_{\, 2 n} \, (t , \lambda_{\, n})-
+M_{\, 1 n} \, (t , \lambda_{\, n}) \dfrac{M_{\, 2 n}' \, (T , \lambda_{\, n})}{M_{\, 1 n}' \, (T , \lambda_{\, n})}$.
+
+The uniqueness of the solution of the boundary value problem (\ref{tur-eq1}), (\ref{tur-eq2}) follows from that for $\varphi=0$ and $\beta=0$ it takes place $u \, (t , \lambda_{\, n}) \equiv 0$ for all $t \in [0 ; \, T]$ and $\lambda \in \Lambda_{\, 1}$.
+	
+	 Thus, the following lemma is proved.
+
+\begin{lemma} Let be conditions $(\ref{tur-eq12})$ are fulfilled. Then on the segment  $[0 ; \, T]$ for all values of parameter $\lambda_{\, n} \in \Lambda_{\, 1}$ the boundary value problem $(\ref{tur-eq1}), (\ref{tur-eq2})$ has a unique solution in the form of $(\ref{tur-eq18})$, if condition  $(\ref{tur-eq16})$ is fulfilled.
+\end{lemma}
+
+\subsection{Case 3}
+We assume that
+ \begin{equation} \label{tur-eq19}
+ \sigma_{\, 1} (\lambda_{\, n}) = 0 , \quad  \sigma_{\, 2} (\lambda_{\, n}) \ne 0 .
+\end{equation}
+
+Then for the values of the spectral parameter $\lambda_{\, n} \in \Lambda_{\, 2}$ we construct the solution of the direct boundary value problem (\ref{tur-eq1}), (\ref{tur-eq2}). By virtue of condition (\ref{tur-eq19}), from (\ref{tur-eq8}) we obtain that $A_{\, 1}$ is an arbitrary number and
+$A_{\, 2}=\dfrac{\xi_{\, 0}}{\sigma_{\, 2} \, (\lambda_{\, n})}$. Since the spectrum of the parameter $\lambda_{\, n}$ consists of  the set $\Lambda_{\, 2}$, defined by formula (\ref{tur-eq10}), function (\ref{tur-eq7}) in this case takes the form
+\begin{equation} \label{tur-eq20}
+u \, (t , \, \lambda_{\, n})=A_{\, 1} \, \cos \, \lambda_{\, n} \, t+\dfrac{\nu}{\lambda_{\, n}} \sum \limits_{i=1}^{k}  \tau_{\, i} \, \zeta_{\, i} \, (t)+\dfrac{\beta}{\lambda_{\, n}} \, \delta_{\, 2} \, (t) ,
+\end{equation}
+where $\zeta_{\, i} \, (t)=h_{\, i} \, (t)+\dfrac{\sin \, \lambda_{\, n} \, t}{\sigma_{\, 2} \, (\lambda_{\, n})} \, \left[ \int \limits_{0}^T h_{\, i} \, (t) \, t \, d t-h_{\, i} \, (T) \right] , \: i=\overline{1 , k}$, 
+
+$\delta_{\, 2} \, (t)=\delta_{\, 1} \, (t)+\dfrac{\sin \, \lambda_{\, n} \, t}{\sigma_{\, 2} \, (\lambda_{\, n})} \, \left[ \int \limits_{0}^T \delta_{\, 1} \, (t) \, t \, d t-\delta_{\, 1} \, (T) \right]$.
+
+	Substituting (\ref{tur-eq20}) into (\ref{tur-eq5}), we arrive at the system of algebraic equations (SAE) 
+\begin{equation} \label{tur-eq21}	
+\tau_{\, i}-\dfrac{\nu}{\lambda_{\, n}} \sum \limits_{j=1}^{k} \tau_{\, j} \, P_{\, i \, j}=A_{\, 1} \, 
+\Psi_{\, i}+\dfrac{\beta}{\lambda_{\, n}} \, C_{\, i} , \: i=\overline{1 , k} ,
+\end{equation}
+where $P_{\, i \, j}=\int \limits_{0}^{T} b_{\, i} (s) \, \zeta_{\, j} \, (s) \, d s$,
+$\Psi_{\, i}=\int \limits_{0}^{T}  b_{\, i} (s) \, \cos \, \lambda_{\, n} \, s \, d s $,
+$C_{\, i}=\int \limits_{0}^{T}  b_{\, i} (s) \, \delta_{\, 2} \, (s) \, d s $.
+     
+SAE (\ref{tur-eq21}) is uniquely solvable for any finite right-hand side,  if fulfilled the following condition
+\begin {equation}\label{tur-eq22}
+\Delta_{\, 3} (\nu , \, \lambda_{\, n})=\left| \begin{array}{cccc}
+1-\dfrac{\nu}{\lambda_{\, n}} \, P_{\, 11 } & \dfrac{\nu}{\lambda_{\, n}} \, P_{\, 12 }& \ldots & \dfrac{\nu}{\lambda_{\, n}} \, P_{\, 1 k } \\
+\dfrac{\nu}{\lambda_{\, n}} \, P_{\, 21 } & 1-\dfrac{\nu}{\lambda_{\, n}} \, P_{\, 22 } &  \ldots & \dfrac{\nu}{\lambda_{\, n}} \, P_{\, 2 k } \\
+\vdots &  \vdots &  \ddots & \vdots \\
+\dfrac{\nu}{\lambda_{\, n}} \, P_{\, k 1 } & \dfrac{\nu}{\lambda_{\, n}} \, P_{\, k 2 } &   \ldots  & 1-\dfrac{\nu}{\lambda} \, P_{\, k k }
+\end{array} \right| \ne 0 .
+\end{equation}	
+             
+The determinant $\Delta_{\, 3} (\nu , \lambda_{\, n})$ in (\ref{tur-eq22}) is a polynomial with respect to $\dfrac{\nu}{\lambda_{\, n}}$ of the degree at most $k$.  The equation $\Delta_{\, 3} (\nu , \lambda_{\, n})=0$ has at most $k$ different roots. We denote them by $\omega_{\, m}$, $1 \le m \le k$. Then $\nu=\lambda_{\, n} \, \omega_{\, m}$ are the characteristic numbers of the kernel of the integro-differential equation (\ref{tur-eq1}).	For other values $\nu \ne \lambda_{\, n} \, \omega_{\, m}$ the solutions of SAE (\ref{tur-eq21}) are written in the form            
+\begin {equation}\label{tur-eq23}
+\tau_{\, i }=A_{\, 1} \, \dfrac{\Delta_{\, 3 i }(\nu , \, \lambda_{\, n})}{\Delta_{\, 3} (\nu , \, \lambda_{\, n})}+\dfrac{\beta}{\lambda_{\, n}} \, \dfrac{\Delta_{\, 4 i }(\nu , \, \lambda_{\, n})}{\Delta_{\, 3} (\nu , \, \lambda_{\, n})} , \: i=\overline{1 , k} , 
+\end{equation}
+where 
+\[
+\Delta_{\, 3 i} (\nu , \, \lambda_{\, n})=\left| \begin{array}{ccccccc}
+1-\dfrac{\nu}{\lambda_{\, n}} \, P_{11 } & \ldots & \dfrac{\nu}{\lambda_{\, n}} \, P_{1 (i-1) } & \Psi_{\, 1 }  & \dfrac{\nu}{\lambda_{\, n}} \, P_{1 (i+1) } & \ldots & \dfrac{\nu}{\lambda_{\, n}} \, P_{1 k }\\
+\dfrac{\nu}{\lambda_{\, n}} \, P_{2 1 } & \ldots & \dfrac{\nu}{\lambda_{\, n}} \, P_{2 (i-1) }  & \Psi_{\, 2}  & \dfrac{\nu}{\lambda_{\, n}} \, P_{2 (i+1) } &  \ldots & \dfrac{\nu}{\lambda_{\, n}} \, P_{2 k } \\
+\vdots &  \vdots & \vdots & \vdots & \vdots &  \ddots & \vdots \\
+\dfrac{\nu}{\lambda_{\, n}} \, P_{k 1 } & \ldots & \dfrac{\nu}{\lambda_{\, n}} \, P_{k (i-1) } & \Psi_{\, k}  & \dfrac{\nu}{\lambda_{\, n}} \, P_{k (i+1) } & \ldots  & 1-\dfrac{\nu}{\lambda_{\, n}} \, P_{k k }
+\end{array} \right|, 
+\]
+while the determinant $\Delta_{\, 4 i} (\nu , \, \lambda_{\, n})$ differs from $\Delta_{\, 3 i} (\nu , \, \lambda_{\, n})$ that the column $\Psi_{\, i}$ in it is replaced by $C_{\, i}$. Substituting (\ref{tur-eq23}) into (\ref{tur-eq20}), we obtain 	
+\begin{equation} \label{tur-eq24}	
+u \, (t , \lambda_{\, n})=A_{\, 1} \, G_{\, 1 n} \, (t , \lambda_{\, n})+\beta \, G_{\, 2 n} \, (t , \lambda_{\, n}) ,
+\end{equation} 
+where
+\[
+G_{\, 1 n} \, (t , \lambda_{\, n})=\cos \, \lambda_{\, n} \, t+\frac{\nu}{\lambda_{\, n}} \sum \limits_{i=1}^{k}  \frac{\Delta_{\, 3 i }(\nu , \, \lambda_{\, n})}{\Delta_{\, 3} (\nu , \, \lambda_{\, n})} \, \zeta_{\, i} \, (t) ,
+\]
+\[
+G_{\, 2 n} \, (t , \lambda_{\, n})=\delta_{\, 2} \, (t)+\frac{\nu}{\lambda_{\, n}} \sum \limits_{i=1}^{k}  \frac{\Delta_{\, 4 i }(\nu , \, \lambda_{\, n})}{\Delta_{\, 3} (\nu , \, \lambda_{\, n})} \, \zeta_{\, i} \, (t) .
+\]
+	
+In order to uniquely determine $A_{\, 1}$ we use the second condition in (\ref{tur-eq2}). Then from (\ref{tur-eq24}) we obtain a unique solution of the boundary value problem (\ref{tur-eq1}), (\ref{tur-eq2})  
+\begin{equation} \label{tur-eq25}	
+u \, (t , \lambda_{\, n})=\varphi \, V_{\, 2 n} \, (t , \lambda_{\, n})+\beta \, W_{\, 2 n} \, (t , \lambda_{\, n}) , \: \lambda_{\, n} \in \Lambda_{\, 2} , \: t \in [0 ; \, T] ,
+\end{equation}
+where $V_{\, 2 n} \, (t , \lambda_{\, n})=\dfrac{G_{\, 1 n} \, (t , \lambda_{\, n})}{G_{\, 1 n}' \, (T , \lambda_{\, n})}$, 
+
+$W_{\, 2 n} \, (t , \lambda_{\, n})=G_{\, 2 n} \, (t , \lambda_{\, n})-
+G_{\, 1 n} \, (t , \lambda_{\, n}) \dfrac{G_{\, 2 n}' \, (T , \lambda_{\, n})}{G_{\, 1 n}' \, (T , \lambda_{\, n})}$,
+
+$G_{\, 1 n}' \, (T , \lambda_{\, n})=\dfrac{\nu}{\lambda_{\, n}} \sum \limits_{i=1}^{k}  \dfrac{\Delta_{\, 3 i }(\nu , \, \lambda_{\, n})}{\Delta_{\, 3} (\nu , \, \lambda_{\, n})} \, \zeta_{\, i}' \, (T)-\lambda_{\, n} \, \sin \, \lambda_{\, n} \, T \ne 0 , \: \lambda_{\, n} \in \Lambda_{\, 2}$.
+
+The uniqueness of the solution of the boundary value problem (\ref{tur-eq1}), (\ref{tur-eq2}) follows from (\ref{tur-eq25}) that for $\varphi=0$ and $\beta=0$ it takes place $u \, (t , \lambda_{\, n}) \equiv 0$ for all $t \in [0 ; \, T]$ and $\lambda \in \Lambda_{\, 2}$.
+	
+	 Thus, the following lemma is proved.
+
+\begin{lemma} Let be conditions $(\ref{tur-eq19})$ are fulfilled. Then on the segment  $[0 ; \, T]$ for all values of parameter $\lambda_{\, n} \in \Lambda_{\, 2}$ the boundary value problem $(\ref{tur-eq1}), (\ref{tur-eq2})$ has a unique solution in the form of $(\ref{tur-eq25})$, if condition  $(\ref{tur-eq22})$ is fulfilled.
+\end{lemma}
+
+     
+\subsection{Case 4}
+
+Suppose that
+ \begin{equation} \label{tur-eq26}
+ \sigma_{\, 1} (\lambda_{\, n}) \ne 0 , \quad  \sigma_{\, 2} (\lambda_{\, n}) \ne 0 .
+\end{equation}    
+
+Then for the values of the spectral parameter $\lambda_{\, n} \in \Lambda_{\, 3}=(0 ; \, \infty) \setminus (\Lambda_{\, 1} \cup \Lambda_{\, 2})$ we construct the solution of the direct boundary value problem (\ref{tur-eq1}), (\ref{tur-eq2}). By virtue of condition (\ref{tur-eq26}), from (\ref{tur-eq8}) we obtain that 
+\begin{equation} \label{tur-eq27}
+u \, (t , \, \lambda_{\, n})=A_{\, 2} \, \left[ -\dfrac{\sigma_{\, 2} (\lambda_{\, n})}{\sigma_{\, 1} (\lambda_{\, n})} \, \cos \, \lambda_{\, n} \, t+\sin \, \lambda_{\, n} \, t \right]+\varsigma \, (t) ,
+\end{equation}	
+where $\varsigma \, (t)=\dfrac{\xi_{\, 0}}{\sigma_{\, 1} \, (\lambda_{\, n})} \, \cos \lambda_{\, n} \, t+\eta \, (t)$.
+
+Now we use the second condition in  (\ref{tur-eq2}) and from (\ref{tur-eq27}) we obtain that 
+\begin{multline} \label{tur-eq28}
+\varphi=u ' \, (t , \, \lambda_{\, n})_{t=T}=\lambda_{\, n} \, A_{\, 2} \, \left[ \dfrac{\sigma_{\, 2} (\lambda_{\, n})}{\sigma_{\, 1} (\lambda_{\, n})} \, \sin \, \lambda_{\, n} \, T+\cos \, \lambda_{\, n} \, T \right]+\varsigma ' \, (T)=\\
+ =\dfrac{A_{\, 2}}{\lambda_{\, n}}  \dfrac{\sigma_{\, 3} (\lambda_{\, n})}{\sigma_{\, 1} (\lambda_{\, n})}+\varsigma ' \, (T) ,
+\end{multline}
+where $\sigma_{\, 3} (\lambda_{\, n})=1+\lambda_{\, n}^{\, 2}+\cos \, \lambda_{\, n} \, T $. 
+
+ Since $\lambda_{\, n}>0$, then $\sigma_{\, 3} (\lambda_{\, n})>0$ and we can uniquely find the unknown coefficient $A_{\, 2}$ from (\ref{tur-eq28})
+\begin{equation} \label{tur-eq29}
+ A_{\, 2}=\lambda_{\, n}  \dfrac{\sigma_{\, 1} (\lambda_{\, n})}{\sigma_{\, 2} (\lambda_{\, n})} \big( \varphi-\varsigma ' \, (T) \big)  .
+\end{equation} 
+ 
+ Substituting (\ref{tur-eq29}) into (\ref{tur-eq27}), we obtain
+\begin{equation} \label{tur-eq30}	
+u \, (t , \, \lambda_{\, n})=\lambda_{\, n}  \, \varphi \, \delta_{\, 3} \, (t)+\dfrac{\nu}{\lambda_{\, n}} \sum \limits_{i=1}^{k} \tau_{\, i} \, D_{\, i} \, (t)+\dfrac{\beta}{\lambda_{\, n}} \, E \, (t) ,
+\end{equation}
+where 
+\[
+D_{\, i} \, (t)=h_{ \, i} \, (t)+\delta_{ \, 4} \, (t) \int \limits_{0}^T h_{ \, i} \, (t) \, t \, d t-\delta_{ \, 4} \, (t) \, h_{ \, i} \, (T)-\lambda_{\, n} \, \delta_{ \, 3} \, (t) \, h_{\, i} ' \, (T) ,
+\]
+\[
+E \, (t)=\delta_{ \, 1} \, (t)+\delta_{ \, 4} \, (t) \int \limits_{0}^T \delta_{ \, 1} \, (t) \, t \, d t-\delta_{ \, 4} \, (t) \, \delta_{ \, 1} \, (T)-\lambda_{\, n} \, \delta_{ \, 3} \, (t) \, \delta_{\, 1} ' \, (T) ,
+\]
+\[
+\delta_{ \, 3} \, (t)=-\dfrac{\sigma_{\, 2} (\lambda_{\, n})}{\sigma_{\, 3} (\lambda_{\, n})} \cos \, \lambda_{\, n} \, t+\dfrac{\sigma_{\, 1} (\lambda_{\, n})}{\sigma_{\, 3} (\lambda_{\, n})} \sin \, \lambda_{\, n} \, t ,
+\]
+\[
+\delta_{ \, 4} \, (t)=\dfrac{\cos \, \lambda_{\, n} \, t}{\sigma_{\, 1 } (\lambda_{\, n})}+\dfrac{\lambda_{\, n}^{\, 2} \, \delta_{\, 3 } \, (t)}{\sigma_{\, 1 } (\lambda_{\, n})} \, \sin \, \lambda_{\, n} \, T , \quad  h_{\, i } \, (t)= \int \limits_{0}^t \sin \, \lambda_{\, n} \, (t-s) \, a_{\, i} \, (s) \, d s , \: i=\overline{1 , k} ,
+\]
+\[
+\delta_{\, 1 } \, (t)= \int \limits_{0}^t \sin \, \lambda_{\, n} \, (t-s) \, \alpha \, (s) \, d s .
+\]
+
+	Substituting (\ref{tur-eq30}) into (\ref{tur-eq5}), we obtain a system of algebraic equations (SAE)
+\begin{equation} \label{tur-eq31}	
+\tau_{\, i}-\dfrac{\nu}{\lambda_{\, n}} \sum \limits_{j=1}^{k} \tau_{\, j} \, Q_{\, i \, j}=\varphi \, 
+F_{\, 1 i}+\dfrac{\beta}{\lambda_{\, n}} \, F_{\, 2 i} , \: i=\overline{1 , k} ,
+\end{equation}
+where $Q_{\, i \, j}=\int \limits_{0}^{T} b_{\, i} (s) \, D_{\, j} \, (s) \, d s$,
+$F_{\, 1 i}=\lambda_{\, n} \int \limits_{0}^{T}  b_{\, i} (s) \, \delta_{\, 3} \, (s) \, d s $,
+$F_{\, 2 i}= \int \limits_{0}^{T}  b_{\, i} (s) \, E \, (s) \, d s $.
+     
+	SAE (\ref{tur-eq31}) is uniquely solvable for any finite right-hand sides,  if the following condition is fulfilled 
+\begin {equation}\label{tur-eq32}
+\Delta_{\, 5} (\nu , \, \lambda_{\, n})=\left| \begin{array}{cccc}
+1-\dfrac{\nu}{\lambda_{\, n}} \, Q_{\, 11 } & \dfrac{\nu}{\lambda_{\, n}} \, Q_{\, 12 }& \ldots & \dfrac{\nu}{\lambda_{\, n}} \, Q_{\, 1 k } \\
+\dfrac{\nu}{\lambda_{\, n}} \, Q_{\, 21 } & 1-\dfrac{\nu}{\lambda_{\, n}} \, Q_{\, 22 } &  \ldots & \dfrac{\nu}{\lambda_{\, n}} \, Q_{\, 2 k } \\
+\vdots &  \vdots &  \ddots & \vdots \\
+\dfrac{\nu}{\lambda_{\, n}} \, Q_{\, k 1 } & \dfrac{\nu}{\lambda_{\, n}} \, Q_{\, k 2 } &   \ldots  & 1-\dfrac{\nu}{\lambda_{\, n}} \, Q_{\, k k }
+\end{array} \right| \ne 0 .
+\end{equation}	
+    
+Then the solutions of SAE (\ref{tur-eq31}) are written in the form                 
+\begin {equation}\label{tur-eq33}
+\tau_{\, i }=\varphi \, \dfrac{\Delta_{\, 5 i }(\nu , \, \lambda_{\, n})}{\Delta_{\, 5} (\nu , \, \lambda_{\, n})}+
+\dfrac{\beta}{\lambda_{\, n}} \, \dfrac{\Delta_{\, 6 i }(\nu , \, \lambda_{\, n})}{\Delta_{\, 5} (\nu , \, \lambda_{\, n})} , \: i=\overline{1 , k} , 
+\end{equation}
+where
+\[
+\Delta_{\, (4+j) i} (\nu , \, \lambda_{\, n})=\left| \begin{array}{ccccccc}
+1-\dfrac{\nu}{\lambda_{\, n}} \, Q_{11 } & \ldots & \dfrac{\nu}{\lambda_{\, n}} \, Q_{1 (i-1) } & F_{\, j 1 }  & \dfrac{\nu}{\lambda_{\, n}} \, Q_{1 (i+1) } & \ldots & \dfrac{\nu}{\lambda_{\, n}} \, Q_{1 k }\\
+\dfrac{\nu}{\lambda_{\, n}} \, Q_{2 1 } & \ldots & \dfrac{\nu}{\lambda_{\, n}} \, Q_{2 (i-1) }  & F_{\, j 2}  & \dfrac{\nu}{\lambda_{\, n}} \, Q_{2 (i+1) } &  \ldots & \dfrac{\nu}{\lambda_{\, n}} \, Q_{2 k } \\
+\vdots &  \vdots & \vdots & \vdots & \vdots &  \ddots & \vdots \\
+\dfrac{\nu}{\lambda_{\, n}} \, Q_{k 1 } & \ldots & \dfrac{\nu}{\lambda_{\, n}} \, Q_{k (i-1) } & F_{\, j k}  & \dfrac{\nu}{\lambda_{\, n}} \, Q_{k (i+1) } & \ldots  & 1-\dfrac{\nu}{\lambda_{\, n}} \, Q_{k k }
+\end{array} \right|,
+\]
+$j=1 , \, 2$.
+
+Substituting (\ref{tur-eq33}) into (\ref{tur-eq30}), we obtain
+\begin{equation} \label{tur-eq34}	
+u \, (t , \, \lambda_{\, n})=\varphi \, V_{\, 3 n} \, (t , \, \lambda_{\, n})+
+\beta \,  \, W_{\, 3 n} \, (t , \, \lambda_{\, n}) , \: \lambda_{\, n} \in \Lambda_{\, 3} ,
+\end{equation} 
+where  	
+\[
+ V_{\, 3 n} \, (t , \, \lambda_{\, n})=\lambda_{\, n} \, \delta_{\, 3} \, (t)+\dfrac{\nu}{\lambda_{\, n}} \sum \limits_{i=1}^{k} \dfrac{\Delta_{\, 5 i }(\nu , \, \lambda_{\, n})}{\Delta_{\, 5} (\nu , \, \lambda_{\, n})} \, D_{\, i} \, (t) ,
+\]
+\[
+ W_{\, 3 n} \, (t , \, \lambda_{\, n})=\dfrac{E \, (t)}{\lambda_{\, n}}+\dfrac{\nu}{\lambda_{\, n}^{\, 2}} \sum \limits_{i=1}^{k} \dfrac{\Delta_{\, 6 i }(\nu , \, \lambda_{\, n})}{\Delta_{\, 5} (\nu , \, \lambda_{\, n})} \, D_{\, i} \, (t) .
+\]
+
+Now we assume that $\varphi=0$ and $\beta=0$. Then it follows from (\ref{tur-eq34}) that $u \, (t , \, \lambda_{\, n}) \equiv 0$ for all $\lambda_{\, n} \in \Lambda_{\, 3}$, $t \in [0 ; \, T]$.  Hence implies uniqueness of the solution of the boundary value problem (\ref{tur-eq1}), (\ref{tur-eq2}) in this case. 
+
+Thus, the following lemma is proved.
+
+\begin{lemma} Let conditions $(\ref{tur-eq26})$ are fulfilled. Then on the segment $[0 ; \, T]$ for all values of the parameter $\lambda_{\, n} \in \Lambda_{\, 3}$ the boundary value problem  $(\ref{tur-eq1}), (\ref{tur-eq2})$ has a unique solution in the form of the function $(\ref{tur-eq34})$, if condition $(\ref{tur-eq32})$ is fulfilled.
+\end{lemma}
+
+\section{Solvability of the inverse boundary value problem (\ref{tur-eq1})--(\ref{tur-eq3})}
+
+ Using the lemmas proved above and condition (\ref{tur-eq3}), from (\ref{tur-eq18}), (\ref{tur-eq25}) and (\ref{tur-eq34}) we obtain that
+\begin{equation} \label{tur-eq35}
+r=\varphi \, V_{\, m n} \, (0 , \, \lambda_{\, n})+
+\beta \,  \, W_{\, m n} \, (0 , \, \lambda_{\, n}) , \: \lambda_{\, n} \in \Lambda_{\, m} , \: m=1 , 2 , 3 .
+\end{equation}
+                     
+	From (\ref{tur-eq35}) we uniquely determine the redefinition coefficient
+\begin{equation} \label{tur-eq36}
+\beta=\dfrac{r-\varphi \, V_{\, m n} \, (0 , \, \lambda_{\, n})}{W_{\, m n} \, (0 , \, \lambda_{\, n})} , \: W_{\, m n} \, (0 , \, \lambda_{\, n}) \ne 0 , \: \lambda_{\, n} \in \Lambda_{\, m} , \: m=1 , 2 , 3 .
+\end{equation}
+                  
+	Substituting (\ref{tur-eq36}) into (\ref{tur-eq18}), (\ref{tur-eq25}), and (\ref{tur-eq34}) we finally have for the unknown function
+\begin{equation} \label{tur-eq37}
+u \, (t , \, \lambda_{\, n})=\varphi \, V_{\, m n} \, (t , \, \lambda_{\, n})+
+W_{\, m n} \, (t , \, \lambda_{\, n}) \, \dfrac{r-\varphi \, V_{\, m n} \, (0 , \, \lambda_{\, n})}{W_{\, m n} \, (0 , \, \lambda_{\, n})} ,
+\end{equation}
+$\lambda_{\, n} \in \Lambda_{\, m} , \: m=1 , 2 , 3$.
+         
+	Thus we have proved that the following theorem holds.
+	
+\begin{theorem} The inverse boundary value problem $(\ref{tur-eq1})-(\ref{tur-eq3})$ is uniquely solvable for $\lambda_{\, n} \in \Lambda_{\, m}$, $m=1 , 2 , 3 $ on a finite interval $[0 ; \, T]$, if the following condition is fulfilled: condition $(\ref{tur-eq16})$ in the case $m=1$; condition $(\ref{tur-eq22})$ in the case $m=2$; condition $(\ref{tur-eq32})$ in the case $m=3$. The solution of this problem is determined by formulas $(\ref{tur-eq36})$ and $(\ref{tur-eq37})$. 
+\end{theorem}
+
+\begin{thebibliography}{20}
+
+\bibitem{tur1} M. M. Cavalcanti, V. N. Domingos Cavalcanti and J. Ferreira,  {\it Existence and uniform decay for a nonlinear viscoelastic equation with strong damping}, Math. Methods in the Appl. Sciences,  {\bf 24} (2001),  1043--1053.
+
+\bibitem{tur2} S. N. Askhabov, {\it Nonlinear singulasr byntuhj-differential equations with arbitrary parameter},  Math. Notes, {\bf 103} (2018), no. 1, 18--23. 
+
+\bibitem{tur3} A. A. Bobodzhanov and V. F. Safonov, {\it Regularized Asymptotic Solutions of the Initial Problem for the System of Integro-Partial Differential Equations} Math. Notes, {\bf 102} (2017), no. 1,  22--30.
+
+\bibitem{tur4} G. V. Zavizion, {\it Asymptotic Solutions of Systems of Linear Degenerate Integro-Differential Equations}, Ukr. Math. Journal, {\bf 55} (2003), no. 4,  521--534.
+
+\bibitem{tur5} Zh. Sh. Safarov and D. K. Durdiev, {\it Inverse Problem for an Integro-Differential Equation of Acoustics}, Diff. Equations,  {\bf 54} (2018), no. 1,  134--142.
+
+\bibitem{tur6} Yu. G. Smirnov, {\it On the equivalence of the electromagnetic problem of diffraction by an inhomogeneous bounded dielectric body to a volume singular integro-differential equation}, Comput. Math. and Math. Physics, {\bf 56} (2016), no. 9,  1631--1640.
+
+\bibitem{tur7} M. V. Falaleev and S. S. Orlov, {\it Degenerate integro-differential operators in Banah spaces and their applications}, Russian Math. {\bf 55} (2011), no. 10, 59--69.  
+
+\bibitem{tur8} V. A. Yurko, {\it Inverse problems for first-order integro-differential operators}, Math. Notes, {\bf 100} (2016), no. 6,  876--882.
+
+\bibitem{tur9} V. V. Vlasov, R. Perez Ortiz and N. A. Rautian, {\it Study of Volterra Integro-Differential Equations with Kernels Depending on a Parameter}, Diff. Equations, {\bf 54} (2018), no. 3,  363--380.
+
+\bibitem{tur10} A. M. Samoilenko, A. A. Boichuk and   S. A. Krivosheya,
+ {\it Boundary-Value problems for systems of integro-differential equations with Degenerate Kernel}, Ukr. Math. Journal, {\bf 48} (1996),  no. 11,   1785--1789.
+ 
+\bibitem{tur11} T. K. Yuldashev, {\it On Fredholm partial integro-differential equation of the third order}, Russian Math. {\bf 59} (2015), no. 9, 62--66.
+
+\bibitem{tur12} T. K. Yuldashev, {\it Nonlocal mixed-value problem for a Boussinesq-type integrodifferential equation with degenerate kernel}, Ukr. Math. Journal, {\bf 68} (2016), no. 8, 1278--1296.
+
+\bibitem{tur13} T. K. Yuldashev, {\it Mixed problem for pseudoparabolic integrodifferential equation with degenerate kernel}, Diff. equations, {\bf 53} (2017), no. 1,  99--108. 
+
+\bibitem{tur14} T. K. Yuldashev, {\it Determination of the coefficient and boundary regime in boundary value problem for integro-differential equation with degenerate kernel}, Lobachevskii journal of math.  {\bf 38} (2017), no. 3,   547--553.
+
+ 
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,630 @@
+\documentclass[
+11pt,%
+tightenlines,%
+twoside,%
+onecolumn,%
+nofloats,%
+nobibnotes,%
+nofootinbib,%
+superscriptaddress,%
+noshowpacs,%
+centertags]%
+{revtex4}
+\usepackage{ljm}
+
+%\newtheorem{proposition}{Proposition}
+%\newtheorem{definition}{Definition}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{corollary}{Corollary}
+%\newtheorem{lemma}{Lemma}
+%for running heads
+
+%\editor{N.M.~Editor}
+%\setcounter{page}{1}
+
+\newtheorem{remark}{Remark}
+
+ \begin{document}
+\titlerunning{Series  with integer coefficients by systems  of
+contractions}
+\authorrunning{Filippov}
+
+\title{Series  with integer coefficients by systems  of
+contractions and shifts of one function}
+
+\author{\firstname{V.~I.}~\surname{Filippov}}
+\email[E-mail: ]{888vadim@mail.ru} \affiliation{Saratov
+Social-Economic Institute (Branch) of Plekhanov Russian University
+of Economics, 89 Radishcheva str., Saratov, 410003 Russia}
+
+
+%\firstcollaboration{(Submitted by ) }
+
+%\received{date}
+
+\begin{abstract}
+In the spaces $L_p (0,1)$, $1 \leq p <\infty $, we investigate the
+systems consisting of contractions and shifts of one function. We
+study Fourier type series expansions with integer coefficients by
+such systems. The resulting decompositions have the property of
+image compression, that is, many their coefficients vanish. This
+study may also be of interest to the specialists in transmission
+and processing of digital information.
+\end{abstract}
+
+\subclass{42C40, 42A16}
+
+\keywords{functional systems,  contractions and shifts of a
+function,  $L_p$-spaces, Fourier type series with integer
+coefficients, digital information processing, digital information
+transmission}
+
+ \maketitle
+
+% Text of article starts here.
+
+The  author continues the research published in
+\cite{fo,f1,f2,f3,f4}. Systems consisting of contractions and
+shifts of one function have become interesting for researchers
+with the advent of results on wavelets and  frames.
+
+In  this paper, we construct decompositions in the $L_p$-spaces
+directly by a given system consisting of contractions and shifts
+of one function. The proposed algorithm allows one to obtain a
+decomposition  with a large number of zero coefficients and, at
+the same time, to some extent is optimal when approximating with a
+fixed accuracy. The algorithm also admits a significant inaccuracy
+of intermediate calculations; these inaccuracies are corrected in
+further calculations.
+
+The  possibility of uniform approximation of continuous functions
+with any accuracy by polynomials with integer rational
+coefficients on a segment of the real axis has been studied since
+1914, in the works of  I.~Pal, Kakeya, M.~Fekete, I.N.~Khlodovsky,
+S.N.~Bernshtein, L.V.~Kantorovich, and others. The author of the
+paper \cite{alp} continues these studies and formulates
+some results of the above authors and other researchers on this
+problem.
+
+The  existence of a sequence of trigonometric polynomials with
+integer (not necessarily positive) coefficients that converges to
+zero almost everywhere follows from \cite {fek}.
+
+Recently,  there has been a certain interest in decompositions in
+a series with integer coefficients. Thus, \cite{kon} gives a
+result on the existence of a sequence of trigonometric polynomials
+with integer positive coefficients that converges to zero almost
+everywhere.
+
+The papers \cite{luk,kud} also consider systems of contractions
+and shifts of one function, but the expansion coefficients are
+found almost like the Fourier coefficients (the coefficients tend
+to zero) and are slightly different than in this paper.
+
+Here we consider functional systems of the form
+\begin{eqnarray}
+    \{\phi_{k,j}\}=\alpha_k\{\phi( b^kt-j)\}=\{\phi_{l}\},  \,\,
+    k=0,1,2,..., \, j=0,1,...,b^k-1,\, l=b^k+j, \nonumber\\
+    b\in \mathbb{N}, \  b>1,\ \alpha_k \searrow 0,\,\alpha_k>0;
+    %(1)
+\end{eqnarray}
+here $ \phi (t) $ is an arbitrary function from $ L_p [0,1], \, 1
+\le p <\infty $, continued by the value $ 0 $ outside of $[0,1]$.
+
+In Theorem 3, we assume that $ \phi_{k, 0} (0) = \alpha_k,
+\, k \ge 0 $.
+
+In Theorems 1 and 3, we consider the function
+\begin{eqnarray}
+    \phi(t)=\left\{\begin{array}{rcl}
+        1, \mbox { if }
+        t\in (0,1]; \\
+        0, \mbox{ if } t\notin (0,1].
+    \end{array}
+    \right.
+    %(2)
+\end{eqnarray}
+
+Denote  $ \Delta_{k,j}=\left(\frac{j}{b^k},\frac{j+1}{b^k}
+\right),\,k\ge 0, \, j=0,1,...,b^k-1$,
+$\left\vert\Delta_{k,j}\right\vert$ is the measure of the set $
+\Delta_{k, j}$.
+
+For a given function $g$, we construct a series
+\begin{eqnarray}
+    \sum_{l=1}^{\infty}c^{\ast}_l \phi_l= \sum_{i=0}^{\infty}\sum_{j=0}^{b^i-1} c^{\ast}_{i,j} \phi_{i,j}.
+    %(3)
+\end{eqnarray}
+Here the coefficients $c^{\ast}_{i,j}$ are defined with the help
+of auxiliary functions $g_k$ and the recurrent relations:
+\begin{eqnarray}
+g_0=g,\quad g_{k+1}=g_k- \sum_{j=0}^{b^k-1} c^{\ast}_{k,j} \phi_{k,j},\ k\ge0,
+%\tag{4}
+\end{eqnarray}
+\begin{eqnarray}
+c^{\ast}_l=c^{\ast}_{b^k+j} = c^{\ast}_{k,j}=
+\left\{\begin{array}{rcl}
+\left[
+\frac{1}{\alpha_k\left\vert\Delta_{k,j}\right\vert}\int\limits_{\Delta_{k,j}} g_{k} dt
+\right] , \mbox { if }
+\int\limits_{\Delta_{k,j}    } g_{k} dt  \ge 0   ; \\
+\left[
+\frac{1}{\alpha_k\left\vert\Delta_{k,j}\right\vert}\int\limits_{\Delta_{k,j}}
+g_{k} dt\right] +1, \mbox{ if } \int\limits_{\Delta_{k,j}} g_{k}
+dt < 0,
+\end{array}
+\right.
+%(5)
+\end{eqnarray}
+where $[a]$ denoted the integer part of the number $a$.
+
+Let $ \chi _ {\Delta} (t) $ be the characteristic function of the
+set $ \Delta $.\medskip
+% \textbf{Lemma 1.} { \it
+\begin{lemma} %% \label{Lem1 }
+     For any stepwise function of the form $
+    R(t)=\sum_{j=0}^{b^k-1} c_{k,j} \cdot \chi_{\Delta_{k,j}}(t) $,
+    where $  c_{k,j} \in\mathbb{ R}$,
+    %$\Delta_{k,j}=\left(\frac{j}{b^k},\frac{j+1}{b^k}  \right),\,
+    $k=0,1,2,...,$ $j=0,1,...,b^k-1$, consider the sum $P(t)=
+    \sum_{j=0}^{b^k-1} c^{\ast}_{k,j} \phi_{k,j}$ where  $\phi_{k,j}$
+    are defined by (1) with the same  $\phi$ as in (2), and
+    $$
+    c^{\ast}_{k,j}=\left\{\begin{array}{rcl}
+    \left[\frac{1}{\alpha_k} c_{k,j}\right], \mbox { if }
+    c_{k,j} \ge 0, \\
+    \left[\frac{1}{\alpha_k} c_{k,j}\right]+1, \mbox{ if }c_{k,j}<0 ,
+    \end{array}
+    \right.
+    $$
+    Then
+    $$
+    \left\Vert R(t)-P(t)\right\Vert_p \le \alpha_k, \, 1\le p <
+    \infty,\quad
+    %$$
+    %$$
+    \left\|  \sum_{j=0}^{m} c_{k,j}^{\ast} \phi_{k,j}(t) \right\|_p \le
+    \left\| R(t)\right\|_p + \alpha_k, \, 0\le  m \le b^k-1.
+    $$
+\end{lemma}
+
+%\textbf{Proof.}
+\begin{proof}
+ Indeed,
+\begin{multline*}
+    \left\|  \sum_{j=0}^{b^k-1} c_{k,j} \chi_{\Delta_{k,j}}(t)-
+    \sum_{j=0}^{b^k-1} c^{\ast }_{k,j} \phi_{k,j}(t) \right\|_p \le
+    \left\|  \sum_{j=0}^{b^k-1}\left(  c_{k,j}-\alpha_k
+    c^{\ast}_{k,j}\right)  \chi_{\Delta_{k,j}}(t)\right\|_p
+    \\
+    =\left\|  \sum_{j=0}^{b^k-1}   \alpha_k \left( \frac{1}{\alpha_k}
+    c_{k,j}- c^{\ast}_{k,j}\right)  \chi_{\Delta_{k,j}}(t)\right\|_p
+    \le \alpha_k.
+\end{multline*}
+Then
+\begin{multline*}
+    \left\|  \sum_{j=0}^{m} c^{\ast}_{k,j} \phi_{k,j}(t) \right\|_p
+    \le \left\|  \sum_{j=0}^{b^k-1} c^{\ast}_{k,j} \phi_{k,j}(t)
+    \right\|_p  \le\left\| R(t) - P(t) \right\|_p+\left\|
+    R(t)\right\|_p \\ \le \left\| R(t)\right\|_p + \alpha_k, \quad
+    0\le m \le b^k-1.
+\end{multline*}
+\end{proof}
+    \medskip
+ %\textbf{Theorem 1.}
+\begin{theorem} %% \label{Th1 }
+    Let an arbitrary function $ g \in L_p
+    (0,1), \, 1 \leq p <\infty $. Then series (3) with respect to
+    system  (1) with the generating function $ \phi $ as in formula
+    (2) converges in the norm of the space  $  L_p(0,1), \, 1 \leq p <
+    \infty  $, to $ g(t) $, i.e. $ \left\Vert g- \sum_{l=0}^{m}
+    c^{\ast}_l  \phi_l \right\Vert_p \to 0,\quad m\to \infty
+    $.
+\end{theorem}
+%\textbf{Proof of Theorem 1.}
+\begin{proof}
+ Let $ g_0 = g $. Then, by induction,
+we construct sequences of stepwise functions
+$ {S_k (t)}, \, k \ge 0 $,
+functions $ g_k, \, k \ge 0 $, and linear combinations $ \sum_{j =
+    0}^{b^k-1} c^{\ast}_{k, j} \phi_ {k, j} (t), \, k \ge 0 $, so that
+takes place (4) - (5).
+
+Let now $f(t) \in L_p (0,1)$, $1\le p < \infty,$ and
+$$
+S_k \left( f\right) = \sum_{l=0}^{b^k-1} p_{k,l} \cdot
+\phi_{k,l}(t), \quad
+p_{k,l}=\frac{1}{\alpha_k\left\vert\Delta_{k.l}\right\vert}\int\limits_{\Delta_{k,l}}
+f(t) dt,\quad
+%$$
+%$$
+k\ge 0, \, l=0,1,...,b^k -1 .
+$$
+
+Then
+$$
+S_k\left( g_{k}\right) = \sum_{l=0}^{b^k-1} c_{k,l}\cdot \chi_{{\Delta}_{k,l}}(t)=
+\sum_{l=0}^{b^k-1} \frac{1}{\alpha_k}   c_{k,l} \cdot  \phi_{k,l}(t),
+%$$
+%$$
+\quad S_k^{\ast} \left( g_{k}\right) = \sum_{l=0}^{b^k-1}
+c^{\ast}_{k,l} \cdot \phi_{k,l}(t).
+$$
+
+Lemma 1 implies
+$$
+\left\Vert S_{k}(g_{k})- S_k^{\ast}(g_{k}) \right\Vert_p =
+\left\|  \sum_{l=0}^{b^k-1}
+\left( \frac{1}{\alpha_k}      c_{k,l}- c^{\ast}_{k,l} \right)  \phi_{k,l}(t) \right\|_p
+\le \alpha_k.
+$$
+Consequently,
+\begin{eqnarray}
+    \left\Vert g_{k+1} \right\Vert_p \le
+    \left\Vert g_{k} - S_k(g_{k}) \right\Vert_p+
+    \left\Vert S_k(g_{k}) -
+    \sum_{l=0}^{b^k-1} c^{\ast}_{k,l}  \phi_{k,l}(t) \right\Vert_p \le
+    \left\Vert g_{k} - S_k(g_{k}) \right\Vert_p +\alpha_k,
+    %\tag{6}
+\end{eqnarray}
+\begin{equation*}
+    S_k(g_{k}) =
+    S_k\left(  g-\sum_{i=0}^{k-1}   \sum_{j=0}^{b^i-1} c^{\ast}_{i,j} \phi_{i,j}(t) \right)=
+    S_k(g) -  S_k\left(  \sum_{i=0}^{k-1}   \sum_{j=0}^{b^i-1} c^{\ast}_{i,j}  \phi_{i,j}(t) \right) .
+\end{equation*}
+By the definition of system (1)--(2), we have
+$$
+\sum_{i=0}^{k-1}   \sum_{j=0}^{b^i-1} c^{\ast}_{i,j}  \phi_{i,j}(t) =
+\sum_{l=0}^{b^k-1} d_{k,l}  \phi_{k,l}(t).
+$$
+Then
+\begin{equation*}
+    S_k \left(  \sum_{i=0}^{k-1}   \sum_{j=0}^{b^i-1} c^{\ast}_{i,j}  \psi_{i,j}(t) \right)  =
+    S_k \left(  \sum_{l=0}^{b^k-1} d_{k,l}  \phi_{k,l}(t)    \right) =
+    \sum_{l=0}^{b^k-1} d_{k,l}  \phi_{k,l}(t) =
+    \sum_{i=0}^{k-1}   \sum_{j=0}^{b^i-1} c^{\ast}_{i,j}  \phi_{i,j}(t).
+\end{equation*}
+
+Therefore, using (\cite{ks}, pp.~74--75), we obtain
+\begin{eqnarray}
+    \left\Vert g_{k-1} - S_{k-1}(g_{k-1}) \right\Vert_p =
+    \left\Vert g -
+    \sum_{i=0}^{k-2}   \sum_{j=0}^{b^i-1} c^{\ast}_{i,j}  \phi_{i,j}(t)
+    -S_{k-1}\left( g -
+    \sum_{i=0}^{k-2}   \sum_{j=0}^{b^i-1} c^{\ast}_{i,j}  \phi_{i,j}(t)\right)
+    \right\Vert_p
+\nonumber   \\
+    \le\left\Vert g - S_{k-1}(g)- S_{k-1}\left( \sum_{i=0}^{k-2}
+    \sum_{j=0}^{b^i-1} c^{\ast}_{i,j}  \phi_{i,j}(t)\right)
+    -\sum_{i=0}^{k-2}   \sum_{j=0}^{b^i-1} c^{\ast}_{i,j}
+    \phi_{i,j}(t) \right\Vert_p
+\nonumber   \\
+    =\left\Vert g - S_{k-1}(g) \right\Vert_p \le c_p \omega_p\left(
+    \frac{1}{b^{k-1}}, g\right)
+    %\tag{7}
+\end{eqnarray}
+where $\omega_p\left( \frac{1}{b^{k-1}}, g\right)$ is the integral
+continuity module of the function
+$g \in L_p(0,1),\, 1\le p<\infty $, with the step  $\frac{1}{b^{k-1}}$.
+
+Thus, from (6) and (7) we obtain
+\begin{eqnarray}
+    \left\Vert g_k \right\Vert_p \le \alpha_{k-1} +c_p \omega_p\left(
+    \frac{1}{b^{k-1}}, g \right) \to 0,\quad k\to \infty.
+   %\tag{8}
+\end{eqnarray}
+Now we make sure that the constructed series
+$ \sum_{l=0}^{\infty} c^{\ast}_{l} \cdot \phi_{l}(t)=\sum_{i=0}^{\infty} \sum_{j=0}^{b^{i}-1} c^{\ast}_{i,j} \cdot \phi_{i,j}(t)$
+converges to   $ g $  in $ L_p $.
+Let $ n> 0 $ be some large number. Fix $k\ge 2$ such that $0\le
+j_0 \le b^{k}-1,\, k\ge 2$, and
+$$
+\sum_{l=0}^{n} c^{\ast}_{l} \cdot \phi_{l}(t)= \sum_{i=0}^{k-1} \sum_{j=0}^{b^{i}-1} c_{i,j}^{\ast} \cdot \phi_{i,j}(t) +
+\sum_{j=0}^{j_0} c_{k,j}^{\ast} \cdot \phi_{k,j}(t).
+$$
+
+Using Lemma 1, (7) and (8), we have
+\begin{multline*}
+    \left\Vert  g- \left(  \sum_{i=0}^{k-1} \sum_{j=0}^{b^{i}-1} c_{i,j}^{\ast} \cdot \phi_{i,j}(t) +
+    \sum_{j=0}^{j_0} c_{k,j}^{\ast} \cdot \phi_{k,j}(t)   \right)  \right\Vert_p \le
+    \left\Vert  g_{k} \right\Vert_p +\left\Vert  \sum_{j=0}^{j_0} c_{k,j}^{\ast} \cdot \phi_{k,j}(t)    \right\Vert_p \le
+    \\
+    \left\Vert  g_{k} \right\Vert_p + \alpha_k + \left\Vert  S_{k}(g_{k})  \right\Vert_p \le
+    2\left\Vert  g_{k} \right\Vert_p + \alpha_k +
+    \left\Vert g_{k} - S_{k} (g_{k})
+    \right\Vert_p     \le
+    \\
+    2 c_p \omega_p\left( \frac{1}{b^{k-1}}, g \right)
+    +   c_p \omega_p\left( \frac{1}{b^{k}}, g \right)
+    +   \alpha_k +2\alpha_{k-1}
+    \to 0,\, n\to \infty.
+\end{multline*}
+The theorem is proved.
+\end{proof}
+Now assume that the function $\phi$ is of a more general type. We
+give two lemmas that will be needed below.
+\\
+\begin{lemma} %% \label{Lem2 }
+ (\cite{fo}).   Let $\phi\in L_p(0,1), \, 1
+    \leq p< \infty,\,   \int_{0}^{1} \phi(t)dt=\delta\neq 0  $.  Then
+    there is a constant $\lambda_0 \not= 0$ such that
+    \begin{eqnarray}
+        \left\Vert 1- \lambda_0 \phi(t) \right\Vert_p = \sigma_0   <1.
+        %\tag{9}
+\end{eqnarray}
+\end{lemma}
+\begin{lemma} %% \label{Lem3 }
+  Let a function $\phi\in L_p(0,1), \, 1
+    \leq p< \infty $,
+    satisfy~(9). Fix  $\sigma \in (\max\{ \frac{1}{2}, \sigma_0\};1)$.
+    Then, for any stepwise function
+    $S(t)=\sum_{l=0}^{b^k-1} c_{k,l} \cdot \chi_{\Delta_{k,l}}(t)$,
+    the finite sum $h(t)= \sum_{l=0}^{b^k-1} c_{k,l}\cdot
+    \frac{1}{\alpha_k} \lambda_0 \cdot \phi_{k,l}(t)$ (here  $
+    \phi_{k,l}(t) $ is the same as in (1)) % exists and
+    satisfies the
+    conditions
+    $$
+    \left\Vert S(t)  - h(t) \right\Vert_p \le \sigma \left\Vert S(t)
+    \right\Vert_p,\quad
+    %$$
+    %$$
+    \left\Vert \sum_{l=0}^{m} c_{k,l}\cdot \frac{1}{\alpha_k}
+    \lambda_0  \cdot \phi_{k,l}(t) \right\Vert_p \le (1+\sigma)
+    \left\Vert S(t) \right\Vert_p, \, 0\le m \le b^k -1.
+    $$
+\end{lemma}
+\begin{proof}  Indeed,
+\begin{multline*}
+    \left\Vert S(t)  - h(t) \right\Vert_p^p \le \left\Vert \sum_{l=0}^{b^k-1} c_{k,l} \cdot \chi_{\Delta_{k,l}}(t)
+    - \sum_{l=0}^{b^k-1} c_{k,l}\cdot \frac{1}{\alpha_k} \lambda_0 \cdot \phi_{k,l}(t)\right\Vert_p^p
+    \\
+    \le\int_{0}^{1} |1- \lambda_0 \phi(t)|^pdt \sum_{l=0}^{b^k
+        -1}|c_{k,l}|^p  |\Delta_{k,l}|\le \sigma^p \left\Vert S(t)
+    \right\Vert_p^p,
+\end{multline*}
+\begin{multline*}
+    \left\Vert \sum_{l=0}^{m} c_{k,l}\cdot \frac{1}{\alpha_k}
+    \lambda_0  \cdot \phi_{k,l}(t) \right\Vert_p \le\left\Vert
+    \sum_{l=0}^{b^k-1} c_{k,l}\cdot \frac{1}{\alpha_k} \lambda_0 \cdot
+    \phi_{k,l}(t) -S(t) +S(t)  \right\Vert_p
+    \\
+    \le(1+\sigma) \left\Vert S(t) \right\Vert_p, \quad 0\le m \le b^k
+    -1.
+\end{multline*}
+Lemma~3 is proved.
+\end{proof}
+\smallskip
+
+
+Let now   $\phi\in L_p(0,1), \,
+1 \leq p< \infty,\,   \int_{0}^{1} \phi(t)dt=\delta\neq 0  $,
+\begin{eqnarray}
+    \{\phi_{n,k}\}=\lambda_0\cdot \alpha_n \{\phi(
+    b^nt-k)\}=\{\phi_{l}\},\quad n=0,1,2,..., \ k=0,1,...,b^n-1,\,
+    l=b^n+k.
+    %\tag{10}
+\end{eqnarray}
+\begin{theorem} %% \label{Th2 }
+ For any function $ g \in L_p (0,1), \, 1
+    \leq p <\infty $, the series $ \sum_{l = 1}^{\infty} c_{l}^{\ast}
+    \cdot \phi_{l} (t) $    with respect to system (10), where $
+    c_{l}^{\ast}  \in Z $, % exists and
+    converges in the space $L_p(0,1)$, $1 \leq p< \infty$, to $g(t)$,
+    i.e.,
+    $$
+    \left\Vert g - \sum_{l=0}^{m} c_{l}^{\ast} \cdot \phi_{l}(t)
+    \right\Vert_p \to 0,\quad m \to \infty.
+    $$
+\end{theorem}
+\begin{proof}
+ Let  $ g_0=g $. Using Lemma 3, we
+construct, by induction, a sequence of stepwise functions $
+{R_k(t)}, \, k \ge 1 $, numbers $ {n_k} \, (n_1 \ge 4),$ functions
+$ {g_k}, \, k \ge 1 $, and linear combinations  $
+\sum_{j=0}^{b^{n_k}-1} c_{n_k,j}^{\ast} \cdot \phi_{n_k,j}(t),
+\, k\ge 1 $, such that
+\begin{equation*}
+    g_k = g_{k-1} - \sum_{j=0}^{b^{n_k}-1} c_{n_k,j}^{\ast} \cdot \phi_{n_k,j}(t),
+\end{equation*}
+
+\begin{eqnarray}
+    \left\Vert g_{k-1} - R_k (t) \right\Vert_p <\frac{1}{2^{k+2}},\,\,
+    \alpha_{n_k}\le \frac{1}{2^{k+2}},
+    %\tag{11}
+\end{eqnarray}
+where
+$$
+R_k (t)= \sum_{l=0}^{b^{n_k}-1} c_{n_k,l} \cdot
+\chi_{\Delta_{n_k,l}}(t),\quad
+%\Delta_{n_k,l}=\left( \frac{l}{b^{n_k}}, \frac{l+1}{b^{n_k}}\right) , \,
+k\ge 1,
+%$$
+%$$
+\quad
+c_{n_k,l}=\frac{1}{\left| \Delta_{n_k,l}\right|
+}\int_{\Delta_{n_k,l}}
+g_{k-1}  dt, \, l=0,1,...,b^{n_k}-1,
+$$
+$$
+c^{\ast}_{n_k,l}=\left\{\begin{array}{rcl}
+\left[\frac{1}{\alpha_{n_k}} c_{n_k,l}\right], \mbox { if }
+c_{n_k,l} \ge 0, \\
+\left[\frac{1}{\alpha_{n_k}} c_{n_k,l}\right]+1, \mbox{ if }c_{n_k,l}<0 .
+\end{array}
+\right.
+$$
+Note that we choose $n_k$ such that relations (11) hold.
+
+Let
+$$
+S_k\left( g_{k-1}\right) = R_k(t) = \sum_{l=0}^{b^{n_k}-1} c_{n_k,l}\cdot \chi_{{\Delta}_{n_k,l}}(t),\quad
+S_k^{\ast} \left( g_{k-1}\right) =
+\sum_{l=0}^{b^{n_k}-1} c^{\ast}_{n_k,l} \cdot \phi_{n_k,l}(t),
+$$
+$$
+R_k^{\ast}(t) = \sum_{l=0}^{b^{n_k}-1} \alpha_{n_k}\cdot c_{n_k,l}^{\ast}\cdot \chi_{{\Delta}_{n_k,l}}(t).
+$$
+
+Using Lemma 3, we have
+\begin{eqnarray}
+    \left\Vert R_k^{\ast} (t) - S_k^{\ast}(g_{k-1})  \right\Vert_p
+    <\sigma \left\Vert  R_k^{\ast} (t) \right\Vert_p,
+%   \tag{12}
+\end{eqnarray}
+$$
+\left\Vert  \sum_{l=0}^{m} c^{\ast}_{n_k,l} \cdot \phi_{n_k,l}(t) \right\Vert_p \le(1+\sigma) \left\Vert  R_k^{\ast} (t) \right\Vert_p,\, 0\le m \le b^{n_k}-1.
+$$
+
+Now we make sure that the constructed series  $
+\sum_{l=0}^{\infty} c^{\ast}_{l} \cdot \phi_{l}(t)=
+\sum_{i=0}^{\infty} \sum_{j=0}^{b^{n_i}-1} c^{\ast}_{n_i,j} \cdot
+\phi_{n_i,j}(t) $ converges to the function $ g $ in the metric of
+the space $ L_p $. Let $ n> 0 $ be a large number. Define $k\ge 2$
+such that
+$ 0\le j_0 \le b^{n_k}-1,\, k\ge 2,$ and
+$$
+\sum_{l=0}^{n} c^{\ast}_{l} \cdot \phi_{l}(t)= \sum_{i=0}^{k-1} \sum_{j=0}^{b^{n_i}-1} c^{\ast}_{n_i,j} \cdot \phi_{n_i,j}(t) +
+\sum_{j=0}^{j_0} c^{\ast}_{n_k,j} \cdot \phi_{n_k,j}(t).
+$$
+
+Then from Lemma 1 and (11) we obtain
+\begin{multline*}
+    \left\Vert  g- \left(  \sum_{i=0}^{k-1} \sum_{j=0}^{b^{n_i}-1}
+    c_{n_i,j}^{\ast} \cdot \phi_{n_i,j}(t) + \sum_{j=0}^{j_0}
+    c_{n_k,j}^{\ast} \cdot \phi_{n_k,j}(t)   \right)  \right\Vert_p
+    \le \left\Vert  g_{k-1} \right\Vert_p +\left\Vert \sum_{j=0}^{j_0}
+    c_{n_k,j}^{\ast} \cdot \phi_{n_k,j}(t) \right\Vert_p
+    \\
+    \le\left\Vert  g_{k-1} \right\Vert_p + 2 \left\Vert  R_k^{\ast}
+    (t) \right\Vert_p \le \left\Vert  g_{k-1} \right\Vert_p + 2
+    \left\Vert  R_k^{\ast} (t) - R_k (t) \right\Vert_p + 2 \left\Vert
+    R_k (t) \right\Vert_p
+    \\
+    \le\left\Vert  g_{k-1} \right\Vert_p + 2\alpha_{n_k} +  2
+    \left\Vert g_{k-1} - R_k (t) \right\Vert_p  + 2\left\Vert  g_{k-1}
+    \right\Vert_p \le 3\left\Vert  g_{k-1} \right\Vert_p
+    +2\alpha_{n_k}+ \frac{1}{2^{k+1}}  .
+\end{multline*}
+
+Using Lemmas~1,~3 and formulas (11),~(12), we obtain
+\begin{multline*}
+    \left\Vert  g_{k-1} \right\Vert_p \le \left\Vert  g_{k-2}  -
+    R_{k-1}^{\ast} (t) \right\Vert_p + \left\Vert     R_{k-1}^{\ast}
+    (t)- S_{k-1}^{\ast} (g_{k-2}) \right\Vert_p \le \left\Vert g_{k-2}
+    - R_{k-1} (t) \right\Vert_p
+    \\
+    +\left\Vert  R_{k-1}^{\ast} (t) - R_{k-1} (t) \right\Vert_p +
+    \sigma \left\Vert  R_{k-1}^{\ast} (t)
+    \right\Vert_p \le
+    \frac{1}{2^k} + \sigma \left\Vert  R_{k-1}^{\ast} (t) -  R_{k-1}
+    (t) \right\Vert_p
+    \\
+    +\sigma \left\Vert  R_{k-1} (t) \right\Vert_p \le \frac{1}{2^k} +
+    \sigma\cdot \alpha_{n_{k-1}}+ \sigma \left( \frac{1}{2^{k+1}}  +
+    \left\Vert  g_{k-2} \right\Vert_p \right) \le \frac{1}{2^{k-1}} +
+    \sigma \left\Vert  g_{k-2} \right\Vert_p .
+\end{multline*}
+Consequently,
+$$
+\left\Vert  g_{k} \right\Vert_p  \le \frac{1}{2^{k}}   + \frac{\sigma}{2^{k-1}}+ ...+
+\frac{1}{2} \sigma^{k-1}+  \sigma^{k}\left\Vert  g \right\Vert_p \le
+k\sigma^{k}+ \sigma^{k}\left\Vert  g \right\Vert_p \to 0, \quad k\to \infty.
+$$
+
+Thus,
+$$
+\left\Vert  g - \sum_{l=0}^{n}   c_l^{\ast}  \phi_l\right\Vert_p
+\to 0, \quad n\to \infty.
+$$
+\end{proof}
+\begin{theorem} %% \label{Th3 }
+    Let $ g \in C[0,1] $. The series (3) by
+    the system (1) with generating function $ \phi $ as in (2)
+    converges in the  space  $  C[0,1]$ to $ g(t) $, i.e., $
+    \left\Vert g- \sum_{l=0}^{m}  c^{\ast}_l  \phi_l
+    \right\Vert_{C[0,1]} \to 0,\quad m\to \infty$.
+\end{theorem}
+\begin{proof}
+     Repeating the considerations  of Lemma~1 and
+Theorem~1, we obtain the proof of Theorem 3 with the estimate  $ 3
+\omega\left( \frac{1}{b^{k}}, g\right)  $ (\cite {ks}, p. 74) in
+place of $ c_p \omega_p\left( \frac{1}{b^{k}}, g\right)  $ in
+formulas (7)  and (8).
+\end{proof}
+\begin{remark}
+  We call the  expansions of  functions in
+Theorems~1--3 the {\it  integer expansions} of functions in the
+corresponding spaces.
+\end{remark}
+
+
+
+\begin{thebibliography}{99}
+
+\bibitem{fo}
+ V.~I.~Filippov, P.~Oswald, ``Representation in
+$L^p$ by series of translates and dilates of one,''  Journal of
+Approximation Theory, \textbf{ 82}~(1), 15--29 (1995).
+
+\bibitem{f1}
+V.~I.~Filippov, ``Subsystems of the Faber-Schauder system in
+function space,'' Soviet Mathematics (Izvestiya VUZ. Matematika)
+\textbf{35}~(2), 90--97 (1991).
+
+\bibitem{f2}
+V.~I.~Filippov, ``Systems of functions obtained using translates
+and dilates of a single function in the spaces  $ E_{\varphi}$
+with  $ \lim_{t\to \infty}\frac{\varphi(t)}{t}=0$,'' Izvestiya:
+Mathematics, \textbf{65}~(2), 389--402 (2001).
+
+\bibitem{f3}
+V.~I.~Filippov,  ``Systems obtained using translates and dilates
+of a single function in multidimensional spaces $ E_{\varphi}$,''
+Izvestiya: Mathematics, \textbf{76}~(6), 1257--1270 (2012).
+
+
+\bibitem{f4}
+V.~I.~Filippov, ``On generalization  of Haar System and other
+function systems in $ E_{\varphi}$,'' Russian Mathematics
+(Izvestiya VUZ. Matematika) \textbf{62}~(1), 76--81 (2018).
+
+\bibitem{alp}
+S.~Ya.~Al'per, ``On  the approximation of functions on closed sets
+by polynomials with entire coefficients,'' Izv. Akad. Nauk SSSR
+Ser. Mat., \textbf{28}~(5), 1173--1186 (1964) [in Russian].
+
+\bibitem{fek}
+M.~Fekete, ``Uber die Verteilung der Wurzeln bei gewissen algebraischen Gleichungen
+mit ganzzahligen Koeffizienten,''  Math. Zeitschrift.  Bd.\textbf{ 17}. 228--249 (1923).
+
+\bibitem{kon}
+P.~A~Borodin, S.~V.~Konyagin, ``Convergence to zero of exponential
+sums with positive integer coefficients and approximation by sums
+of shifts of single function on the line,'' Analysis Math.,
+\textbf{44}~(2), 163--183 (2018).
+
+ \bibitem{luk}
+V.~V.~Galatenko, T.~ P.~Lukashenko, V.~ A.~Sadovnichy,
+``Orthorecursive   decompositions and their properties,'' Itogi
+Nauki i Tekhniki. Ser. Sovrem. Mat. Pril. Temat. Obz., 2019,
+\textbf{170},  61--69 (2019).
+
+\bibitem{kud}
+A.~Yu~Kudryavtsev, ``On the convergence of orthorecursive
+expansions in nonortogonal wavelets,''  Math. Notes,
+\textbf{92}~(5), 643--656 (2012).
+
+\bibitem{ks}
+B.~S~Kashin, A.~A.~Saakyan, \textit{ Orthogonal Series}, 2nd ed.
+(AFTs, Moscow, 1999) [in Russian].
+
+\end{thebibliography}
+
+
+
+
+
+
+
+\end{document}
